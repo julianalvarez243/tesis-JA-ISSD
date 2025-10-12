@@ -28,137 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            button2 = new Button();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            label1 = new Label();
+            txtCapacidad = new TextBox();
+            txtUbicacion = new TextBox();
+            txtNroMesa = new TextBox();
+            Reservada = new RadioButton();
+            noDisponible = new RadioButton();
+            Disponible = new RadioButton();
+            btnCancelar = new Button();
+            btnActualizar = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 406F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 39F));
-            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 283F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 83F));
-            tableLayoutPanel1.Size = new Size(484, 461);
-            tableLayoutPanel1.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(radioButton1);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox2);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(42, 98);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(400, 277);
-            panel1.TabIndex = 0;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(210, 82);
-            radioButton2.Name = "radioButton2";
-            radioButton2.RightToLeft = RightToLeft.No;
-            radioButton2.Size = new Size(100, 19);
-            radioButton2.TabIndex = 6;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "No Disponible";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(210, 57);
-            radioButton1.Name = "radioButton1";
-            radioButton1.RightToLeft = RightToLeft.No;
-            radioButton1.Size = new Size(81, 19);
-            radioButton1.TabIndex = 5;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Disponible";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(210, 173);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 37);
-            button2.TabIndex = 4;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Elegir Ubicacion" });
-            comboBox1.Location = new Point(34, 125);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(330, 23);
-            comboBox1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(43, 173);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 37);
-            button1.TabIndex = 2;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(82, 72);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Capacidad";
-            textBox2.Size = new Size(106, 29);
-            textBox2.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(42, 0);
+            label1.Location = new Point(59, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(400, 95);
+            label1.Size = new Size(572, 158);
             label1.TabIndex = 1;
-            label1.Text = "Modificar Mesa";
+            label1.Text = "Editar Mesa";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 580F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
+            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 472F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 138F));
+            tableLayoutPanel1.Size = new Size(691, 768);
+            tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(236, 232, 221);
+            panel1.Controls.Add(txtCapacidad);
+            panel1.Controls.Add(txtUbicacion);
+            panel1.Controls.Add(txtNroMesa);
+            panel1.Controls.Add(Reservada);
+            panel1.Controls.Add(noDisponible);
+            panel1.Controls.Add(Disponible);
+            panel1.Controls.Add(btnCancelar);
+            panel1.Controls.Add(btnActualizar);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(59, 163);
+            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(572, 462);
+            panel1.TabIndex = 0;
+            // 
+            // txtCapacidad
+            // 
+            txtCapacidad.Location = new Point(370, 147);
+            txtCapacidad.Name = "txtCapacidad";
+            txtCapacidad.PlaceholderText = "Capacidad";
+            txtCapacidad.Size = new Size(178, 31);
+            txtCapacidad.TabIndex = 10;
+            // 
+            // txtUbicacion
+            // 
+            txtUbicacion.Location = new Point(61, 147);
+            txtUbicacion.Name = "txtUbicacion";
+            txtUbicacion.PlaceholderText = "Ubicacion";
+            txtUbicacion.Size = new Size(178, 31);
+            txtUbicacion.TabIndex = 9;
+            // 
+            // txtNroMesa
+            // 
+            txtNroMesa.Location = new Point(61, 19);
+            txtNroMesa.Name = "txtNroMesa";
+            txtNroMesa.PlaceholderText = "Numero de mesa";
+            txtNroMesa.Size = new Size(178, 31);
+            txtNroMesa.TabIndex = 8;
+            // 
+            // Reservada
+            // 
+            Reservada.AutoSize = true;
+            Reservada.Location = new Point(397, 100);
+            Reservada.Margin = new Padding(4, 5, 4, 5);
+            Reservada.Name = "Reservada";
+            Reservada.RightToLeft = RightToLeft.No;
+            Reservada.Size = new Size(117, 29);
+            Reservada.TabIndex = 7;
+            Reservada.TabStop = true;
+            Reservada.Text = "Reservada";
+            Reservada.UseVisualStyleBackColor = true;
+            // 
+            // noDisponible
+            // 
+            noDisponible.AutoSize = true;
+            noDisponible.Location = new Point(397, 61);
+            noDisponible.Margin = new Padding(4, 5, 4, 5);
+            noDisponible.Name = "noDisponible";
+            noDisponible.RightToLeft = RightToLeft.No;
+            noDisponible.Size = new Size(151, 29);
+            noDisponible.TabIndex = 6;
+            noDisponible.TabStop = true;
+            noDisponible.Text = "No Disponible";
+            noDisponible.UseVisualStyleBackColor = true;
+            // 
+            // Disponible
+            // 
+            Disponible.AutoSize = true;
+            Disponible.Location = new Point(397, 19);
+            Disponible.Margin = new Padding(4, 5, 4, 5);
+            Disponible.Name = "Disponible";
+            Disponible.RightToLeft = RightToLeft.No;
+            Disponible.Size = new Size(122, 29);
+            Disponible.TabIndex = 5;
+            Disponible.TabStop = true;
+            Disponible.Text = "Disponible";
+            Disponible.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Font = new Font("Segoe UI", 12F);
+            btnCancelar.Location = new Point(300, 288);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(206, 62);
+            btnCancelar.TabIndex = 4;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnActualizar
+            // 
+            btnActualizar.Font = new Font("Segoe UI", 12F);
+            btnActualizar.Location = new Point(61, 288);
+            btnActualizar.Margin = new Padding(4, 5, 4, 5);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(207, 62);
+            btnActualizar.TabIndex = 2;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // ModificarMesa
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 232, 221);
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(691, 768);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ModificarMesa";
             Text = "Modificar Mesa";
+            Load += ModificarMesa_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -168,14 +200,16 @@
 
         #endregion
 
+        private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button button2;
-        private ComboBox comboBox1;
-        private Button button1;
-        private TextBox textBox2;
-        private Label label1;
+        private TextBox txtCapacidad;
+        private TextBox txtUbicacion;
+        private TextBox txtNroMesa;
+        private RadioButton Reservada;
+        private RadioButton noDisponible;
+        private RadioButton Disponible;
+        private Button btnCancelar;
+        private Button btnActualizar;
     }
 }

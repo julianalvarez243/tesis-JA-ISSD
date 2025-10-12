@@ -45,7 +45,7 @@ namespace WinFormsApp2
 
             foreach (var u in usuarios)
             {
-                dgvUsuarios.Rows.Add(u.UsuarioId, u.NombreUsuario, u.Contrasenia);
+                dgvUsuarios.Rows.Add(u.UsuarioId, u.NombreUsuario, u.Contrasenia, u.Rol);
             }
         }
 

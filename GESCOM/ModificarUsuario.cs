@@ -23,22 +23,31 @@ namespace WinFormsApp2
             _idUsuario = idUsuario;
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ModificarUsuario_Load(object sender, EventArgs e)
         {
             usuarioNegocio negocio = new usuarioNegocio();
             _usuario = negocio.ObtenerUsuarioPorId(_idUsuario);
+
+           
 
             if (_usuario != null)
             {
                 txtNombreUsuario.Text = _usuario.NombreUsuario;
                 txtContrasenia.Text = _usuario.Contrasenia;
                 txtConfirmarContrasenia.Text = _usuario.Contrasenia;
+
+                
+                cboRol.Items.Add("Mozo");
+                cboRol.Items.Add("Administrador");
+
+                cboRol.SelectedItem = _usuario.Rol; // Seleccionar el rol actual
             }
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;    
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -46,9 +55,10 @@ namespace WinFormsApp2
             string nombre = txtNombreUsuario.Text.Trim();
             string pass = txtContrasenia.Text.Trim();
             string confirmar = txtConfirmarContrasenia.Text.Trim();
+            string rolSeleccionado = cboRol.SelectedItem != null ? cboRol.SelectedItem.ToString() : string.Empty;
 
             usuarioNegocio negocio = new usuarioNegocio();
-            if (negocio.EditarUsuario(_idUsuario, nombre, pass, confirmar, out string mensaje))
+            if (negocio.EditarUsuario(_idUsuario, nombre, pass, confirmar, rolSeleccionado,out string mensaje))
             {
                 MessageBox.Show("✅ Usuario actualizado correctamente.");
                 this.DialogResult = DialogResult.OK;

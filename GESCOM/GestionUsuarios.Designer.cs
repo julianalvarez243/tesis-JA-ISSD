@@ -31,10 +31,6 @@
             components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
             dgvUsuarios = new DataGridView();
-            id = new DataGridViewTextBoxColumn();
-            Usuario = new DataGridViewTextBoxColumn();
-            Constraseña = new DataGridViewTextBoxColumn();
-            Permisos = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             btnVolver = new Button();
             btnEliminar = new Button();
@@ -44,6 +40,10 @@
             label1 = new Label();
             gescomDBContextBindingSource = new BindingSource(components);
             gescomDBContextBindingSource1 = new BindingSource(components);
+            id = new DataGridViewTextBoxColumn();
+            Usuario = new DataGridViewTextBoxColumn();
+            Constraseña = new DataGridViewTextBoxColumn();
+            Rol = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             panel1.SuspendLayout();
@@ -77,7 +77,7 @@
             // dgvUsuarios
             // 
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { id, Usuario, Constraseña, Permisos });
+            dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { id, Usuario, Constraseña, Rol });
             dgvUsuarios.Dock = DockStyle.Fill;
             dgvUsuarios.Location = new Point(81, 172);
             dgvUsuarios.Margin = new Padding(4, 5, 4, 5);
@@ -85,34 +85,6 @@
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(1650, 737);
             dgvUsuarios.TabIndex = 2;
-            // 
-            // id
-            // 
-            id.HeaderText = "id";
-            id.MinimumWidth = 8;
-            id.Name = "id";
-            id.Width = 150;
-            // 
-            // Usuario
-            // 
-            Usuario.HeaderText = "Usuario";
-            Usuario.MinimumWidth = 8;
-            Usuario.Name = "Usuario";
-            Usuario.Width = 150;
-            // 
-            // Constraseña
-            // 
-            Constraseña.HeaderText = "Contraseña";
-            Constraseña.MinimumWidth = 8;
-            Constraseña.Name = "Constraseña";
-            Constraseña.Width = 150;
-            // 
-            // Permisos
-            // 
-            Permisos.HeaderText = "Permisos";
-            Permisos.MinimumWidth = 8;
-            Permisos.Name = "Permisos";
-            Permisos.Width = 150;
             // 
             // panel1
             // 
@@ -201,6 +173,34 @@
             // 
             gescomDBContextBindingSource1.DataSource = typeof(GESCOM.GescomDBContext);
             // 
+            // id
+            // 
+            id.HeaderText = "id";
+            id.MinimumWidth = 8;
+            id.Name = "id";
+            id.Width = 150;
+            // 
+            // Usuario
+            // 
+            Usuario.HeaderText = "Usuario";
+            Usuario.MinimumWidth = 8;
+            Usuario.Name = "Usuario";
+            Usuario.Width = 150;
+            // 
+            // Constraseña
+            // 
+            Constraseña.HeaderText = "Contraseña";
+            Constraseña.MinimumWidth = 8;
+            Constraseña.Name = "Constraseña";
+            Constraseña.Width = 150;
+            // 
+            // Rol
+            // 
+            Rol.HeaderText = "Rol";
+            Rol.MinimumWidth = 8;
+            Rol.Name = "Rol";
+            Rol.Width = 150;
+            // 
             // GestionUsuarios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -239,5 +239,6 @@
         private DataGridViewTextBoxColumn Usuario;
         private DataGridViewTextBoxColumn Constraseña;
         private DataGridViewTextBoxColumn Permisos;
+        private DataGridViewTextBoxColumn Rol;
     }
 }

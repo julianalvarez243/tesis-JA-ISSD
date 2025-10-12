@@ -38,12 +38,12 @@
             Comentarios = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
+            btnVolver = new Button();
             button3 = new Button();
             button1 = new Button();
             button2 = new Button();
             panel2 = new Panel();
             label1 = new Label();
-            button4 = new Button();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -136,7 +136,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(236, 232, 230);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnVolver);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
@@ -146,6 +146,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1650, 92);
             panel1.TabIndex = 5;
+            // 
+            // btnVolver
+            // 
+            btnVolver.Location = new Point(544, 27);
+            btnVolver.Margin = new Padding(4, 5, 4, 5);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(97, 38);
+            btnVolver.TabIndex = 6;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // button3
             // 
@@ -198,16 +209,6 @@
             label1.TabIndex = 1;
             label1.Text = "Gestion De Comandas";
             // 
-            // button4
-            // 
-            button4.Location = new Point(544, 27);
-            button4.Margin = new Padding(4, 5, 4, 5);
-            button4.Name = "button4";
-            button4.Size = new Size(97, 38);
-            button4.TabIndex = 6;
-            button4.Text = "Recargar";
-            button4.UseVisualStyleBackColor = true;
-            // 
             // GestionDeComandas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -242,6 +243,6 @@
         private Button button2;
         private Panel panel2;
         private Label label1;
-        private Button button4;
+        private Button btnVolver;
     }
 }

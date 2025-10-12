@@ -36,6 +36,7 @@
             btnActualizar = new Button();
             txtContrasenia = new TextBox();
             txtNombreUsuario = new TextBox();
+            cboRol = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(cboRol);
             panel1.Controls.Add(txtConfirmarContrasenia);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnActualizar);
@@ -143,6 +145,14 @@
             txtNombreUsuario.Size = new Size(471, 39);
             txtNombreUsuario.TabIndex = 0;
             // 
+            // cboRol
+            // 
+            cboRol.FormattingEnabled = true;
+            cboRol.Location = new Point(51, 291);
+            cboRol.Name = "cboRol";
+            cboRol.Size = new Size(461, 33);
+            cboRol.TabIndex = 7;
+            // 
             // ModificarUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -173,5 +183,6 @@
         private Button btnActualizar;
         private TextBox txtContrasenia;
         private TextBox txtNombreUsuario;
+        private ComboBox cboRol;
     }
 }

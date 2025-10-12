@@ -30,19 +30,19 @@
         {
             groupBox1 = new GroupBox();
             label15 = new Label();
-            button11 = new Button();
+            btnVerDesempenio = new Button();
             btnComandas = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
+            btnVerInformeMensual = new Button();
+            btnVerInformeDiario = new Button();
+            btnGenerarDesempenio = new Button();
             label13 = new Label();
             label14 = new Label();
             btnNuevaComanda = new Button();
             label11 = new Label();
             label12 = new Label();
-            button5 = new Button();
+            btnGenerarInformeMensual = new Button();
             label10 = new Label();
-            button4 = new Button();
+            btnGenerarInformeDiario = new Button();
             label8 = new Label();
             label9 = new Label();
             btnComida = new Button();
@@ -68,19 +68,19 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label15);
-            groupBox1.Controls.Add(button11);
+            groupBox1.Controls.Add(btnVerDesempenio);
             groupBox1.Controls.Add(btnComandas);
-            groupBox1.Controls.Add(button9);
-            groupBox1.Controls.Add(button8);
-            groupBox1.Controls.Add(button7);
+            groupBox1.Controls.Add(btnVerInformeMensual);
+            groupBox1.Controls.Add(btnVerInformeDiario);
+            groupBox1.Controls.Add(btnGenerarDesempenio);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(label14);
             groupBox1.Controls.Add(btnNuevaComanda);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(btnGenerarInformeMensual);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(btnGenerarInformeDiario);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(btnComida);
@@ -111,15 +111,15 @@
             label15.TabIndex = 26;
             label15.Text = "en el mes";
             // 
-            // button11
+            // btnVerDesempenio
             // 
-            button11.Location = new Point(1501, 492);
-            button11.Margin = new Padding(4, 5, 4, 5);
-            button11.Name = "button11";
-            button11.Size = new Size(107, 38);
-            button11.TabIndex = 25;
-            button11.Text = "Ver";
-            button11.UseVisualStyleBackColor = true;
+            btnVerDesempenio.Location = new Point(1501, 492);
+            btnVerDesempenio.Margin = new Padding(4, 5, 4, 5);
+            btnVerDesempenio.Name = "btnVerDesempenio";
+            btnVerDesempenio.Size = new Size(107, 38);
+            btnVerDesempenio.TabIndex = 25;
+            btnVerDesempenio.Text = "Ver";
+            btnVerDesempenio.UseVisualStyleBackColor = true;
             // 
             // btnComandas
             // 
@@ -132,35 +132,35 @@
             btnComandas.UseVisualStyleBackColor = true;
             btnComandas.Click += btnComandas_Click;
             // 
-            // button9
+            // btnVerInformeMensual
             // 
-            button9.Location = new Point(1506, 158);
-            button9.Margin = new Padding(4, 5, 4, 5);
-            button9.Name = "button9";
-            button9.Size = new Size(107, 38);
-            button9.TabIndex = 23;
-            button9.Text = "Ver";
-            button9.UseVisualStyleBackColor = true;
+            btnVerInformeMensual.Location = new Point(1506, 158);
+            btnVerInformeMensual.Margin = new Padding(4, 5, 4, 5);
+            btnVerInformeMensual.Name = "btnVerInformeMensual";
+            btnVerInformeMensual.Size = new Size(107, 38);
+            btnVerInformeMensual.TabIndex = 23;
+            btnVerInformeMensual.Text = "Ver";
+            btnVerInformeMensual.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnVerInformeDiario
             // 
-            button8.Location = new Point(1506, 100);
-            button8.Margin = new Padding(4, 5, 4, 5);
-            button8.Name = "button8";
-            button8.Size = new Size(107, 38);
-            button8.TabIndex = 22;
-            button8.Text = "Ver";
-            button8.UseVisualStyleBackColor = true;
+            btnVerInformeDiario.Location = new Point(1506, 100);
+            btnVerInformeDiario.Margin = new Padding(4, 5, 4, 5);
+            btnVerInformeDiario.Name = "btnVerInformeDiario";
+            btnVerInformeDiario.Size = new Size(107, 38);
+            btnVerInformeDiario.TabIndex = 22;
+            btnVerInformeDiario.Text = "Ver";
+            btnVerInformeDiario.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnGenerarDesempenio
             // 
-            button7.Location = new Point(1386, 492);
-            button7.Margin = new Padding(4, 5, 4, 5);
-            button7.Name = "button7";
-            button7.Size = new Size(107, 38);
-            button7.TabIndex = 21;
-            button7.Text = "Generar";
-            button7.UseVisualStyleBackColor = true;
+            btnGenerarDesempenio.Location = new Point(1386, 492);
+            btnGenerarDesempenio.Margin = new Padding(4, 5, 4, 5);
+            btnGenerarDesempenio.Name = "btnGenerarDesempenio";
+            btnGenerarDesempenio.Size = new Size(107, 38);
+            btnGenerarDesempenio.TabIndex = 21;
+            btnGenerarDesempenio.Text = "Generar";
+            btnGenerarDesempenio.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -217,15 +217,15 @@
             label12.TabIndex = 16;
             label12.Text = "Listado comandas";
             // 
-            // button5
+            // btnGenerarInformeMensual
             // 
-            button5.Location = new Point(1390, 163);
-            button5.Margin = new Padding(4, 5, 4, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(107, 38);
-            button5.TabIndex = 15;
-            button5.Text = "Generar";
-            button5.UseVisualStyleBackColor = true;
+            btnGenerarInformeMensual.Location = new Point(1390, 163);
+            btnGenerarInformeMensual.Margin = new Padding(4, 5, 4, 5);
+            btnGenerarInformeMensual.Name = "btnGenerarInformeMensual";
+            btnGenerarInformeMensual.Size = new Size(107, 38);
+            btnGenerarInformeMensual.TabIndex = 15;
+            btnGenerarInformeMensual.Text = "Generar";
+            btnGenerarInformeMensual.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -238,15 +238,15 @@
             label10.TabIndex = 14;
             label10.Text = "Generar informe de los movimientos de la caja en el mes";
             // 
-            // button4
+            // btnGenerarInformeDiario
             // 
-            button4.Location = new Point(1390, 100);
-            button4.Margin = new Padding(4, 5, 4, 5);
-            button4.Name = "button4";
-            button4.Size = new Size(107, 38);
-            button4.TabIndex = 13;
-            button4.Text = "Generar";
-            button4.UseVisualStyleBackColor = true;
+            btnGenerarInformeDiario.Location = new Point(1390, 100);
+            btnGenerarInformeDiario.Margin = new Padding(4, 5, 4, 5);
+            btnGenerarInformeDiario.Name = "btnGenerarInformeDiario";
+            btnGenerarInformeDiario.Size = new Size(107, 38);
+            btnGenerarInformeDiario.TabIndex = 13;
+            btnGenerarInformeDiario.Text = "Generar";
+            btnGenerarInformeDiario.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -428,6 +428,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.4404974F));
@@ -456,32 +457,32 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "GestionInformes";
             Text = "GestionInformes";
-            Load += GestionInformes_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private GroupBox groupBox1;
         private Label label15;
-        private Button button11;
+        private Button btnVerDesempenio;
         private Button btnComandas;
-        private Button button9;
-        private Button button8;
-        private Button button7;
+        private Button btnVerInformeMensual;
+        private Button btnVerInformeDiario;
+        private Button btnGenerarDesempenio;
         private Label label13;
         private Label label14;
         private Button btnNuevaComanda;
         private Label label11;
         private Label label12;
-        private Button button5;
+        private Button btnGenerarInformeMensual;
         private Label label10;
-        private Button button4;
+        private Button btnGenerarInformeDiario;
         private Label label8;
         private Label label9;
         private Button btnComida;

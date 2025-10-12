@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using GESCOM;
-using capaEF; // Cambiá por el namespace real donde esté AppDbContext
+using capaEF; 
 using System;
 using System.Windows.Forms;
 using WinFormsApp2;
