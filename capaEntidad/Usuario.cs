@@ -15,6 +15,8 @@ namespace capaEntidad
         [Required]
         public string Contrasenia { get; set; }
 
+        [Required]
+        public string Rol { get; set; } = "Mozo";
 
     }
 }

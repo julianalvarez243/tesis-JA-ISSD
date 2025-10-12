@@ -18,7 +18,7 @@ namespace capaNegocio
             return datos.listarUsuarios();
         }
 
-        public bool CrearUsuario(string nombreUsuario, string contrasenia, string confirmarContrasenia, out string mensaje)
+        public bool CrearUsuario(string nombreUsuario, string contrasenia, string confirmarContrasenia, string rolSeleccionado, out string mensaje)
         {
             mensaje = "";
 
@@ -54,7 +54,8 @@ namespace capaNegocio
                 Usuario nuevo = new Usuario
                 {
                     NombreUsuario = nombreUsuario,
-                    Contrasenia = contrasenia
+                    Contrasenia = contrasenia,
+                    Rol = rolSeleccionado
                 };
 
                 db.Usuario.Add(nuevo);
@@ -72,7 +73,7 @@ namespace capaNegocio
             }
         }
 
-        public bool EditarUsuario(int id, string nombreUsuario, string contrasenia, string confirmarContrasenia, out string mensaje)
+        public bool EditarUsuario(int id, string nombreUsuario, string contrasenia, string confirmarContrasenia, string rolSeleccionado, out string mensaje)
         {
             mensaje = "";
 
@@ -112,6 +113,7 @@ namespace capaNegocio
 
                 usuario.NombreUsuario = nombreUsuario;
                 usuario.Contrasenia = contrasenia;
+                usuario.Rol = rolSeleccionado;
 
                 db.SaveChanges();
             }

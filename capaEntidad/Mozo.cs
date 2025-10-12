@@ -12,11 +12,5 @@ namespace capaEntidad
         public int MozoId { get; set; }
         [Required]
         public string Nombre { get; set; }
-        [Required]
-        public int EstadoMozoId { get; set; }
-        [Required]
-        public EstadoMozo EstadoMozo { get; set; }
-        public ICollection<Mesa> Mesas { get; set; }
-
     }
 }

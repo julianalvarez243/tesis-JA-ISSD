@@ -10,10 +10,7 @@ namespace capaEF
         public DbSet<Comanda> Comanda { get; set; }
         public DbSet<EstadoComanda> EstadoComanda { get; set; }
         public DbSet<Mesa> Mesa { get; set; }
-        public DbSet<EstadoMesa> EstadoMesa { get; set; }
-        public DbSet<Tamanio> Tamanio { get; set; }
         public DbSet<Mozo> Mozo { get; set; }
-        public DbSet<EstadoMozo> EstadoMozo { get; set; }
         public DbSet<Caja> Caja { get; set; }
         public DbSet<EstadoCaja> EstadoCaja { get; set; }
         public DbSet<Factura> Factura { get; set; }
@@ -30,12 +27,6 @@ namespace capaEF
                 optionsBuilder.UseSqlServer(
                     "Server=localhost;Database=GESCOM_DB;Trusted_Connection=True;TrustServerCertificate=True;");
             }
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            // Configuración extra si hace falta
         }
     }
 }
