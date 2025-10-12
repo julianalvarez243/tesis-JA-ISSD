@@ -12,15 +12,9 @@ namespace capaEntidad
         public int MesaId { get; set; }
         [Required]
         public int NumeroMesa { get; set; }
-        [Required]
-        public int EstadoMesaId { get; set; }
-        [Required]
-        public EstadoMesa EstadoMesa { get; set; }
-        [Required]
-        public int TamanioId { get; set; }
-        [Required]
-        public Tamanio TamanioMesa { get; set; }
-        public ICollection<Comanda> Comandas { get; set; }
-
+        public string Estado { get; set; }
+        public string Ubicacion { get; set; }
+        public int Tamanio { get; set; }
     }
 }
+

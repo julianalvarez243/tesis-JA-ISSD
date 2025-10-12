@@ -21,6 +21,18 @@ namespace WinFormsApp2
             usuarioActual = user;
 
             labelNombreUsuario.Text = $"{usuarioActual.NombreUsuario}";
+
+            if (usuarioActual.Rol == "Mozo")
+            {
+                btnUsuarios.Enabled = false;
+                btnVerInformeDiario.Enabled = false;
+                btnGenerarInformeDiario.Enabled = false;
+                btnVerInformeMensual.Enabled = false;
+                btnGenerarInformeMensual.Enabled = false;
+                btnGenerarDesempenio.Enabled = false;
+                btnVerDesempenio.Enabled = false;
+
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -67,14 +79,9 @@ namespace WinFormsApp2
         private void btnComandas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GestionDeComandas gestor = new GestionDeComandas();
+            GestionDeComandas gestor = new GestionDeComandas(usuarioActual);
             gestor.WindowState = FormWindowState.Maximized;
             gestor.Show();
-        }
-
-        private void GestionInformes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

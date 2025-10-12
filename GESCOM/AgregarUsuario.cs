@@ -24,10 +24,11 @@ namespace WinFormsApp2
             string nombreUsuario = txtNombreUsuario.Text.Trim();
             string contrasenia = txtContrasenia.Text.Trim();
             string confirmar = txtConfirmarContrasenia.Text.Trim();
+            string rolSeleccionado = cboRol.SelectedItem?.ToString() ?? "";
 
             usuarioNegocio negocio = new usuarioNegocio();
 
-            if (negocio.CrearUsuario(nombreUsuario, contrasenia, confirmar, out string mensaje))
+            if (negocio.CrearUsuario(nombreUsuario, contrasenia, confirmar, rolSeleccionado, out string mensaje))
             {
                 MessageBox.Show("✅ Usuario creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK; // Para refrescar dgv al volver
@@ -44,6 +45,12 @@ namespace WinFormsApp2
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AgregarUsuario_Load(object sender, EventArgs e)
+        {
+            cboRol.Items.Add("Administrador");
+            cboRol.Items.Add("Mozo");
         }
     }
 }

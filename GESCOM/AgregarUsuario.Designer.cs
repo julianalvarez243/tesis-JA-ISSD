@@ -30,6 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            cboRol = new ComboBox();
             txtConfirmarContrasenia = new TextBox();
             btnCancelar = new Button();
             btnAgregar = new Button();
@@ -61,6 +62,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(cboRol);
             panel1.Controls.Add(txtConfirmarContrasenia);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnAgregar);
@@ -72,6 +74,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(572, 462);
             panel1.TabIndex = 0;
+            // 
+            // cboRol
+            // 
+            cboRol.FormattingEnabled = true;
+            cboRol.Location = new Point(51, 289);
+            cboRol.Name = "cboRol";
+            cboRol.Size = new Size(461, 33);
+            cboRol.TabIndex = 6;
             // 
             // txtConfirmarContrasenia
             // 
@@ -155,6 +165,7 @@
             MaximizeBox = false;
             Name = "AgregarUsuario";
             Text = "Agregar";
+            Load += AgregarUsuario_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -174,5 +185,6 @@
         private Button btnCancelar;
         private TextBox txtConfirmarContrasenia;
         private Label label2;
+        private ComboBox cboRol;
     }
 }

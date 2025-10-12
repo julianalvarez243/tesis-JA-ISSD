@@ -30,15 +30,15 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
+            txtEstado = new Label();
+            txtUbicacion = new Label();
+            txtCapacidad = new Label();
+            txtNroMesa = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btnCerrar = new Button();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -48,94 +48,102 @@
             // 
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 406F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 39F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 580F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 56F));
             tableLayoutPanel1.Controls.Add(panel1, 1, 1);
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 283F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 83F));
-            tableLayoutPanel1.Size = new Size(484, 461);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 472F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 138F));
+            tableLayoutPanel1.Size = new Size(691, 768);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
+            panel1.Controls.Add(txtEstado);
+            panel1.Controls.Add(txtUbicacion);
+            panel1.Controls.Add(txtCapacidad);
+            panel1.Controls.Add(txtNroMesa);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnCerrar);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(42, 98);
+            panel1.Location = new Point(59, 163);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(400, 277);
+            panel1.Size = new Size(572, 462);
             panel1.TabIndex = 0;
             // 
-            // label9
+            // txtEstado
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F);
-            label9.Location = new Point(163, 157);
-            label9.Name = "label9";
-            label9.Size = new Size(84, 21);
-            label9.TabIndex = 10;
-            label9.Text = "Disponible";
+            txtEstado.AutoSize = true;
+            txtEstado.Font = new Font("Segoe UI", 12F);
+            txtEstado.Location = new Point(193, 262);
+            txtEstado.Margin = new Padding(4, 0, 4, 0);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(104, 32);
+            txtEstado.TabIndex = 10;
+            txtEstado.Text = "*********";
             // 
-            // label8
+            // txtUbicacion
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F);
-            label8.Location = new Point(131, 118);
-            label8.Name = "label8";
-            label8.Size = new Size(99, 21);
-            label8.TabIndex = 9;
-            label8.Text = "Patio Trasero";
+            txtUbicacion.AutoSize = true;
+            txtUbicacion.Font = new Font("Segoe UI", 12F);
+            txtUbicacion.Location = new Point(187, 197);
+            txtUbicacion.Margin = new Padding(4, 0, 4, 0);
+            txtUbicacion.Name = "txtUbicacion";
+            txtUbicacion.Size = new Size(104, 32);
+            txtUbicacion.TabIndex = 9;
+            txtUbicacion.Text = "*********";
             // 
-            // label7
+            // txtCapacidad
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(135, 78);
-            label7.Name = "label7";
-            label7.Size = new Size(19, 21);
-            label7.TabIndex = 8;
-            label7.Text = "6";
+            txtCapacidad.AutoSize = true;
+            txtCapacidad.Font = new Font("Segoe UI", 12F);
+            txtCapacidad.Location = new Point(193, 130);
+            txtCapacidad.Margin = new Padding(4, 0, 4, 0);
+            txtCapacidad.Name = "txtCapacidad";
+            txtCapacidad.Size = new Size(27, 32);
+            txtCapacidad.TabIndex = 8;
+            txtCapacidad.Text = "0";
             // 
-            // label6
+            // txtNroMesa
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(183, 36);
-            label6.Name = "label6";
-            label6.Size = new Size(19, 21);
-            label6.TabIndex = 7;
-            label6.Text = "1";
+            txtNroMesa.AutoSize = true;
+            txtNroMesa.Font = new Font("Segoe UI", 12F);
+            txtNroMesa.Location = new Point(261, 60);
+            txtNroMesa.Margin = new Padding(4, 0, 4, 0);
+            txtNroMesa.Name = "txtNroMesa";
+            txtNroMesa.Size = new Size(27, 32);
+            txtNroMesa.TabIndex = 7;
+            txtNroMesa.Text = "0";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(44, 157);
+            label5.Location = new Point(63, 262);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(113, 21);
+            label5.Size = new Size(89, 32);
             label5.TabIndex = 6;
-            label5.Text = "Disponibilidad:";
+            label5.Text = "Estado:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(44, 118);
+            label4.Location = new Point(63, 197);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(81, 21);
+            label4.Size = new Size(123, 32);
             label4.TabIndex = 5;
             label4.Text = "Ubicacion:";
             // 
@@ -143,9 +151,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(44, 78);
+            label3.Location = new Point(63, 130);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(85, 21);
+            label3.Size = new Size(129, 32);
             label3.TabIndex = 4;
             label3.Text = "Capacidad:";
             // 
@@ -153,21 +162,24 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(44, 36);
+            label2.Location = new Point(63, 60);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(133, 21);
+            label2.Size = new Size(205, 32);
             label2.TabIndex = 3;
             label2.Text = "Numero de Mesa:";
             // 
-            // button1
+            // btnCerrar
             // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(126, 218);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 37);
-            button1.TabIndex = 2;
-            button1.Text = "Volver";
-            button1.UseVisualStyleBackColor = true;
+            btnCerrar.Font = new Font("Segoe UI", 12F);
+            btnCerrar.Location = new Point(180, 363);
+            btnCerrar.Margin = new Padding(4, 5, 4, 5);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(207, 62);
+            btnCerrar.TabIndex = 2;
+            btnCerrar.Text = "Volver";
+            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // label1
             // 
@@ -175,22 +187,25 @@
             label1.BackColor = Color.FromArgb(236, 232, 221);
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(42, 0);
+            label1.Location = new Point(59, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(400, 95);
+            label1.Size = new Size(572, 158);
             label1.TabIndex = 1;
             label1.Text = "Datos de la Mesa";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ConsultarMesa
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 232, 221);
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(691, 768);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ConsultarMesa";
             Text = "Datos de la mesa";
+            Load += ConsultarMesa_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -202,12 +217,12 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private Button button1;
+        private Button btnCerrar;
         private Label label1;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
+        private Label txtEstado;
+        private Label txtUbicacion;
+        private Label txtCapacidad;
+        private Label txtNroMesa;
         private Label label5;
         private Label label4;
         private Label label3;
