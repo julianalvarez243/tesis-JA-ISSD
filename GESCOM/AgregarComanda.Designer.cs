@@ -28,197 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            label6 = new Label();
-            label1 = new Label();
             panel1 = new Panel();
-            button4 = new Button();
+            txtCantidadBebida = new TextBox();
+            txtCantidadComida = new TextBox();
+            btnAgregarBebida = new Button();
             label5 = new Label();
-            comboBox3 = new ComboBox();
-            button3 = new Button();
+            cboBebida = new ComboBox();
+            btnAgregarComida = new Button();
             label4 = new Label();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            cboComida = new ComboBox();
+            txtCantComensales = new TextBox();
+            cboNroMesa = new ComboBox();
             label3 = new Label();
             label2 = new Label();
             panel2 = new Panel();
-            textBox3 = new TextBox();
-            button2 = new Button();
-            button1 = new Button();
-            panel3 = new Panel();
-            button5 = new Button();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            tableLayoutPanel1.SuspendLayout();
+            txtComentario = new TextBox();
+            btnVolver = new Button();
+            btnConfirmar = new Button();
+            label1 = new Label();
+            label6 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            lstPedido = new ListBox();
+            btnEliminarItem = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
-            tableLayoutPanel1.ColumnCount = 5;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.82997751F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.17002F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 19F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 304F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Controls.Add(label6, 3, 0);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
-            tableLayoutPanel1.Controls.Add(panel3, 3, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5686283F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.43137F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 18F));
-            tableLayoutPanel1.Size = new Size(734, 461);
-            tableLayoutPanel1.TabIndex = 5;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(236, 232, 221);
-            label6.Dock = DockStyle.Fill;
-            label6.Font = new Font("Segoe UI", 25F);
-            label6.Location = new Point(412, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(298, 95);
-            label6.TabIndex = 4;
-            label6.Text = "Listado del pedido";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(236, 232, 221);
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(33, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(354, 95);
-            label1.TabIndex = 0;
-            label1.Text = "Agregar Comanda";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(236, 232, 221);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(txtCantidadBebida);
+            panel1.Controls.Add(txtCantidadComida);
+            panel1.Controls.Add(btnAgregarBebida);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(cboBebida);
+            panel1.Controls.Add(btnAgregarComida);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cboComida);
+            panel1.Controls.Add(txtCantComensales);
+            panel1.Controls.Add(cboNroMesa);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnVolver);
+            panel1.Controls.Add(btnConfirmar);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(33, 98);
+            panel1.Location = new Point(47, 98);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(354, 341);
+            panel1.Size = new Size(506, 572);
             panel1.TabIndex = 1;
             // 
-            // button4
+            // txtCantidadBebida
             // 
-            button4.Font = new Font("Segoe UI", 10F);
-            button4.ImageAlign = ContentAlignment.TopRight;
-            button4.Location = new Point(246, 190);
-            button4.Name = "button4";
-            button4.Size = new Size(86, 32);
-            button4.TabIndex = 22;
-            button4.Text = "Agregar";
-            button4.UseVisualStyleBackColor = true;
+            txtCantidadBebida.Location = new Point(185, 278);
+            txtCantidadBebida.Name = "txtCantidadBebida";
+            txtCantidadBebida.Size = new Size(95, 31);
+            txtCantidadBebida.TabIndex = 24;
+            // 
+            // txtCantidadComida
+            // 
+            txtCantidadComida.Location = new Point(185, 153);
+            txtCantidadComida.Name = "txtCantidadComida";
+            txtCantidadComida.Size = new Size(95, 31);
+            txtCantidadComida.TabIndex = 23;
+            // 
+            // btnAgregarBebida
+            // 
+            btnAgregarBebida.Font = new Font("Segoe UI", 10F);
+            btnAgregarBebida.ImageAlign = ContentAlignment.TopRight;
+            btnAgregarBebida.Location = new Point(351, 317);
+            btnAgregarBebida.Margin = new Padding(4, 5, 4, 5);
+            btnAgregarBebida.Name = "btnAgregarBebida";
+            btnAgregarBebida.Size = new Size(123, 53);
+            btnAgregarBebida.TabIndex = 22;
+            btnAgregarBebida.Text = "Agregar";
+            btnAgregarBebida.UseVisualStyleBackColor = true;
+            btnAgregarBebida.Click += btnAgregarBebida_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(37, 165);
+            label5.Location = new Point(53, 275);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(60, 21);
+            label5.Size = new Size(92, 32);
             label5.TabIndex = 21;
             label5.Text = "Bebida:";
             // 
-            // comboBox3
+            // cboBebida
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Elegir Bebida" });
-            comboBox3.Location = new Point(37, 197);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(203, 23);
-            comboBox3.TabIndex = 20;
+            cboBebida.FormattingEnabled = true;
+            cboBebida.Items.AddRange(new object[] { "Elegir Bebida" });
+            cboBebida.Location = new Point(53, 328);
+            cboBebida.Margin = new Padding(4, 5, 4, 5);
+            cboBebida.Name = "cboBebida";
+            cboBebida.Size = new Size(288, 33);
+            cboBebida.TabIndex = 20;
             // 
-            // button3
+            // btnAgregarComida
             // 
-            button3.Font = new Font("Segoe UI", 10F);
-            button3.ImageAlign = ContentAlignment.TopRight;
-            button3.Location = new Point(246, 125);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 32);
-            button3.TabIndex = 19;
-            button3.Text = "Agregar";
-            button3.UseVisualStyleBackColor = true;
+            btnAgregarComida.Font = new Font("Segoe UI", 10F);
+            btnAgregarComida.ImageAlign = ContentAlignment.TopRight;
+            btnAgregarComida.Location = new Point(351, 196);
+            btnAgregarComida.Margin = new Padding(4, 5, 4, 5);
+            btnAgregarComida.Name = "btnAgregarComida";
+            btnAgregarComida.Size = new Size(123, 53);
+            btnAgregarComida.TabIndex = 19;
+            btnAgregarComida.Text = "Agregar";
+            btnAgregarComida.UseVisualStyleBackColor = true;
+            btnAgregarComida.Click += btnAgregarComida_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(37, 104);
+            label4.Location = new Point(53, 150);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(67, 21);
+            label4.Size = new Size(101, 32);
             label4.TabIndex = 18;
             label4.Text = "Comida:";
-            label4.Click += label4_Click;
             // 
-            // comboBox2
+            // cboComida
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Elegir Comida" });
-            comboBox2.Location = new Point(37, 132);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(203, 23);
-            comboBox2.TabIndex = 17;
+            cboComida.FormattingEnabled = true;
+            cboComida.Items.AddRange(new object[] { "Elegir Comida" });
+            cboComida.Location = new Point(53, 208);
+            cboComida.Margin = new Padding(4, 5, 4, 5);
+            cboComida.Name = "cboComida";
+            cboComida.Size = new Size(288, 33);
+            cboComida.TabIndex = 17;
             // 
-            // textBox1
+            // txtCantComensales
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(227, 58);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(62, 29);
-            textBox1.TabIndex = 16;
+            txtCantComensales.BorderStyle = BorderStyle.FixedSingle;
+            txtCantComensales.Font = new Font("Segoe UI", 12F);
+            txtCantComensales.Location = new Point(325, 71);
+            txtCantComensales.Margin = new Padding(4, 5, 4, 5);
+            txtCantComensales.Name = "txtCantComensales";
+            txtCantComensales.Size = new Size(88, 39);
+            txtCantComensales.TabIndex = 16;
             // 
-            // comboBox1
+            // cboNroMesa
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1", "2", "3", "4" });
-            comboBox1.Location = new Point(176, 26);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(64, 23);
-            comboBox1.TabIndex = 15;
+            cboNroMesa.FormattingEnabled = true;
+            cboNroMesa.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            cboNroMesa.Location = new Point(252, 17);
+            cboNroMesa.Margin = new Padding(4, 5, 4, 5);
+            cboNroMesa.Name = "cboNroMesa";
+            cboNroMesa.Size = new Size(90, 33);
+            cboNroMesa.TabIndex = 15;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(37, 60);
+            label3.Location = new Point(54, 74);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(184, 21);
+            label3.Size = new Size(283, 32);
             label3.TabIndex = 14;
             label3.Text = "Cantidad de Comensales:";
             // 
@@ -226,209 +197,176 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(37, 26);
+            label2.Location = new Point(54, 17);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(133, 21);
+            label2.Size = new Size(205, 32);
             label2.TabIndex = 13;
             label2.Text = "Numero de Mesa:";
             // 
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(textBox3);
-            panel2.Location = new Point(37, 226);
+            panel2.Controls.Add(txtComentario);
+            panel2.Location = new Point(53, 377);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(295, 59);
+            panel2.Size = new Size(421, 97);
             panel2.TabIndex = 12;
             // 
-            // textBox3
+            // txtComentario
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Dock = DockStyle.Fill;
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(0, 0);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Comentario";
-            textBox3.Size = new Size(293, 57);
-            textBox3.TabIndex = 11;
+            txtComentario.BorderStyle = BorderStyle.FixedSingle;
+            txtComentario.Dock = DockStyle.Fill;
+            txtComentario.Font = new Font("Segoe UI", 12F);
+            txtComentario.Location = new Point(0, 0);
+            txtComentario.Margin = new Padding(4, 5, 4, 5);
+            txtComentario.Multiline = true;
+            txtComentario.Name = "txtComentario";
+            txtComentario.PlaceholderText = "Comentario";
+            txtComentario.Size = new Size(419, 95);
+            txtComentario.TabIndex = 11;
             // 
-            // button2
+            // btnVolver
             // 
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(188, 291);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 37);
-            button2.TabIndex = 9;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            btnVolver.Font = new Font("Segoe UI", 12F);
+            btnVolver.Location = new Point(269, 485);
+            btnVolver.Margin = new Padding(4, 5, 4, 5);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(206, 62);
+            btnVolver.TabIndex = 9;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnCancelar_Click;
             // 
-            // button1
+            // btnConfirmar
             // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(25, 291);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 37);
-            button1.TabIndex = 7;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = true;
+            btnConfirmar.Font = new Font("Segoe UI", 12F);
+            btnConfirmar.Location = new Point(40, 485);
+            btnConfirmar.Margin = new Padding(4, 5, 4, 5);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(207, 62);
+            btnConfirmar.TabIndex = 7;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
-            // panel3
+            // label1
             // 
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(label14);
-            panel3.Controls.Add(label13);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label7);
-            panel3.Location = new Point(412, 98);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(298, 341);
-            panel3.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(236, 232, 221);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Segoe UI", 30F);
+            label1.Location = new Point(47, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(506, 93);
+            label1.TabIndex = 0;
+            label1.Text = "Agregar Comanda";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // label6
             // 
-            button5.Font = new Font("Segoe UI", 10F);
-            button5.ImageAlign = ContentAlignment.TopRight;
-            button5.Location = new Point(101, 294);
-            button5.Name = "button5";
-            button5.Size = new Size(86, 32);
-            button5.TabIndex = 23;
-            button5.Text = "Quitar";
-            button5.UseVisualStyleBackColor = true;
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(236, 232, 221);
+            label6.Dock = DockStyle.Fill;
+            label6.Font = new Font("Segoe UI", 25F);
+            label6.Location = new Point(588, 0);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(426, 93);
+            label6.TabIndex = 4;
+            label6.Text = "Listado";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // tableLayoutPanel1
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F);
-            label14.Location = new Point(16, 229);
-            label14.Name = "label14";
-            label14.Size = new Size(139, 21);
-            label14.TabIndex = 21;
-            label14.Text = "Ejemplo Bebida 11";
+            tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
+            tableLayoutPanel1.ColumnCount = 5;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.82997751F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.17002F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 27F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 434F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.Controls.Add(label6, 3, 0);
+            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
+            tableLayoutPanel1.Controls.Add(lstPedido, 3, 1);
+            tableLayoutPanel1.Controls.Add(btnEliminarItem, 3, 2);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 13.8398914F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 86.16011F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 92F));
+            tableLayoutPanel1.Size = new Size(1049, 768);
+            tableLayoutPanel1.TabIndex = 5;
             // 
-            // label13
+            // lstPedido
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F);
-            label13.Location = new Point(16, 195);
-            label13.Name = "label13";
-            label13.Size = new Size(130, 21);
-            label13.TabIndex = 20;
-            label13.Text = "Ejemplo Bebida 9";
+            lstPedido.FormattingEnabled = true;
+            lstPedido.ItemHeight = 25;
+            lstPedido.Location = new Point(587, 96);
+            lstPedido.Name = "lstPedido";
+            lstPedido.Size = new Size(428, 554);
+            lstPedido.TabIndex = 5;
             // 
-            // label12
+            // btnEliminarItem
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F);
-            label12.Location = new Point(16, 165);
-            label12.Name = "label12";
-            label12.Size = new Size(130, 21);
-            label12.TabIndex = 19;
-            label12.Text = "Ejemplo Bebida 6";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F);
-            label11.Location = new Point(16, 134);
-            label11.Name = "label11";
-            label11.Size = new Size(130, 21);
-            label11.TabIndex = 18;
-            label11.Text = "Ejemplo Bebida 2";
-            label11.Click += label11_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F);
-            label10.Location = new Point(16, 104);
-            label10.Name = "label10";
-            label10.Size = new Size(137, 21);
-            label10.TabIndex = 17;
-            label10.Text = "Ejemplo Comida 5";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F);
-            label9.Location = new Point(16, 76);
-            label9.Name = "label9";
-            label9.Size = new Size(137, 21);
-            label9.TabIndex = 16;
-            label9.Text = "Ejemplo Comida 6";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F);
-            label8.Location = new Point(16, 45);
-            label8.Name = "label8";
-            label8.Size = new Size(137, 21);
-            label8.TabIndex = 15;
-            label8.Text = "Ejemplo Comida 8";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(16, 13);
-            label7.Name = "label7";
-            label7.Size = new Size(137, 21);
-            label7.TabIndex = 14;
-            label7.Text = "Ejemplo Comida 1";
+            btnEliminarItem.Font = new Font("Segoe UI", 12F);
+            btnEliminarItem.Location = new Point(588, 680);
+            btnEliminarItem.Margin = new Padding(4, 5, 4, 5);
+            btnEliminarItem.Name = "btnEliminarItem";
+            btnEliminarItem.Size = new Size(206, 83);
+            btnEliminarItem.TabIndex = 23;
+            btnEliminarItem.Text = "Eliminar";
+            btnEliminarItem.UseVisualStyleBackColor = true;
+            btnEliminarItem.Click += btnEliminarItem_Click;
             // 
             // AgregarComanda
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 461);
+            ClientSize = new Size(1049, 768);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "AgregarComanda";
             Text = "AgregarComanda";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            Load += AgregarComanda_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
         private Panel panel1;
-        private Panel panel2;
-        private TextBox textBox3;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
+        private Button btnAgregarBebida;
+        private Label label5;
+        private ComboBox cboBebida;
+        private Button btnAgregarComida;
+        private Label label4;
+        private ComboBox cboComida;
+        private TextBox txtCantComensales;
+        private ComboBox cboNroMesa;
         private Label label3;
         private Label label2;
+        private Panel panel2;
+        private TextBox txtComentario;
+        private Button btnVolver;
+        private Button btnConfirmar;
+        private Label label1;
         private Label label6;
-        private Label label4;
-        private ComboBox comboBox2;
-        private Button button3;
-        private Button button4;
-        private Label label5;
-        private ComboBox comboBox3;
-        private Panel panel3;
-        private Label label7;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Button button5;
-        private Label label14;
-        private Label label13;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button btnEliminarItem;
+        private ListBox lstPedido;
+        private TextBox txtCantidadComida;
+        private TextBox txtCantidadBebida;
     }
 }

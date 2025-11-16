@@ -1,29 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\",
+  "WorkspaceRootPath": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\consultarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:consultarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\consultarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:consultarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\gestion de mesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:gestion de mesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84AD6DE1-937C-44D8-AEFB-CC0A4438AF2A}|..\\capaNegocio\\capaNegocio.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\capanegocio\\movimientocajanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\gestion de mesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:gestion de mesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\agregarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:agregarmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{365A52E2-3297-4755-B657-0A3FFF74C31A}|..\\capaEntidad\\capaEntidad.csproj|c:\\users\\julia\\desktop\\me\\facultad\\tesis dev\\gescom c# .net\\capaentidad\\mesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,77 +53,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConsultarMesa.cs",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ConsultarMesa.cs",
-              "RelativeDocumentMoniker": "ConsultarMesa.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ConsultarMesa.cs",
-              "RelativeToolTip": "ConsultarMesa.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:39:48.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgregarMesa.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\AgregarMesa.cs",
-              "RelativeDocumentMoniker": "AgregarMesa.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\AgregarMesa.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AgregarMesa.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:36:54.76Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Gestion de mesas.cs",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\Gestion de mesas.cs",
-              "RelativeDocumentMoniker": "Gestion de mesas.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\Gestion de mesas.cs",
-              "RelativeToolTip": "Gestion de mesas.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAA1wHcAAAANAAAAAAAAAA==",
+              "Title": "movimientoCajaNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaNegocio\\movimientoCajaNegocio.cs",
+              "RelativeDocumentMoniker": "..\\capaNegocio\\movimientoCajaNegocio.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaNegocio\\movimientoCajaNegocio.cs",
+              "RelativeToolTip": "..\\capaNegocio\\movimientoCajaNegocio.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAywDEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:34:27.781Z",
+              "WhenOpened": "2025-11-16T21:22:52.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Mesa.cs",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaEntidad\\Mesa.cs",
-              "RelativeDocumentMoniker": "..\\capaEntidad\\Mesa.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaEntidad\\Mesa.cs",
-              "RelativeToolTip": "..\\capaEntidad\\Mesa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "InformeCajaDia.cs",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaDia.cs",
+              "RelativeDocumentMoniker": "InformeCajaDia.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaDia.cs",
+              "RelativeToolTip": "InformeCajaDia.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA7wCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:33:38.588Z",
+              "WhenOpened": "2025-11-16T21:22:20.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InformeCajaMes.cs",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
+              "RelativeDocumentMoniker": "InformeCajaMes.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
+              "RelativeToolTip": "InformeCajaMes.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAzwEEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T21:14:25.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Gestion de mesas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\Gestion de mesas.cs",
-              "RelativeDocumentMoniker": "Gestion de mesas.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\Gestion de mesas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Gestion de mesas.cs [Dise\u00F1o]",
+              "Title": "InformeCajaMes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
+              "RelativeDocumentMoniker": "InformeCajaMes.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "InformeCajaMes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:33:08.579Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConsultarMesa.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ConsultarMesa.cs",
-              "RelativeDocumentMoniker": "ConsultarMesa.cs",
-              "ToolTip": "C:\\Users\\julia\\Desktop\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ConsultarMesa.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ConsultarMesa.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T11:33:01.649Z",
+              "WhenOpened": "2025-11-16T21:13:46.775Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

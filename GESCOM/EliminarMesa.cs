@@ -16,5 +16,10 @@ namespace WinFormsApp2
         {
             InitializeComponent();
         }
+
+        private void EliminarMesa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

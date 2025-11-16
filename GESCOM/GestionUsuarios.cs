@@ -27,7 +27,7 @@ namespace WinFormsApp2
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GestionInformes main = new GestionInformes(usuarioActual);
+            Gestion main = new Gestion(usuarioActual);
             main.WindowState = FormWindowState.Maximized;
             main.Show();
         }
@@ -55,7 +55,6 @@ namespace WinFormsApp2
             {
                 if (frm.ShowDialog(this) == DialogResult.OK)
                 {
-                    // Refrescar DGV después de cerrar la modal
                     cargarUsuarios();
                 }
             }
@@ -72,7 +71,7 @@ namespace WinFormsApp2
                 {
                     if (frm.ShowDialog(this) == DialogResult.OK)
                     {
-                        cargarUsuarios(); // Refresca DGV después de editar
+                        cargarUsuarios(); 
                     }
                 }
             }
@@ -89,7 +88,6 @@ namespace WinFormsApp2
                 int idUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["id"].Value);
                 string nombreUsuario = dgvUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
 
-                // Preguntar confirmación
                 DialogResult result = MessageBox.Show(
                     $"¿Estás seguro que deseas eliminar al usuario '{nombreUsuario}'?",
                     "Confirmar eliminación",
@@ -103,7 +101,7 @@ namespace WinFormsApp2
                     if (negocio.EliminarUsuario(idUsuario, out string mensaje))
                     {
                         MessageBox.Show("✅ Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cargarUsuarios(); // Refresca el dgv
+                        cargarUsuarios();
                     }
                     else
                     {

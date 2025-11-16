@@ -12,6 +12,11 @@ namespace capaEntidad
         public int EstadoComandaId { get; set; }
         [Required]
         public string Descripcion { get; set; }
-        public ICollection<Comanda> Comandas { get; set; }
+
+
+        public override string ToString()
+        {
+            return Descripcion;
+        }
     }
 }

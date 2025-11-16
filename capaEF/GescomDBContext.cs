@@ -8,11 +8,13 @@ namespace capaEF
         public DbSet<Comida> Comida { get; set; }
         public DbSet<Bebida> Bebida { get; set; }
         public DbSet<Comanda> Comanda { get; set; }
+        public DbSet<ComandaDetalle> ComandaDetalle { get; set; }
         public DbSet<EstadoComanda> EstadoComanda { get; set; }
         public DbSet<Mesa> Mesa { get; set; }
         public DbSet<Mozo> Mozo { get; set; }
         public DbSet<Caja> Caja { get; set; }
-        public DbSet<EstadoCaja> EstadoCaja { get; set; }
+        public DbSet<MovimientoCaja> MovimientoCaja { get; set; }
+        public DbSet<Ticket> Ticket { get; set; }   
         public DbSet<Factura> Factura { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
 

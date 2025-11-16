@@ -29,23 +29,16 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Usuario = new DataGridViewTextBoxColumn();
-            Constraseña = new DataGridViewTextBoxColumn();
-            Permisos = new DataGridViewTextBoxColumn();
-            Bebidas = new DataGridViewTextBoxColumn();
-            Comentarios = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
+            dgvComandas = new DataGridView();
             panel1 = new Panel();
             btnVolver = new Button();
-            button3 = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            btnEliminar = new Button();
+            btnAgregar = new Button();
+            btnEditar = new Button();
             panel2 = new Panel();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvComandas).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -57,7 +50,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.4404974F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95.5595F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
+            tableLayoutPanel1.Controls.Add(dgvComandas, 1, 1);
             tableLayoutPanel1.Controls.Add(panel1, 1, 2);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -72,74 +65,25 @@
             tableLayoutPanel1.Size = new Size(1806, 1050);
             tableLayoutPanel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvComandas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Usuario, Constraseña, Permisos, Bebidas, Comentarios, Estado });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(81, 172);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1650, 737);
-            dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "id";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Usuario
-            // 
-            Usuario.HeaderText = "Mesa";
-            Usuario.MinimumWidth = 8;
-            Usuario.Name = "Usuario";
-            Usuario.Width = 150;
-            // 
-            // Constraseña
-            // 
-            Constraseña.HeaderText = "Comensales";
-            Constraseña.MinimumWidth = 8;
-            Constraseña.Name = "Constraseña";
-            Constraseña.Width = 150;
-            // 
-            // Permisos
-            // 
-            Permisos.HeaderText = "Comidas";
-            Permisos.MinimumWidth = 8;
-            Permisos.Name = "Permisos";
-            Permisos.Width = 150;
-            // 
-            // Bebidas
-            // 
-            Bebidas.HeaderText = "Bebidas";
-            Bebidas.MinimumWidth = 8;
-            Bebidas.Name = "Bebidas";
-            Bebidas.Width = 150;
-            // 
-            // Comentarios
-            // 
-            Comentarios.HeaderText = "Comentarios";
-            Comentarios.MinimumWidth = 8;
-            Comentarios.Name = "Comentarios";
-            Comentarios.Width = 150;
-            // 
-            // Estado
-            // 
-            Estado.HeaderText = "Estado";
-            Estado.MinimumWidth = 8;
-            Estado.Name = "Estado";
-            Estado.Width = 150;
+            dgvComandas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvComandas.Dock = DockStyle.Fill;
+            dgvComandas.Location = new Point(81, 172);
+            dgvComandas.Margin = new Padding(4, 5, 4, 5);
+            dgvComandas.Name = "dgvComandas";
+            dgvComandas.RowHeadersWidth = 62;
+            dgvComandas.Size = new Size(1650, 737);
+            dgvComandas.TabIndex = 2;
+            dgvComandas.CellDoubleClick += dgvComandas_CellDoubleClick_1;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(236, 232, 230);
             panel1.Controls.Add(btnVolver);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnEliminar);
+            panel1.Controls.Add(btnAgregar);
+            panel1.Controls.Add(btnEditar);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(81, 919);
             panel1.Margin = new Padding(4, 5, 4, 5);
@@ -158,35 +102,38 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
-            // button3
+            // btnEliminar
             // 
-            button3.Location = new Point(366, 27);
-            button3.Margin = new Padding(4, 5, 4, 5);
-            button3.Name = "button3";
-            button3.Size = new Size(107, 38);
-            button3.TabIndex = 5;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            btnEliminar.Location = new Point(366, 27);
+            btnEliminar.Margin = new Padding(4, 5, 4, 5);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(107, 38);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
-            // button1
+            // btnAgregar
             // 
-            button1.Location = new Point(30, 27);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 38);
-            button1.TabIndex = 3;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = true;
+            btnAgregar.Location = new Point(30, 27);
+            btnAgregar.Margin = new Padding(4, 5, 4, 5);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(107, 38);
+            btnAgregar.TabIndex = 3;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
-            // button2
+            // btnEditar
             // 
-            button2.Location = new Point(204, 27);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 38);
-            button2.TabIndex = 4;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = true;
+            btnEditar.Location = new Point(204, 27);
+            btnEditar.Margin = new Padding(4, 5, 4, 5);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(97, 38);
+            btnEditar.TabIndex = 4;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // panel2
             // 
@@ -218,8 +165,9 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "GestionDeComandas";
             Text = "GestionDeComandas";
+            Load += GestionDeComandas_Load;
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvComandas).EndInit();
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -229,20 +177,13 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Usuario;
-        private DataGridViewTextBoxColumn Constraseña;
-        private DataGridViewTextBoxColumn Permisos;
-        private DataGridViewTextBoxColumn Bebidas;
-        private DataGridViewTextBoxColumn Comentarios;
-        private DataGridViewTextBoxColumn Estado;
+        private DataGridView dgvComandas;
         private Panel panel1;
-        private Button button3;
-        private Button button1;
-        private Button button2;
+        private Button btnEliminar;
+        private Button btnEditar;
         private Panel panel2;
         private Label label1;
         private Button btnVolver;
+        private Button btnAgregar;
     }
 }

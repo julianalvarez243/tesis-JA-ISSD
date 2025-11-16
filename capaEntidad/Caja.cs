@@ -16,8 +16,5 @@ namespace capaEntidad
         public decimal CantFinal { get; set; }
         [Required]
         public int EstadoCajaId { get; set; }
-        [Required]
-        public EstadoCaja EstadoCaja { get; set; }
-
     }
 }
