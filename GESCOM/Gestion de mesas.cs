@@ -21,10 +21,8 @@ namespace WinFormsApp2
         {
             mesaNegocio negocio = new mesaNegocio();
 
-            // Trae todas las mesas
             dgvMesas.DataSource = negocio.listarMesas();
 
-            // Ocultar columnas que no queremos mostrar
             dgvMesas.Columns["MesaId"].Visible = false;
 
             dgvMesas.Columns["NumeroMesa"].HeaderText = "Número";
@@ -41,7 +39,7 @@ namespace WinFormsApp2
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GestionInformes main = new GestionInformes(usuarioActual);
+            Gestion main = new Gestion(usuarioActual);
             main.WindowState = FormWindowState.Maximized;
             main.Show();
         }
@@ -116,8 +114,13 @@ namespace WinFormsApp2
                 ConsultarMesa frm = new ConsultarMesa(mesaSeleccionada);
                 frm.ShowDialog();
 
-                cargarMesas ();
+                cargarMesas();
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

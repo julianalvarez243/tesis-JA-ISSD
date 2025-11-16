@@ -15,6 +15,5 @@ namespace capaEntidad
         public string? Descripcion { get; set; }
         [Required]
         public decimal Precio { get; set; }
-        public ICollection<Comanda> Comandas { get; set; }
     }
 }

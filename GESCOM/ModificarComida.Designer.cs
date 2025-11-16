@@ -32,11 +32,11 @@
             label1 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            button2 = new Button();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            txtDescripcion = new TextBox();
+            txtPrecio = new TextBox();
+            btnCancelar = new Button();
+            btnActualizar = new Button();
+            txtNombre = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -48,17 +48,18 @@
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.82997751F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.17002F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
             tableLayoutPanel1.Controls.Add(panel1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5686283F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.43137F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.Size = new Size(484, 461);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
+            tableLayoutPanel1.Size = new Size(691, 768);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // label1
@@ -67,9 +68,10 @@
             label1.BackColor = Color.FromArgb(236, 232, 221);
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(38, 0);
+            label1.Location = new Point(53, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(406, 88);
+            label1.Size = new Size(580, 146);
             label1.TabIndex = 0;
             label1.Text = "Modificar Comida";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -78,85 +80,96 @@
             // 
             panel1.BackColor = Color.FromArgb(236, 232, 221);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtPrecio);
+            panel1.Controls.Add(btnCancelar);
+            panel1.Controls.Add(btnActualizar);
+            panel1.Controls.Add(txtNombre);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(38, 91);
+            panel1.Location = new Point(53, 151);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(406, 314);
+            panel1.Size = new Size(580, 524);
             panel1.TabIndex = 1;
             // 
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(textBox3);
-            panel2.Location = new Point(38, 75);
+            panel2.Controls.Add(txtDescripcion);
+            panel2.Location = new Point(54, 125);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(330, 92);
+            panel2.Size = new Size(471, 152);
             panel2.TabIndex = 12;
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Dock = DockStyle.Fill;
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(0, 0);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Descripción";
-            textBox3.Size = new Size(328, 90);
-            textBox3.TabIndex = 11;
+            txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
+            txtDescripcion.Dock = DockStyle.Fill;
+            txtDescripcion.Font = new Font("Segoe UI", 12F);
+            txtDescripcion.Location = new Point(0, 0);
+            txtDescripcion.Margin = new Padding(4, 5, 4, 5);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Descripción";
+            txtDescripcion.Size = new Size(469, 150);
+            txtDescripcion.TabIndex = 11;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(38, 173);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Precio";
-            textBox2.Size = new Size(330, 29);
-            textBox2.TabIndex = 10;
+            txtPrecio.BorderStyle = BorderStyle.FixedSingle;
+            txtPrecio.Font = new Font("Segoe UI", 12F);
+            txtPrecio.Location = new Point(54, 288);
+            txtPrecio.Margin = new Padding(4, 5, 4, 5);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.PlaceholderText = "Precio";
+            txtPrecio.Size = new Size(471, 39);
+            txtPrecio.TabIndex = 10;
             // 
-            // button2
+            // btnCancelar
             // 
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.Location = new Point(211, 224);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 37);
-            button2.TabIndex = 9;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            btnCancelar.Font = new Font("Segoe UI", 12F);
+            btnCancelar.Location = new Point(301, 373);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(206, 62);
+            btnCancelar.TabIndex = 9;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // button1
+            // btnActualizar
             // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(50, 224);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 37);
-            button1.TabIndex = 7;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = true;
+            btnActualizar.Font = new Font("Segoe UI", 12F);
+            btnActualizar.Location = new Point(71, 373);
+            btnActualizar.Margin = new Padding(4, 5, 4, 5);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(207, 62);
+            btnActualizar.TabIndex = 7;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(38, 40);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Nombre";
-            textBox1.Size = new Size(330, 29);
-            textBox1.TabIndex = 5;
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Font = new Font("Segoe UI", 12F);
+            txtNombre.Location = new Point(54, 67);
+            txtNombre.Margin = new Padding(4, 5, 4, 5);
+            txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "Nombre";
+            txtNombre.Size = new Size(471, 39);
+            txtNombre.TabIndex = 5;
             // 
             // ModificarComida
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(691, 768);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ModificarComida";
             Text = "ModificarComida";
+            Load += ModificarComida_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -172,10 +185,10 @@
         private Label label1;
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
+        private TextBox txtDescripcion;
+        private TextBox txtPrecio;
+        private Button btnCancelar;
+        private Button btnActualizar;
+        private TextBox txtNombre;
     }
 }

@@ -22,6 +22,18 @@
     <Compile Update="ConsultarMesa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EliminarComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InformeCajaMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InformeCajaDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -40,7 +52,7 @@
     <Compile Update="GestionDeComandas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GestionInformes.cs">
+    <Compile Update="Gestion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GestionMenu.cs">

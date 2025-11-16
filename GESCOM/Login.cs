@@ -33,7 +33,7 @@ namespace WinFormsApp2
                 {
                     this.Hide();
                     // Abrir formulario principal
-                    GestionInformes main = new GestionInformes(user);
+                    Gestion main = new Gestion(user);
                     main.WindowState = FormWindowState.Maximized;
                     main.Show();
 

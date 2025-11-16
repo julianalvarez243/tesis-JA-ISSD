@@ -64,6 +64,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
             tableLayoutPanel1.Size = new Size(1806, 1050);
             tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // dgvMesas
             // 

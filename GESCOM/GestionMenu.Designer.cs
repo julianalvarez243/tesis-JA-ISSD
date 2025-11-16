@@ -35,19 +35,11 @@
             btnEliminarComida = new Button();
             btnAgregarComida = new Button();
             btnEditarComida = new Button();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Descripcion = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
+            dgvComida = new DataGridView();
             label2 = new Label();
             panel4 = new Panel();
             label4 = new Label();
-            dataGridView4 = new DataGridView();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            dgvBebida = new DataGridView();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             btnVolver2 = new Button();
@@ -56,9 +48,9 @@
             btnEditarBebida = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvComida).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBebida).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -118,6 +110,7 @@
             btnEliminarComida.TabIndex = 5;
             btnEliminarComida.Text = "Eliminar";
             btnEliminarComida.UseVisualStyleBackColor = true;
+            btnEliminarComida.Click += btnEliminarComida_Click;
             // 
             // btnAgregarComida
             // 
@@ -128,6 +121,7 @@
             btnAgregarComida.TabIndex = 3;
             btnAgregarComida.Text = "Agregar";
             btnAgregarComida.UseVisualStyleBackColor = true;
+            btnAgregarComida.Click += btnAgregarComida_Click;
             // 
             // btnEditarComida
             // 
@@ -138,45 +132,17 @@
             btnEditarComida.TabIndex = 4;
             btnEditarComida.Text = "Editar";
             btnEditarComida.UseVisualStyleBackColor = true;
+            btnEditarComida.Click += btnEditarComida_Click;
             // 
-            // dataGridView1
+            // dgvComida
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Nombre, Descripcion, Precio });
-            dataGridView1.Location = new Point(36, 140);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(682, 769);
-            dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "id";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 8;
-            Nombre.Name = "Nombre";
-            Nombre.Width = 150;
-            // 
-            // Descripcion
-            // 
-            Descripcion.HeaderText = "Descripcion";
-            Descripcion.MinimumWidth = 8;
-            Descripcion.Name = "Descripcion";
-            Descripcion.Width = 150;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.MinimumWidth = 8;
-            Precio.Name = "Precio";
-            Precio.Width = 150;
+            dgvComida.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvComida.Location = new Point(36, 140);
+            dgvComida.Margin = new Padding(4, 5, 4, 5);
+            dgvComida.Name = "dgvComida";
+            dgvComida.RowHeadersWidth = 62;
+            dgvComida.Size = new Size(682, 769);
+            dgvComida.TabIndex = 2;
             // 
             // label2
             // 
@@ -210,45 +176,16 @@
             label4.TabIndex = 1;
             label4.Text = "Bebidas";
             // 
-            // dataGridView4
+            // dgvBebida
             // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12 });
-            dataGridView4.Dock = DockStyle.Fill;
-            dataGridView4.Location = new Point(1091, 140);
-            dataGridView4.Margin = new Padding(4, 5, 4, 5);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersWidth = 62;
-            dataGridView4.Size = new Size(680, 769);
-            dataGridView4.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.HeaderText = "id";
-            dataGridViewTextBoxColumn9.MinimumWidth = 8;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            dataGridViewTextBoxColumn10.HeaderText = "Nombre";
-            dataGridViewTextBoxColumn10.MinimumWidth = 8;
-            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            dataGridViewTextBoxColumn11.HeaderText = "Descripcion";
-            dataGridViewTextBoxColumn11.MinimumWidth = 8;
-            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            dataGridViewTextBoxColumn11.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            dataGridViewTextBoxColumn12.HeaderText = "Precio";
-            dataGridViewTextBoxColumn12.MinimumWidth = 8;
-            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            dataGridViewTextBoxColumn12.Width = 150;
+            dgvBebida.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBebida.Dock = DockStyle.Fill;
+            dgvBebida.Location = new Point(1091, 140);
+            dgvBebida.Margin = new Padding(4, 5, 4, 5);
+            dgvBebida.Name = "dgvBebida";
+            dgvBebida.RowHeadersWidth = 62;
+            dgvBebida.Size = new Size(680, 769);
+            dgvBebida.TabIndex = 12;
             // 
             // tableLayoutPanel1
             // 
@@ -260,10 +197,10 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 688F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
             tableLayoutPanel1.Controls.Add(panel3, 3, 2);
-            tableLayoutPanel1.Controls.Add(dataGridView4, 3, 1);
+            tableLayoutPanel1.Controls.Add(dgvBebida, 3, 1);
             tableLayoutPanel1.Controls.Add(panel4, 3, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
+            tableLayoutPanel1.Controls.Add(dgvComida, 1, 1);
             tableLayoutPanel1.Controls.Add(panel1, 1, 2);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -300,6 +237,7 @@
             btnVolver2.TabIndex = 6;
             btnVolver2.Text = "Volver";
             btnVolver2.UseVisualStyleBackColor = true;
+            btnVolver2.Click += btnVolver2_Click;
             // 
             // btnEliminarBebida
             // 
@@ -310,6 +248,7 @@
             btnEliminarBebida.TabIndex = 5;
             btnEliminarBebida.Text = "Eliminar";
             btnEliminarBebida.UseVisualStyleBackColor = true;
+            btnEliminarBebida.Click += btnEliminarBebida_Click;
             // 
             // btnAgregarBebida
             // 
@@ -320,6 +259,7 @@
             btnAgregarBebida.TabIndex = 3;
             btnAgregarBebida.Text = "Agregar";
             btnAgregarBebida.UseVisualStyleBackColor = true;
+            btnAgregarBebida.Click += btnAgregarBebida_Click;
             // 
             // btnEditarBebida
             // 
@@ -330,6 +270,7 @@
             btnEditarBebida.TabIndex = 4;
             btnEditarBebida.Text = "Editar";
             btnEditarBebida.UseVisualStyleBackColor = true;
+            btnEditarBebida.Click += btnEditarBebida_Click;
             // 
             // GestionMenu
             // 
@@ -340,13 +281,14 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "GestionMenu";
             Text = "GestionMenu";
+            Load += GestionMenu_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvComida).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBebida).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel3.ResumeLayout(false);
@@ -362,19 +304,11 @@
         private Button btnEliminarComida;
         private Button btnAgregarComida;
         private Button btnEditarComida;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Descripcion;
-        private DataGridViewTextBoxColumn Precio;
+        private DataGridView dgvComida;
         private Label label2;
         private Panel panel4;
         private Label label4;
-        private DataGridView dataGridView4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridView dgvBebida;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel3;
         private Button button1;
