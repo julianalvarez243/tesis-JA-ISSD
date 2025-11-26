@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsApp2;
 
 namespace capaPresentacion
 {
@@ -24,6 +23,12 @@ namespace capaPresentacion
         {
             InitializeComponent();
             usuarioActual = user;
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
 
 
@@ -54,9 +59,6 @@ namespace capaPresentacion
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
-            GestionInformes main = new GestionInformes(usuarioActual);
-            main.WindowState = FormWindowState.Maximized;
-            main.Show();
         }
     }
 }

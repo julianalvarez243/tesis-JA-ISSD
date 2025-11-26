@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class ModificarUsuario : Form
     {
@@ -46,6 +46,7 @@ namespace WinFormsApp2
             this.FormBorderStyle = FormBorderStyle.FixedDialog;    
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+  
             this.StartPosition = FormStartPosition.CenterScreen;
             this.ShowInTaskbar = false;
         }

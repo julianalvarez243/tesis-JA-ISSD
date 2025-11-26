@@ -5,7 +5,7 @@ using GESCOM;
 using capaEF; 
 using System;
 using System.Windows.Forms;
-using WinFormsApp2;
+using capaPresentacion;
 
 namespace GESCOM
 {

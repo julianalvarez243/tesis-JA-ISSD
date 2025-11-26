@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class AgregarUsuario : Form
     {
@@ -31,7 +31,7 @@ namespace WinFormsApp2
             if (negocio.CrearUsuario(nombreUsuario, contrasenia, confirmar, rolSeleccionado, out string mensaje))
             {
                 MessageBox.Show("✅ Usuario creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK; // Para refrescar dgv al volver
+                this.DialogResult = DialogResult.OK; // para refrescar dgv al volver
                 this.Close();
             }
             else

@@ -7,32 +7,42 @@ using System.Linq;
 using System.Windows.Forms;
 using static capaNegocio.movimientoCajaNegocio;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class AgregarComanda : Form
     {
         private Usuario usuarioActual;
+        private usuarioNegocio usuarioNegocio = new usuarioNegocio();
         private List<ComandaDetalle> listaDetalles = new List<ComandaDetalle>();
         private mesaNegocio mesaNeg = new mesaNegocio();
         private comidaNegocio comidaNeg = new comidaNegocio();
         private bebidaNegocio bebidaNeg = new bebidaNegocio();
         private comandaNegocio comandaNeg = new comandaNegocio();
-        comandaNegocio comNeg = new comandaNegocio();
-        movimientoCajaNegocio movNeg = new movimientoCajaNegocio();
-        MovimientoCaja movimiento = new MovimientoCaja();
+        private movimientoCajaNegocio movNeg = new movimientoCajaNegocio();
+        private MovimientoCaja movimiento = new MovimientoCaja();
+        private Size formOriginalSize;
+        private Dictionary<Control, Rectangle> shadowPanelsOriginalRects = new();
+        private Dictionary<Control, Rectangle> controlsOriginalRects = new();
+        private Dictionary<Control, float> originalFonts = new();
 
         public AgregarComanda(Usuario user)
         {
             InitializeComponent();
             usuarioActual = user;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            InitializeResponsiveLayout();
+            AdjustLayout();
+            this.Resize += Gestion_Resize;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Gestion main = new Gestion(usuarioActual);
-            main.WindowState = FormWindowState.Maximized;
-            main.Show();
         }
 
         private void AgregarComanda_Load(object sender, EventArgs e)
@@ -49,8 +59,8 @@ namespace WinFormsApp2
             cboBebida.DisplayMember = "Nombre";
             cboBebida.ValueMember = "BebidaId";
 
-            txtCantidadComida.Text = "1";
-            txtCantidadBebida.Text = "1";
+            txtCantComida.Text = "1";
+            txtCantBebida.Text = "1";
 
         }
 
@@ -58,7 +68,7 @@ namespace WinFormsApp2
         {
             if (cboComida.SelectedItem == null) return;
             var comida = (Comida)cboComida.SelectedItem;
-            int cantidad = int.Parse(txtCantidadComida.Text);
+            int cantidad = int.Parse(txtCantComida.Text);
 
             listaDetalles.Add(new ComandaDetalle
             {
@@ -73,7 +83,7 @@ namespace WinFormsApp2
         {
             if (cboBebida.SelectedItem == null) return;
             var bebida = (Bebida)cboBebida.SelectedItem;
-            int cantidad = int.Parse(txtCantidadBebida.Text);
+            int cantidad = int.Parse(txtCantBebida.Text);
 
             listaDetalles.Add(new ComandaDetalle
             {
@@ -110,8 +120,8 @@ namespace WinFormsApp2
             cboBebida.SelectedItem = null;
             cboBebida.SelectedItem = null;
             txtCantComensales.Text = "";
-            txtCantidadBebida.Text = "1";
-            txtCantidadComida.Text = "1";
+            txtCantBebida.Text = "1";
+            txtCantComida.Text = "1";
             txtComentario.Text = "";
             cboNroMesa.DataSource = mesaNeg.listarMesas().Where(m => m.Estado == "Disponible").ToList();
             cboNroMesa.DisplayMember = "NumeroMesa";
@@ -152,9 +162,7 @@ namespace WinFormsApp2
                 mesaNeg.editarMesa(mesa);
                 int idComanda = comanda.ComandaId;
 
-               
-
-                decimal totalComanda = comNeg.obtenerTotalComanda(idComanda);
+                decimal totalComanda = comandaNeg.obtenerTotalComanda(idComanda);
 
                 movimiento.ComandaId = idComanda;
                 movimiento.Fecha = DateTime.Now;
@@ -172,15 +180,67 @@ namespace WinFormsApp2
                     return;
                 }
 
-                
-
                 MessageBox.Show("Comanda creada y movimiento registrado.");
+                usuarioActual.CantComandasAtendidas+= 1;
+                usuarioNegocio.actualizarCantidadComandas(usuarioActual.UsuarioId, usuarioActual.CantComandasAtendidas);
                 limpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar la comanda: " + ex.Message);
             }
+        }
+
+        private void InitializeResponsiveLayout()
+        {
+            formOriginalSize = this.ClientSize;
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                shadowPanelsOriginalRects[shadow] = shadow.Bounds;
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    controlsOriginalRects[ctrl] = ctrl.Bounds;
+                    originalFonts[ctrl] = ctrl.Font.Size;
+                }
+            }
+        }
+
+        private void AdjustLayout()
+        {
+            float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
+            float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                Rectangle orig = shadowPanelsOriginalRects[shadow];
+                shadow.Bounds = new Rectangle(
+                    (int)(orig.X * scaleX),
+                    (int)(orig.Y * scaleY),
+                    (int)(orig.Width * scaleX),
+                    (int)(orig.Height * scaleY)
+                );
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    Rectangle ctrlOrig = controlsOriginalRects[ctrl];
+                    ctrl.Bounds = new Rectangle(
+                        (int)(ctrlOrig.X * scaleX),
+                        (int)(ctrlOrig.Y * scaleY),
+                        (int)(ctrlOrig.Width * scaleX),
+                        (int)(ctrlOrig.Height * scaleY)
+                    );
+
+                    float newFontSize = originalFonts[ctrl] * Math.Min(scaleX, scaleY);
+                    ctrl.Font = new Font(ctrl.Font.FontFamily, newFontSize, ctrl.Font.Style);
+                }
+            }
+        }
+
+        private void Gestion_Resize(object sender, EventArgs e)
+        {
+            AdjustLayout();
         }
     }
 }

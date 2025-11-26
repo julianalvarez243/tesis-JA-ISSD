@@ -18,5 +18,6 @@ namespace capaEntidad
         [Required]
         public string Rol { get; set; } = "Mozo";
 
+        public int CantComandasAtendidas { get; set; } = 0;
     }
 }

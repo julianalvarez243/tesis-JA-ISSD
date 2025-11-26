@@ -1,13 +1,14 @@
 ﻿using capaEntidad;
 using capaNegocio;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class AgregarMesa : Form
     {
-        private mesaNegocio negocio = new mesaNegocio();
+        private readonly mesaNegocio negocio = new mesaNegocio();
 
         public AgregarMesa()
         {
@@ -39,34 +40,33 @@ namespace WinFormsApp2
                 return;
             }
 
-            using (var db = new capaEF.GescomDBContext())
+            bool existe = negocio.listarMesas().Any(m => m.NumeroMesa == numeroMesa);
+            if (existe)
             {
-                bool existe = db.Mesa.Any(m => m.NumeroMesa == numeroMesa);
-                if (existe)
-                {
-                    MessageBox.Show("Ya existe una mesa con ese número.");
-                    return;
-                }
+                MessageBox.Show("Ya existe una mesa con ese número.");
+                return;
+            }
 
-                Mesa mesa = new Mesa
-                {
-                    NumeroMesa = numeroMesa,
-                    Tamanio = tamanio,
-                    Ubicacion = txtUbicacion.Text.Trim(),
-                    Estado = estado
-                };
+ 
+            Mesa mesa = new Mesa
+            {
+                NumeroMesa = numeroMesa,
+                Tamanio = tamanio,
+                Ubicacion = txtUbicacion.Text.Trim(),
+                Estado = estado
+            };
 
-                db.Mesa.Add(mesa);
-                db.SaveChanges();
+            try
+            {
+                negocio.agregarMesa(mesa);
+                MessageBox.Show("Mesa agregada correctamente.");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-        }
-
-
-        private void AgregarMesa_Load(object sender, EventArgs e)
-        {
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar la mesa: " + ex.Message);
+            }
         }
     }
 }

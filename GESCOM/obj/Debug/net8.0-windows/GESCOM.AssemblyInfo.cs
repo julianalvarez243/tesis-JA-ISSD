@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GESCOM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbb9ca260a767315e2069ed6ba7857aa679482f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7190d1e3e26673f5577cecb640a274bd926e5e42")]
 [assembly: System.Reflection.AssemblyProductAttribute("GESCOM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GESCOM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

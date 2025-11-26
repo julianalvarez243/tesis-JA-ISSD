@@ -1,10 +1,12 @@
 ﻿using capaEF;
 using capaEntidad;
+using capaPresentacion.Properties;
+using Guna.UI2.WinForms;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class Login : Form
     {
@@ -15,10 +17,21 @@ namespace WinFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CenterPanel();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Login2_Resize(object sender, EventArgs e)
+        {
+            CenterPanel();
+        }
+
+        private void CenterPanel()
+        {
+            guna2ShadowPanel1.Left = (this.ClientSize.Width - guna2ShadowPanel1.Width) / 2;
+            guna2ShadowPanel1.Top = (this.ClientSize.Height - guna2ShadowPanel1.Height) / 2;
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             string usuario = txtNombreUsuario.Text.Trim();
             string password = txtContrasenia.Text;

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class ModificarBebida : Form
     {

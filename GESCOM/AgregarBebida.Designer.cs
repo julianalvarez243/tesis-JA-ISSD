@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace capaPresentacion
 {
     partial class AgregarBebida
     {
@@ -28,165 +28,243 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            txtDescripcion = new TextBox();
-            txtPrecio = new TextBox();
-            btnCancelar = new Button();
-            btnAgregar = new Button();
-            txtNombre = new TextBox();
-            tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnVolver = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            txtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
+            label3 = new Label();
+            txtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
+            label4 = new Label();
+            txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
+            label2 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            guna2Panel1.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.82997751F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.17002F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5686283F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 78.43137F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
-            tableLayoutPanel1.Size = new Size(691, 768);
-            tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(236, 232, 221);
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(53, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(94, 148, 255);
+            label1.Location = new Point(139, 19);
             label1.Name = "label1";
-            label1.Size = new Size(580, 146);
-            label1.TabIndex = 0;
-            label1.Text = "Agregar Bebida";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Size = new Size(268, 46);
+            label1.TabIndex = 1;
+            label1.Text = "Agregar bebida";
             // 
-            // panel1
+            // guna2Panel1
             // 
-            panel1.BackColor = Color.FromArgb(236, 232, 221);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(txtPrecio);
-            panel1.Controls.Add(btnCancelar);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(txtNombre);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(53, 151);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(580, 524);
-            panel1.TabIndex = 1;
+            guna2Panel1.BackColor = Color.FromArgb(236, 232, 221);
+            guna2Panel1.Controls.Add(btnVolver);
+            guna2Panel1.Controls.Add(btnAgregar);
+            guna2Panel1.Controls.Add(label1);
+            guna2Panel1.Controls.Add(guna2ShadowPanel1);
+            guna2Panel1.CustomizableEdges = customizableEdges11;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel1.Size = new Size(553, 614);
+            guna2Panel1.TabIndex = 3;
             // 
-            // panel2
+            // btnVolver
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(txtDescripcion);
-            panel2.Location = new Point(54, 125);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(471, 152);
-            panel2.TabIndex = 12;
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
-            txtDescripcion.Dock = DockStyle.Fill;
-            txtDescripcion.Font = new Font("Segoe UI", 12F);
-            txtDescripcion.Location = new Point(0, 0);
-            txtDescripcion.Margin = new Padding(4, 5, 4, 5);
-            txtDescripcion.Multiline = true;
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.PlaceholderText = "Descripción";
-            txtDescripcion.Size = new Size(469, 150);
-            txtDescripcion.TabIndex = 11;
-            // 
-            // txtPrecio
-            // 
-            txtPrecio.BorderStyle = BorderStyle.FixedSingle;
-            txtPrecio.Font = new Font("Segoe UI", 12F);
-            txtPrecio.Location = new Point(54, 288);
-            txtPrecio.Margin = new Padding(4, 5, 4, 5);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.PlaceholderText = "Precio";
-            txtPrecio.Size = new Size(471, 39);
-            txtPrecio.TabIndex = 10;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(301, 373);
-            btnCancelar.Margin = new Padding(4, 5, 4, 5);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(206, 62);
-            btnCancelar.TabIndex = 9;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnVolver.BorderRadius = 10;
+            btnVolver.CustomizableEdges = customizableEdges1;
+            btnVolver.DisabledState.BorderColor = Color.DarkGray;
+            btnVolver.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnVolver.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnVolver.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVolver.Font = new Font("Segoe UI", 9F);
+            btnVolver.ForeColor = Color.White;
+            btnVolver.Image = Properties.Resources.back;
+            btnVolver.ImageAlign = HorizontalAlignment.Left;
+            btnVolver.Location = new Point(329, 513);
+            btnVolver.Name = "btnVolver";
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnVolver.Size = new Size(148, 40);
+            btnVolver.TabIndex = 5;
+            btnVolver.Text = "Volver";
+            btnVolver.Click += btnVolver_Click;
             // 
             // btnAgregar
             // 
-            btnAgregar.Font = new Font("Segoe UI", 12F);
-            btnAgregar.Location = new Point(71, 373);
-            btnAgregar.Margin = new Padding(4, 5, 4, 5);
+            btnAgregar.BorderRadius = 10;
+            btnAgregar.CustomizableEdges = customizableEdges3;
+            btnAgregar.DisabledState.BorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgregar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregar.Font = new Font("Segoe UI", 9F);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Image = Properties.Resources.add;
+            btnAgregar.ImageAlign = HorizontalAlignment.Left;
+            btnAgregar.Location = new Point(80, 513);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(207, 62);
-            btnAgregar.TabIndex = 7;
+            btnAgregar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAgregar.Size = new Size(148, 40);
+            btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // guna2ShadowPanel1
+            // 
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(txtPrecio);
+            guna2ShadowPanel1.Controls.Add(label3);
+            guna2ShadowPanel1.Controls.Add(txtDescripcion);
+            guna2ShadowPanel1.Controls.Add(label4);
+            guna2ShadowPanel1.Controls.Add(txtNombre);
+            guna2ShadowPanel1.Controls.Add(label2);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(46, 80);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.Size = new Size(464, 389);
+            guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.CustomizableEdges = customizableEdges5;
+            txtPrecio.DefaultText = "";
+            txtPrecio.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPrecio.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPrecio.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPrecio.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPrecio.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPrecio.Font = new Font("Segoe UI", 9F);
+            txtPrecio.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPrecio.IconLeft = Properties.Resources.price;
+            txtPrecio.Location = new Point(33, 288);
+            txtPrecio.Margin = new Padding(3, 4, 3, 4);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.PlaceholderText = "Precio";
+            txtPrecio.SelectedText = "";
+            txtPrecio.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPrecio.Size = new Size(397, 41);
+            txtPrecio.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label3.Location = new Point(33, 256);
+            label3.Name = "label3";
+            label3.Size = new Size(76, 28);
+            label3.TabIndex = 6;
+            label3.Text = "Precio:";
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.CustomizableEdges = customizableEdges7;
+            txtDescripcion.DefaultText = "";
+            txtDescripcion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtDescripcion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtDescripcion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtDescripcion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtDescripcion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDescripcion.Font = new Font("Segoe UI", 9F);
+            txtDescripcion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDescripcion.IconLeft = Properties.Resources.description;
+            txtDescripcion.Location = new Point(33, 180);
+            txtDescripcion.Margin = new Padding(3, 4, 3, 4);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Descripción";
+            txtDescripcion.SelectedText = "";
+            txtDescripcion.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtDescripcion.Size = new Size(397, 41);
+            txtDescripcion.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.Location = new Point(33, 148);
+            label4.Name = "label4";
+            label4.Size = new Size(128, 28);
+            label4.TabIndex = 4;
+            label4.Text = "Descripción:";
             // 
             // txtNombre
             // 
-            txtNombre.BorderStyle = BorderStyle.FixedSingle;
-            txtNombre.Font = new Font("Segoe UI", 12F);
-            txtNombre.Location = new Point(54, 67);
-            txtNombre.Margin = new Padding(4, 5, 4, 5);
+            txtNombre.CustomizableEdges = customizableEdges9;
+            txtNombre.DefaultText = "";
+            txtNombre.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNombre.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNombre.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNombre.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNombre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombre.Font = new Font("Segoe UI", 9F);
+            txtNombre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombre.IconLeft = Properties.Resources.food;
+            txtNombre.Location = new Point(34, 64);
+            txtNombre.Margin = new Padding(3, 4, 3, 4);
             txtNombre.Name = "txtNombre";
-            txtNombre.PlaceholderText = "Nombre";
-            txtNombre.Size = new Size(471, 39);
-            txtNombre.TabIndex = 5;
+            txtNombre.PlaceholderText = "Nombre de la bebida";
+            txtNombre.SelectedText = "";
+            txtNombre.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNombre.Size = new Size(397, 41);
+            txtNombre.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Location = new Point(33, 32);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 28);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre:";
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
             // AgregarBebida
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(691, 768);
-            Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 5, 4, 5);
+            ClientSize = new Size(553, 614);
+            Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarBebida";
             Text = "AgregarBebida";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            Load += AgregarBebida_Load;
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            guna2ShadowPanel1.ResumeLayout(false);
+            guna2ShadowPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private Panel panel1;
-        private Panel panel2;
-        private TextBox txtDescripcion;
-        private TextBox txtPrecio;
-        private Button btnCancelar;
-        private Button btnAgregar;
-        private TextBox txtNombre;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnVolver;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrecio;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtDescripcion;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombre;
+        private Label label2;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }

@@ -2,10 +2,11 @@
 using capaNegocio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class ModificarComanda : Form
     {
@@ -52,12 +53,11 @@ namespace WinFormsApp2
             cboEstado.SelectedValue = comandaActual.EstadoComandaId;
 
 
-            txtCantidadComida.Text = "1";
-            txtCantidadBebida.Text = "1";
+            txtCantComida.Text = "1";
+            txtCantBebida.Text = "1";
             txtCantComensales.Text = comandaActual.CantComensales.ToString();
             txtComentario.Text = comandaActual.Comentario;
 
-            // 🔸 Cargar detalles
             listaDetalles = comandaActual.Detalles
                 .Select(d => new ComandaDetalle
                 {
@@ -87,7 +87,7 @@ namespace WinFormsApp2
         {
             if (cboComida.SelectedItem == null) return;
             var comida = (Comida)cboComida.SelectedItem;
-            int cantidad = int.Parse(txtCantidadComida.Text);
+            int cantidad = int.Parse(txtCantComida.Text);
 
             listaDetalles.Add(new ComandaDetalle
             {
@@ -102,7 +102,7 @@ namespace WinFormsApp2
         {
             if (cboBebida.SelectedItem == null) return;
             var bebida = (Bebida)cboBebida.SelectedItem;
-            int cantidad = int.Parse(txtCantidadBebida.Text);
+            int cantidad = int.Parse(txtCantBebida.Text);
 
             listaDetalles.Add(new ComandaDetalle
             {
@@ -124,13 +124,60 @@ namespace WinFormsApp2
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
             try
             {
+                int estadoAnterior = comandaActual.EstadoComandaId;
+                int estadoNuevo = (int)cboEstado.SelectedValue;
+
+                if ((estadoNuevo == 2 || estadoNuevo == 3))
+                {
+                    DialogResult confirm = MessageBox.Show(
+                        "Está por cambiar el estado de la comanda a un estado FINAL (Entregada o Cancelada).\n" +
+                        "Después de este cambio NO se podrá volver a modificar ni eliminar.\n\n" +
+                        "¿Desea continuar?",
+                        "Confirmar cambio de estado",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+
+                    if (confirm == DialogResult.No)
+                    {
+                        return; 
+                    }
+                }
+
                 comandaActual.MesaId = (int)cboNroMesa.SelectedValue;
                 comandaActual.CantComensales = int.Parse(txtCantComensales.Text);
                 comandaActual.Comentario = txtComentario.Text;
                 comandaActual.EstadoComandaId = (int)cboEstado.SelectedValue;
                 comandaActual.Detalles = listaDetalles;
+
+                if (comandaActual.EstadoComandaId == 3)
+                {
+                    movimientoCajaNegocio movNeg = new movimientoCajaNegocio();
+                    MovimientoCaja movimiento = new MovimientoCaja();
+                    int comandaId = comandaActual.ComandaId;
+
+                    decimal totalComanda = comandaNeg.obtenerTotalComanda(comandaId);
+
+                    movimiento.ComandaId = comandaId;
+                    movimiento.Fecha = DateTime.Now;
+                    movimiento.Tipo = "Egreso";
+                    movimiento.Monto = totalComanda;
+                    movimiento.Descripcion = "Comanda cancelada. ID: " + comandaId;
+                    movimiento.UsuarioId = usuarioActual.UsuarioId;
+
+                    string mensaje;
+                    int idMmov = movNeg.guardarMovimiento(movimiento, out mensaje);
+
+                    if (idMmov <= 0)
+                    {
+                        MessageBox.Show("No se pudo registrar el movimiento de caja: " + mensaje);
+                        return;
+                    }
+
+                }
 
                 comandaNeg.actualizarComanda(comandaActual);
 

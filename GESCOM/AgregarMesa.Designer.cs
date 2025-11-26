@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace capaPresentacion
 {
     partial class AgregarMesa
     {
@@ -28,188 +28,313 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
-            txtCapacidad = new TextBox();
-            txtUbicacion = new TextBox();
-            txtNroMesa = new TextBox();
-            Reservada = new RadioButton();
-            noDisponible = new RadioButton();
-            Disponible = new RadioButton();
-            btnCancelar = new Button();
-            btnAgregar = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnVolver = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
-            tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            txtCapacidad = new Guna.UI2.WinForms.Guna2TextBox();
+            label3 = new Label();
+            txtUbicacion = new Guna.UI2.WinForms.Guna2TextBox();
+            label4 = new Label();
+            txtNroMesa = new Guna.UI2.WinForms.Guna2TextBox();
+            label2 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            Disponible = new Guna.UI2.WinForms.Guna2RadioButton();
+            noDisponible = new Guna.UI2.WinForms.Guna2RadioButton();
+            Reservada = new Guna.UI2.WinForms.Guna2RadioButton();
+            guna2Panel1.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // guna2Panel1
             // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 580F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 56F));
-            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 472F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 138F));
-            tableLayoutPanel1.Size = new Size(691, 768);
-            tableLayoutPanel1.TabIndex = 1;
+            guna2Panel1.Controls.Add(btnVolver);
+            guna2Panel1.Controls.Add(btnAgregar);
+            guna2Panel1.Controls.Add(label1);
+            guna2Panel1.Controls.Add(guna2ShadowPanel1);
+            guna2Panel1.CustomizableEdges = customizableEdges11;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel1.Size = new Size(553, 614);
+            guna2Panel1.TabIndex = 1;
             // 
-            // panel1
+            // btnVolver
             // 
-            panel1.BackColor = Color.FromArgb(236, 232, 221);
-            panel1.Controls.Add(txtCapacidad);
-            panel1.Controls.Add(txtUbicacion);
-            panel1.Controls.Add(txtNroMesa);
-            panel1.Controls.Add(Reservada);
-            panel1.Controls.Add(noDisponible);
-            panel1.Controls.Add(Disponible);
-            panel1.Controls.Add(btnCancelar);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(59, 163);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(572, 462);
-            panel1.TabIndex = 0;
-            // 
-            // txtCapacidad
-            // 
-            txtCapacidad.Location = new Point(370, 147);
-            txtCapacidad.Name = "txtCapacidad";
-            txtCapacidad.PlaceholderText = "Capacidad";
-            txtCapacidad.Size = new Size(178, 31);
-            txtCapacidad.TabIndex = 10;
-            // 
-            // txtUbicacion
-            // 
-            txtUbicacion.Location = new Point(61, 147);
-            txtUbicacion.Name = "txtUbicacion";
-            txtUbicacion.PlaceholderText = "Ubicacion";
-            txtUbicacion.Size = new Size(178, 31);
-            txtUbicacion.TabIndex = 9;
-            // 
-            // txtNroMesa
-            // 
-            txtNroMesa.Location = new Point(61, 19);
-            txtNroMesa.Name = "txtNroMesa";
-            txtNroMesa.PlaceholderText = "Numero de mesa";
-            txtNroMesa.Size = new Size(178, 31);
-            txtNroMesa.TabIndex = 8;
-            // 
-            // Reservada
-            // 
-            Reservada.AutoSize = true;
-            Reservada.Location = new Point(397, 100);
-            Reservada.Margin = new Padding(4, 5, 4, 5);
-            Reservada.Name = "Reservada";
-            Reservada.RightToLeft = RightToLeft.No;
-            Reservada.Size = new Size(117, 29);
-            Reservada.TabIndex = 7;
-            Reservada.TabStop = true;
-            Reservada.Text = "Reservada";
-            Reservada.UseVisualStyleBackColor = true;
-            // 
-            // noDisponible
-            // 
-            noDisponible.AutoSize = true;
-            noDisponible.Location = new Point(397, 61);
-            noDisponible.Margin = new Padding(4, 5, 4, 5);
-            noDisponible.Name = "noDisponible";
-            noDisponible.RightToLeft = RightToLeft.No;
-            noDisponible.Size = new Size(151, 29);
-            noDisponible.TabIndex = 6;
-            noDisponible.TabStop = true;
-            noDisponible.Text = "No Disponible";
-            noDisponible.UseVisualStyleBackColor = true;
-            // 
-            // Disponible
-            // 
-            Disponible.AutoSize = true;
-            Disponible.Location = new Point(397, 19);
-            Disponible.Margin = new Padding(4, 5, 4, 5);
-            Disponible.Name = "Disponible";
-            Disponible.RightToLeft = RightToLeft.No;
-            Disponible.Size = new Size(122, 29);
-            Disponible.TabIndex = 5;
-            Disponible.TabStop = true;
-            Disponible.Text = "Disponible";
-            Disponible.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(300, 288);
-            btnCancelar.Margin = new Padding(4, 5, 4, 5);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(206, 62);
-            btnCancelar.TabIndex = 4;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            btnVolver.BorderRadius = 10;
+            btnVolver.CustomizableEdges = customizableEdges1;
+            btnVolver.DisabledState.BorderColor = Color.DarkGray;
+            btnVolver.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnVolver.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnVolver.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVolver.Font = new Font("Segoe UI", 9F);
+            btnVolver.ForeColor = Color.White;
+            btnVolver.Image = Properties.Resources.back;
+            btnVolver.ImageAlign = HorizontalAlignment.Left;
+            btnVolver.Location = new Point(329, 551);
+            btnVolver.Name = "btnVolver";
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnVolver.Size = new Size(148, 40);
+            btnVolver.TabIndex = 5;
+            btnVolver.Text = "Volver";
+            btnVolver.Click += btnCancelar_Click;
             // 
             // btnAgregar
             // 
-            btnAgregar.Font = new Font("Segoe UI", 12F);
-            btnAgregar.Location = new Point(61, 288);
-            btnAgregar.Margin = new Padding(4, 5, 4, 5);
+            btnAgregar.BorderRadius = 10;
+            btnAgregar.CustomizableEdges = customizableEdges3;
+            btnAgregar.DisabledState.BorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgregar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregar.Font = new Font("Segoe UI", 9F);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Image = Properties.Resources.add;
+            btnAgregar.ImageAlign = HorizontalAlignment.Left;
+            btnAgregar.Location = new Point(68, 551);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(207, 62);
+            btnAgregar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAgregar.Size = new Size(148, 40);
             btnAgregar.TabIndex = 2;
-            btnAgregar.Text = "Confirmar";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Text = "Agregar";
             btnAgregar.Click += btnAgregar_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(59, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(94, 148, 255);
+            label1.Location = new Point(169, 22);
             label1.Name = "label1";
-            label1.Size = new Size(572, 158);
+            label1.Size = new Size(241, 46);
             label1.TabIndex = 1;
-            label1.Text = "Agregar Mesa";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Text = "Agregar mesa";
+            // 
+            // guna2ShadowPanel1
+            // 
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(Reservada);
+            guna2ShadowPanel1.Controls.Add(noDisponible);
+            guna2ShadowPanel1.Controls.Add(Disponible);
+            guna2ShadowPanel1.Controls.Add(txtCapacidad);
+            guna2ShadowPanel1.Controls.Add(label3);
+            guna2ShadowPanel1.Controls.Add(txtUbicacion);
+            guna2ShadowPanel1.Controls.Add(label4);
+            guna2ShadowPanel1.Controls.Add(txtNroMesa);
+            guna2ShadowPanel1.Controls.Add(label2);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(46, 80);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.Radius = 10;
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.Size = new Size(464, 456);
+            guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // txtCapacidad
+            // 
+            txtCapacidad.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCapacidad.CustomizableEdges = customizableEdges5;
+            txtCapacidad.DefaultText = "";
+            txtCapacidad.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCapacidad.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCapacidad.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCapacidad.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCapacidad.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCapacidad.Font = new Font("Segoe UI", 9F);
+            txtCapacidad.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCapacidad.IconLeft = Properties.Resources.people;
+            txtCapacidad.Location = new Point(35, 296);
+            txtCapacidad.Margin = new Padding(3, 4, 3, 4);
+            txtCapacidad.Name = "txtCapacidad";
+            txtCapacidad.PlaceholderText = "Capacidad";
+            txtCapacidad.SelectedText = "";
+            txtCapacidad.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtCapacidad.Size = new Size(174, 41);
+            txtCapacidad.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label3.Location = new Point(35, 264);
+            label3.Name = "label3";
+            label3.Size = new Size(114, 28);
+            label3.TabIndex = 6;
+            label3.Text = "Capacidad:";
+            // 
+            // txtUbicacion
+            // 
+            txtUbicacion.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUbicacion.CustomizableEdges = customizableEdges7;
+            txtUbicacion.DefaultText = "";
+            txtUbicacion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUbicacion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUbicacion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUbicacion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUbicacion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUbicacion.Font = new Font("Segoe UI", 9F);
+            txtUbicacion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUbicacion.IconLeft = Properties.Resources.location;
+            txtUbicacion.Location = new Point(35, 205);
+            txtUbicacion.Margin = new Padding(3, 4, 3, 4);
+            txtUbicacion.Name = "txtUbicacion";
+            txtUbicacion.PlaceholderText = "Ubicación";
+            txtUbicacion.SelectedText = "";
+            txtUbicacion.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtUbicacion.Size = new Size(174, 41);
+            txtUbicacion.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.Location = new Point(35, 173);
+            label4.Name = "label4";
+            label4.Size = new Size(110, 28);
+            label4.TabIndex = 4;
+            label4.Text = "Ubicación:";
+            // 
+            // txtNroMesa
+            // 
+            txtNroMesa.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNroMesa.CustomizableEdges = customizableEdges9;
+            txtNroMesa.DefaultText = "";
+            txtNroMesa.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNroMesa.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNroMesa.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNroMesa.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNroMesa.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNroMesa.Font = new Font("Segoe UI", 9F);
+            txtNroMesa.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNroMesa.IconLeft = Properties.Resources.table;
+            txtNroMesa.Location = new Point(35, 116);
+            txtNroMesa.Margin = new Padding(3, 4, 3, 4);
+            txtNroMesa.Name = "txtNroMesa";
+            txtNroMesa.PlaceholderText = "Nro. mesa";
+            txtNroMesa.SelectedText = "";
+            txtNroMesa.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNroMesa.Size = new Size(174, 41);
+            txtNroMesa.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Location = new Point(34, 84);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 28);
+            label2.TabIndex = 0;
+            label2.Text = "Nro. mesa:";
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // Disponible
+            // 
+            Disponible.AutoSize = true;
+            Disponible.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Disponible.CheckedState.BorderThickness = 0;
+            Disponible.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Disponible.CheckedState.InnerColor = Color.White;
+            Disponible.CheckedState.InnerOffset = -4;
+            Disponible.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            Disponible.Location = new Point(266, 155);
+            Disponible.Name = "Disponible";
+            Disponible.Size = new Size(134, 32);
+            Disponible.TabIndex = 8;
+            Disponible.Text = "Disponible";
+            Disponible.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Disponible.UncheckedState.BorderThickness = 2;
+            Disponible.UncheckedState.FillColor = Color.Transparent;
+            Disponible.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // noDisponible
+            // 
+            noDisponible.AutoSize = true;
+            noDisponible.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            noDisponible.CheckedState.BorderThickness = 0;
+            noDisponible.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            noDisponible.CheckedState.InnerColor = Color.White;
+            noDisponible.CheckedState.InnerOffset = -4;
+            noDisponible.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            noDisponible.Location = new Point(266, 205);
+            noDisponible.Name = "noDisponible";
+            noDisponible.Size = new Size(165, 32);
+            noDisponible.TabIndex = 9;
+            noDisponible.Text = "No disponible";
+            noDisponible.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            noDisponible.UncheckedState.BorderThickness = 2;
+            noDisponible.UncheckedState.FillColor = Color.Transparent;
+            noDisponible.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // Reservada
+            // 
+            Reservada.AutoSize = true;
+            Reservada.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Reservada.CheckedState.BorderThickness = 0;
+            Reservada.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Reservada.CheckedState.InnerColor = Color.FromArgb(94, 148, 255);
+            Reservada.CheckedState.InnerOffset = -4;
+            Reservada.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            Reservada.Location = new Point(266, 260);
+            Reservada.Name = "Reservada";
+            Reservada.Size = new Size(131, 32);
+            Reservada.TabIndex = 10;
+            Reservada.Text = "Reservada";
+            Reservada.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Reservada.UncheckedState.BorderThickness = 2;
+            Reservada.UncheckedState.FillColor = Color.Transparent;
+            Reservada.UncheckedState.InnerColor = Color.Transparent;
             // 
             // AgregarMesa
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 232, 221);
-            ClientSize = new Size(691, 768);
-            Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 5, 4, 5);
+            ClientSize = new Size(553, 614);
+            Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarMesa";
             Text = "Agregar Mesa";
-            Load += AgregarMesa_Load;
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            guna2ShadowPanel1.ResumeLayout(false);
+            guna2ShadowPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
-        private Button btnCancelar;
-        private Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnVolver;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private Label label1;
-        private RadioButton Disponible;
-        private RadioButton noDisponible;
-        private TextBox txtNroMesa;
-        private RadioButton Reservada;
-        private TextBox txtUbicacion;
-        private TextBox txtCapacidad;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCapacidad;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtUbicacion;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txtNroMesa;
+        private Label label2;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Guna.UI2.WinForms.Guna2RadioButton Disponible;
+        private Guna.UI2.WinForms.Guna2RadioButton Reservada;
+        private Guna.UI2.WinForms.Guna2RadioButton noDisponible;
     }
 }

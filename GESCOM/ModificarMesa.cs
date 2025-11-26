@@ -3,7 +3,7 @@ using capaNegocio;
 using System;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class ModificarMesa : Form
     {
@@ -48,7 +48,7 @@ namespace WinFormsApp2
 
             string estado = Disponible.Checked ? "Disponible" :
                             Reservada.Checked ? "Reservada" :
-                            noDisponible.Checked ? "No Disponible" : "";
+                            noDisponible.Checked ? "No disponible" : "";
 
             if (estado == "")
             {

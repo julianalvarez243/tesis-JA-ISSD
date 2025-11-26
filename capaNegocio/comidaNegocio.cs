@@ -17,13 +17,28 @@ namespace capaNegocio
             return datos.listarComida();
         }
 
-        public void agregarComida(Comida comida)
+        private void validarComida(Comida comida)
         {
+            if (comida == null)
+                throw new Exception("Comida inválida.");
+
             if (string.IsNullOrWhiteSpace(comida.Nombre))
                 throw new Exception("El nombre de la comida es obligatorio.");
 
             if (comida.Precio <= 0)
                 throw new Exception("El precio debe ser mayor a 0.");
+
+            if (Decimal.Round(comida.Precio, 2) != comida.Precio)
+                throw new Exception("El precio solo puede tener hasta 2 decimales.");
+
+            string soloNumeros = comida.Precio.ToString().Replace(",", "").Replace(".", "");
+            if (soloNumeros.Length > 10)
+                throw new Exception("El precio no puede superar los 10 dígitos.");
+        }
+
+        public void agregarComida(Comida comida)
+        {
+            validarComida(comida);
 
             var lista = datos.listarComida();
             if (lista.Any(x => x.Nombre.ToLower() == comida.Nombre.ToLower()))
@@ -34,6 +49,8 @@ namespace capaNegocio
 
         public void editarComida(Comida comida)
         {
+            validarComida(comida);
+
             datos.editarComida(comida);
         }
 

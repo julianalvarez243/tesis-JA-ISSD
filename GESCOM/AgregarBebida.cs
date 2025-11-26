@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class AgregarBebida : Form
     {
@@ -22,12 +22,37 @@ namespace WinFormsApp2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string precioTexto = txtPrecio.Text.Trim();
+
+            if (!decimal.TryParse(precioTexto, out decimal precio))
+            {
+                MessageBox.Show("El precio debe ser un número válido.");
+                return;
+            }
+
+
+            if (precio <= 0)
+            {
+                MessageBox.Show("El precio debe ser mayor a 0.");
+                return;
+            }
+
+            if (Decimal.Round(precio, 2) != precio)
+            {
+                MessageBox.Show("El precio solo puede tener hasta 2 decimales.");
+                return;
+            }
+
+            string soloNumeros = precioTexto.Replace(",", "").Replace(".", "");
+            if (soloNumeros.Length > 10)
+            {
+                MessageBox.Show("El precio no puede superar los 10 dígitos.");
+                return;
+            }
+
             try
             {
-                if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
-                    throw new Exception("El precio debe ser un valor numérico.");
-
-                Bebida nuevaBebida= new Bebida
+                Bebida nuevaBebida = new Bebida
                 {
                     Nombre = txtNombre.Text.Trim(),
                     Precio = precio,
@@ -46,6 +71,20 @@ namespace WinFormsApp2
             {
                 MessageBox.Show(ex.Message, "Error al agregar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AgregarBebida_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
     }
 }
