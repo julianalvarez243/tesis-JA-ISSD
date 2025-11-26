@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace capaPresentacion
 {
     partial class ConsultarComanda
     {

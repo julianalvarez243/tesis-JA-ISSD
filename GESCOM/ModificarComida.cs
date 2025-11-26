@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class ModificarComida : Form
     {

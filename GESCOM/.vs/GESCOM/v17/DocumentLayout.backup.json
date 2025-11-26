@@ -3,19 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\modificarcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:modificarcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\gestiondecomandas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:gestiondecomandas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84AD6DE1-937C-44D8-AEFB-CC0A4438AF2A}|..\\capaNegocio\\capaNegocio.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\capanegocio\\movimientocajanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:informecajames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|c:\\users\\bulli\\onedrive\\escritorio\\me\\facultad\\tesis dev\\gescom c# .net\\gescom\\agregarcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7298CCDA-C212-4453-AA12-7D41D5D33E67}|capaPresentacion.csproj|solutionrelative:agregarcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,54 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "movimientoCajaNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaNegocio\\movimientoCajaNegocio.cs",
-              "RelativeDocumentMoniker": "..\\capaNegocio\\movimientoCajaNegocio.cs",
-              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\capaNegocio\\movimientoCajaNegocio.cs",
-              "RelativeToolTip": "..\\capaNegocio\\movimientoCajaNegocio.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAywDEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ModificarComanda.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ModificarComanda.cs",
+              "RelativeDocumentMoniker": "ModificarComanda.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\ModificarComanda.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ModificarComanda.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:22:52.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T15:20:27.606Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InformeCajaDia.cs",
-              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaDia.cs",
-              "RelativeDocumentMoniker": "InformeCajaDia.cs",
-              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaDia.cs",
-              "RelativeToolTip": "InformeCajaDia.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA7wCgAAAAAAAAAAAAAAA==",
+              "Title": "GestionDeComandas.cs",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\GestionDeComandas.cs",
+              "RelativeDocumentMoniker": "GestionDeComandas.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\GestionDeComandas.cs",
+              "RelativeToolTip": "GestionDeComandas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:22:20.042Z",
+              "WhenOpened": "2025-11-26T15:15:32.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InformeCajaMes.cs",
-              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
-              "RelativeDocumentMoniker": "InformeCajaMes.cs",
-              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
-              "RelativeToolTip": "InformeCajaMes.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAzwEEAAAANAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AgregarComanda.cs",
+              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\AgregarComanda.cs",
+              "RelativeDocumentMoniker": "AgregarComanda.cs",
+              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\AgregarComanda.cs",
+              "RelativeToolTip": "AgregarComanda.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAywMMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:14:25.615Z",
+              "WhenOpened": "2025-11-26T14:54:00.431Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InformeCajaMes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs",
-              "RelativeDocumentMoniker": "InformeCajaMes.cs",
-              "ToolTip": "C:\\Users\\bulli\\OneDrive\\Escritorio\\me\\facultad\\TESIS DEV\\GESCOM C# .NET\\GESCOM\\InformeCajaMes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "InformeCajaMes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:13:46.775Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

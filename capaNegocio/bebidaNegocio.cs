@@ -17,13 +17,29 @@ namespace capaNegocio
             return datos.listarBebida();
         }
 
-        public void agregarBebida(Bebida bebida)
+        private void validarBebida(Bebida bebida)
         {
+            if (bebida == null)
+                throw new Exception("Bebida inválida.");
+
             if (string.IsNullOrWhiteSpace(bebida.Nombre))
                 throw new Exception("El nombre de la bebida es obligatorio.");
 
             if (bebida.Precio <= 0)
                 throw new Exception("El precio debe ser mayor a 0.");
+
+            if (Decimal.Round(bebida.Precio, 2) != bebida.Precio)
+                throw new Exception("El precio solo puede tener hasta 2 decimales.");
+
+            string soloNumeros = bebida.Precio.ToString().Replace(",", "").Replace(".", "");
+            if (soloNumeros.Length > 10)
+                throw new Exception("El precio no puede superar los 10 dígitos.");
+        }
+
+
+        public void agregarBebida(Bebida bebida)
+        {
+            validarBebida(bebida);
 
             var lista = datos.listarBebida();
             if (lista.Any(x => x.Nombre.ToLower() == bebida.Nombre.ToLower()))

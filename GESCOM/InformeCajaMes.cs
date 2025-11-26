@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsApp2;
 
 namespace capaPresentacion
 {
@@ -17,8 +16,6 @@ namespace capaPresentacion
     {
         private Usuario usuarioActual;
         private movimientoCajaNegocio movNeg = new movimientoCajaNegocio();
-        private int mesSeleccionado;
-        private int anioSeleccionado;
 
 
         public InformeCajaMes(Usuario user)
@@ -28,6 +25,12 @@ namespace capaPresentacion
             dtpFecha.CustomFormat = "MMMM yyyy";
             dtpFecha.Format = DateTimePickerFormat.Custom;
             dtpFecha.ShowUpDown = true;
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
 
 
@@ -35,9 +38,6 @@ namespace capaPresentacion
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
-            Gestion main = new Gestion(usuarioActual);
-            main.WindowState = FormWindowState.Maximized;
-            main.Show();
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

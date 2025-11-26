@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace capaPresentacion
 {
     partial class GestionMenu
     {
@@ -28,296 +28,347 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
-            label1 = new Label();
-            panel1 = new Panel();
-            btnVolver = new Button();
-            btnEliminarComida = new Button();
-            btnAgregarComida = new Button();
-            btnEditarComida = new Button();
-            dgvComida = new DataGridView();
-            label2 = new Label();
-            panel4 = new Panel();
-            label4 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnVolver = new Guna.UI2.WinForms.Guna2Button();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            btnListarBebida = new Guna.UI2.WinForms.Guna2Button();
+            btnEliminarBebida = new Guna.UI2.WinForms.Guna2Button();
+            btnEditarBebida = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregarBebida = new Guna.UI2.WinForms.Guna2Button();
             dgvBebida = new DataGridView();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel3 = new Panel();
-            btnVolver2 = new Button();
-            btnEliminarBebida = new Button();
-            btnAgregarBebida = new Button();
-            btnEditarBebida = new Button();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvComida).BeginInit();
-            panel4.SuspendLayout();
+            label2 = new Label();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            btnListarComida = new Guna.UI2.WinForms.Guna2Button();
+            btnEliminarComida = new Guna.UI2.WinForms.Guna2Button();
+            btnEditarComida = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregarComida = new Guna.UI2.WinForms.Guna2Button();
+            dgvComida = new DataGridView();
+            label1 = new Label();
+            guna2Panel1.SuspendLayout();
+            guna2ShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBebida).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
-            panel3.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvComida).BeginInit();
             SuspendLayout();
             // 
-            // panel2
+            // guna2Panel1
             // 
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(36, 5);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(682, 125);
-            panel2.TabIndex = 6;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(176, 25);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(265, 81);
-            label1.TabIndex = 1;
-            label1.Text = "Comidas";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(236, 232, 230);
-            panel1.Controls.Add(btnVolver);
-            panel1.Controls.Add(btnEliminarComida);
-            panel1.Controls.Add(btnAgregarComida);
-            panel1.Controls.Add(btnEditarComida);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(36, 919);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(682, 92);
-            panel1.TabIndex = 5;
+            guna2Panel1.BackColor = Color.FromArgb(236, 232, 221);
+            guna2Panel1.Controls.Add(btnVolver);
+            guna2Panel1.Controls.Add(guna2ShadowPanel2);
+            guna2Panel1.Controls.Add(label2);
+            guna2Panel1.Controls.Add(guna2ShadowPanel1);
+            guna2Panel1.Controls.Add(label1);
+            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel1.Size = new Size(1445, 840);
+            guna2Panel1.TabIndex = 2;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(485, 27);
-            btnVolver.Margin = new Padding(4, 5, 6, 5);
+            btnVolver.BorderRadius = 10;
+            btnVolver.CustomizableEdges = customizableEdges1;
+            btnVolver.DisabledState.BorderColor = Color.DarkGray;
+            btnVolver.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnVolver.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnVolver.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVolver.Font = new Font("Segoe UI", 9F);
+            btnVolver.ForeColor = Color.White;
+            btnVolver.Image = Properties.Resources.back;
+            btnVolver.Location = new Point(672, 703);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(89, 38);
-            btnVolver.TabIndex = 6;
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnVolver.Size = new Size(111, 40);
+            btnVolver.TabIndex = 4;
             btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
-            // btnEliminarComida
+            // guna2ShadowPanel2
             // 
-            btnEliminarComida.Location = new Point(327, 27);
-            btnEliminarComida.Margin = new Padding(4, 5, 4, 5);
-            btnEliminarComida.Name = "btnEliminarComida";
-            btnEliminarComida.Size = new Size(89, 38);
-            btnEliminarComida.TabIndex = 5;
-            btnEliminarComida.Text = "Eliminar";
-            btnEliminarComida.UseVisualStyleBackColor = true;
-            btnEliminarComida.Click += btnEliminarComida_Click;
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(btnListarBebida);
+            guna2ShadowPanel2.Controls.Add(btnEliminarBebida);
+            guna2ShadowPanel2.Controls.Add(btnEditarBebida);
+            guna2ShadowPanel2.Controls.Add(btnAgregarBebida);
+            guna2ShadowPanel2.Controls.Add(dgvBebida);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(853, 95);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 10;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.Size = new Size(580, 679);
+            guna2ShadowPanel2.TabIndex = 3;
             // 
-            // btnAgregarComida
+            // btnListarBebida
             // 
-            btnAgregarComida.Location = new Point(17, 27);
-            btnAgregarComida.Margin = new Padding(6, 5, 4, 5);
-            btnAgregarComida.Name = "btnAgregarComida";
-            btnAgregarComida.Size = new Size(89, 38);
-            btnAgregarComida.TabIndex = 3;
-            btnAgregarComida.Text = "Agregar";
-            btnAgregarComida.UseVisualStyleBackColor = true;
-            btnAgregarComida.Click += btnAgregarComida_Click;
+            btnListarBebida.BorderRadius = 10;
+            btnListarBebida.CustomizableEdges = customizableEdges3;
+            btnListarBebida.DisabledState.BorderColor = Color.DarkGray;
+            btnListarBebida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnListarBebida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnListarBebida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnListarBebida.Font = new Font("Segoe UI", 9F);
+            btnListarBebida.ForeColor = Color.White;
+            btnListarBebida.Image = Properties.Resources.file;
+            btnListarBebida.Location = new Point(440, 608);
+            btnListarBebida.Name = "btnListarBebida";
+            btnListarBebida.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnListarBebida.Size = new Size(108, 40);
+            btnListarBebida.TabIndex = 7;
+            btnListarBebida.Text = "Listar";
+            btnListarBebida.Click += btnListarBebida_Click;
             // 
-            // btnEditarComida
+            // btnEliminarBebida
             // 
-            btnEditarComida.Location = new Point(176, 27);
-            btnEditarComida.Margin = new Padding(4, 5, 4, 5);
-            btnEditarComida.Name = "btnEditarComida";
-            btnEditarComida.Size = new Size(79, 38);
-            btnEditarComida.TabIndex = 4;
-            btnEditarComida.Text = "Editar";
-            btnEditarComida.UseVisualStyleBackColor = true;
-            btnEditarComida.Click += btnEditarComida_Click;
+            btnEliminarBebida.BorderRadius = 10;
+            btnEliminarBebida.CustomizableEdges = customizableEdges5;
+            btnEliminarBebida.DisabledState.BorderColor = Color.DarkGray;
+            btnEliminarBebida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEliminarBebida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEliminarBebida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEliminarBebida.Font = new Font("Segoe UI", 9F);
+            btnEliminarBebida.ForeColor = Color.White;
+            btnEliminarBebida.Image = Properties.Resources.trashbind;
+            btnEliminarBebida.Location = new Point(304, 608);
+            btnEliminarBebida.Name = "btnEliminarBebida";
+            btnEliminarBebida.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnEliminarBebida.Size = new Size(108, 40);
+            btnEliminarBebida.TabIndex = 3;
+            btnEliminarBebida.Text = "Eliminar";
+            btnEliminarBebida.Click += btnEliminarBebida_Click;
             // 
-            // dgvComida
+            // btnEditarBebida
             // 
-            dgvComida.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvComida.Location = new Point(36, 140);
-            dgvComida.Margin = new Padding(4, 5, 4, 5);
-            dgvComida.Name = "dgvComida";
-            dgvComida.RowHeadersWidth = 62;
-            dgvComida.Size = new Size(682, 769);
-            dgvComida.TabIndex = 2;
+            btnEditarBebida.BorderRadius = 10;
+            btnEditarBebida.CustomizableEdges = customizableEdges7;
+            btnEditarBebida.DisabledState.BorderColor = Color.DarkGray;
+            btnEditarBebida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEditarBebida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEditarBebida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditarBebida.Font = new Font("Segoe UI", 9F);
+            btnEditarBebida.ForeColor = Color.White;
+            btnEditarBebida.Image = Properties.Resources.edit;
+            btnEditarBebida.Location = new Point(165, 608);
+            btnEditarBebida.Name = "btnEditarBebida";
+            btnEditarBebida.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEditarBebida.Size = new Size(108, 40);
+            btnEditarBebida.TabIndex = 2;
+            btnEditarBebida.Text = "Editar";
+            btnEditarBebida.Click += btnEditarBebida_Click;
             // 
-            // label2
+            // btnAgregarBebida
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 30F);
-            label2.Location = new Point(4, 0);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(24, 135);
-            label2.TabIndex = 7;
-            label2.Text = "Gestion De Menú";
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(label4);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(1091, 5);
-            panel4.Margin = new Padding(4, 5, 4, 5);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(680, 125);
-            panel4.TabIndex = 9;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 30F);
-            label4.Location = new Point(236, 25);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(241, 81);
-            label4.TabIndex = 1;
-            label4.Text = "Bebidas";
+            btnAgregarBebida.BorderRadius = 10;
+            btnAgregarBebida.CustomizableEdges = customizableEdges9;
+            btnAgregarBebida.DisabledState.BorderColor = Color.DarkGray;
+            btnAgregarBebida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgregarBebida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgregarBebida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregarBebida.Font = new Font("Segoe UI", 9F);
+            btnAgregarBebida.ForeColor = Color.White;
+            btnAgregarBebida.Image = Properties.Resources.add;
+            btnAgregarBebida.Location = new Point(20, 608);
+            btnAgregarBebida.Name = "btnAgregarBebida";
+            btnAgregarBebida.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAgregarBebida.Size = new Size(111, 40);
+            btnAgregarBebida.TabIndex = 1;
+            btnAgregarBebida.Text = "Agregar";
+            btnAgregarBebida.Click += btnAgregarBebida_Click;
             // 
             // dgvBebida
             // 
             dgvBebida.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBebida.Dock = DockStyle.Fill;
-            dgvBebida.Location = new Point(1091, 140);
-            dgvBebida.Margin = new Padding(4, 5, 4, 5);
+            dgvBebida.Location = new Point(3, 3);
             dgvBebida.Name = "dgvBebida";
-            dgvBebida.RowHeadersWidth = 62;
-            dgvBebida.Size = new Size(680, 769);
-            dgvBebida.TabIndex = 12;
+            dgvBebida.RowHeadersWidth = 51;
+            dgvBebida.Size = new Size(574, 579);
+            dgvBebida.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // label2
             // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
-            tableLayoutPanel1.ColumnCount = 5;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.4404974F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95.5595F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 365F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 688F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel1.Controls.Add(panel3, 3, 2);
-            tableLayoutPanel1.Controls.Add(dgvBebida, 3, 1);
-            tableLayoutPanel1.Controls.Add(panel4, 3, 0);
-            tableLayoutPanel1.Controls.Add(label2, 0, 0);
-            tableLayoutPanel1.Controls.Add(dgvComida, 1, 1);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 2);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.8531952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 85.1468048F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 102F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
-            tableLayoutPanel1.Size = new Size(1806, 1050);
-            tableLayoutPanel1.TabIndex = 1;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(94, 148, 255);
+            label2.Location = new Point(1049, 28);
+            label2.Name = "label2";
+            label2.Size = new Size(145, 46);
+            label2.TabIndex = 2;
+            label2.Text = "Bebidas";
             // 
-            // panel3
+            // guna2ShadowPanel1
             // 
-            panel3.BackColor = Color.FromArgb(236, 232, 230);
-            panel3.Controls.Add(btnVolver2);
-            panel3.Controls.Add(btnEliminarBebida);
-            panel3.Controls.Add(btnAgregarBebida);
-            panel3.Controls.Add(btnEditarBebida);
-            panel3.Location = new Point(1091, 919);
-            panel3.Margin = new Padding(4, 5, 4, 5);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(680, 92);
-            panel3.TabIndex = 7;
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(btnListarComida);
+            guna2ShadowPanel1.Controls.Add(btnEliminarComida);
+            guna2ShadowPanel1.Controls.Add(btnEditarComida);
+            guna2ShadowPanel1.Controls.Add(btnAgregarComida);
+            guna2ShadowPanel1.Controls.Add(dgvComida);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(12, 95);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.Radius = 10;
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.Size = new Size(580, 679);
+            guna2ShadowPanel1.TabIndex = 1;
             // 
-            // btnVolver2
+            // btnListarComida
             // 
-            btnVolver2.Location = new Point(485, 27);
-            btnVolver2.Margin = new Padding(4, 5, 6, 5);
-            btnVolver2.Name = "btnVolver2";
-            btnVolver2.Size = new Size(89, 38);
-            btnVolver2.TabIndex = 6;
-            btnVolver2.Text = "Volver";
-            btnVolver2.UseVisualStyleBackColor = true;
-            btnVolver2.Click += btnVolver2_Click;
+            btnListarComida.BorderRadius = 10;
+            btnListarComida.CustomizableEdges = customizableEdges11;
+            btnListarComida.DisabledState.BorderColor = Color.DarkGray;
+            btnListarComida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnListarComida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnListarComida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnListarComida.Font = new Font("Segoe UI", 9F);
+            btnListarComida.ForeColor = Color.White;
+            btnListarComida.Image = Properties.Resources.file;
+            btnListarComida.Location = new Point(444, 608);
+            btnListarComida.Name = "btnListarComida";
+            btnListarComida.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnListarComida.Size = new Size(108, 40);
+            btnListarComida.TabIndex = 6;
+            btnListarComida.Text = "Listar";
+            btnListarComida.Click += btnListarComida_Click;
             // 
-            // btnEliminarBebida
+            // btnEliminarComida
             // 
-            btnEliminarBebida.Location = new Point(327, 27);
-            btnEliminarBebida.Margin = new Padding(4, 5, 4, 5);
-            btnEliminarBebida.Name = "btnEliminarBebida";
-            btnEliminarBebida.Size = new Size(89, 38);
-            btnEliminarBebida.TabIndex = 5;
-            btnEliminarBebida.Text = "Eliminar";
-            btnEliminarBebida.UseVisualStyleBackColor = true;
-            btnEliminarBebida.Click += btnEliminarBebida_Click;
+            btnEliminarComida.BorderRadius = 10;
+            btnEliminarComida.CustomizableEdges = customizableEdges13;
+            btnEliminarComida.DisabledState.BorderColor = Color.DarkGray;
+            btnEliminarComida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEliminarComida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEliminarComida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEliminarComida.Font = new Font("Segoe UI", 9F);
+            btnEliminarComida.ForeColor = Color.White;
+            btnEliminarComida.Image = Properties.Resources.trashbind;
+            btnEliminarComida.Location = new Point(308, 608);
+            btnEliminarComida.Name = "btnEliminarComida";
+            btnEliminarComida.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnEliminarComida.Size = new Size(108, 40);
+            btnEliminarComida.TabIndex = 3;
+            btnEliminarComida.Text = "Eliminar";
+            btnEliminarComida.Click += btnEliminarComida_Click;
             // 
-            // btnAgregarBebida
+            // btnEditarComida
             // 
-            btnAgregarBebida.Location = new Point(17, 27);
-            btnAgregarBebida.Margin = new Padding(6, 5, 4, 5);
-            btnAgregarBebida.Name = "btnAgregarBebida";
-            btnAgregarBebida.Size = new Size(89, 38);
-            btnAgregarBebida.TabIndex = 3;
-            btnAgregarBebida.Text = "Agregar";
-            btnAgregarBebida.UseVisualStyleBackColor = true;
-            btnAgregarBebida.Click += btnAgregarBebida_Click;
+            btnEditarComida.BorderRadius = 10;
+            btnEditarComida.CustomizableEdges = customizableEdges15;
+            btnEditarComida.DisabledState.BorderColor = Color.DarkGray;
+            btnEditarComida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEditarComida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEditarComida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditarComida.Font = new Font("Segoe UI", 9F);
+            btnEditarComida.ForeColor = Color.White;
+            btnEditarComida.Image = Properties.Resources.edit;
+            btnEditarComida.Location = new Point(164, 608);
+            btnEditarComida.Name = "btnEditarComida";
+            btnEditarComida.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEditarComida.Size = new Size(108, 40);
+            btnEditarComida.TabIndex = 2;
+            btnEditarComida.Text = "Editar";
+            btnEditarComida.Click += btnEditarComida_Click;
             // 
-            // btnEditarBebida
+            // btnAgregarComida
             // 
-            btnEditarBebida.Location = new Point(176, 27);
-            btnEditarBebida.Margin = new Padding(4, 5, 4, 5);
-            btnEditarBebida.Name = "btnEditarBebida";
-            btnEditarBebida.Size = new Size(79, 38);
-            btnEditarBebida.TabIndex = 4;
-            btnEditarBebida.Text = "Editar";
-            btnEditarBebida.UseVisualStyleBackColor = true;
-            btnEditarBebida.Click += btnEditarBebida_Click;
+            btnAgregarComida.BorderRadius = 10;
+            btnAgregarComida.CustomizableEdges = customizableEdges17;
+            btnAgregarComida.DisabledState.BorderColor = Color.DarkGray;
+            btnAgregarComida.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgregarComida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgregarComida.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregarComida.Font = new Font("Segoe UI", 9F);
+            btnAgregarComida.ForeColor = Color.White;
+            btnAgregarComida.Image = Properties.Resources.add;
+            btnAgregarComida.Location = new Point(20, 608);
+            btnAgregarComida.Name = "btnAgregarComida";
+            btnAgregarComida.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnAgregarComida.Size = new Size(111, 40);
+            btnAgregarComida.TabIndex = 1;
+            btnAgregarComida.Text = "Agregar";
+            btnAgregarComida.Click += btnAgregarComida_Click;
+            // 
+            // dgvComida
+            // 
+            dgvComida.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvComida.Location = new Point(3, 3);
+            dgvComida.Name = "dgvComida";
+            dgvComida.RowHeadersWidth = 51;
+            dgvComida.Size = new Size(574, 579);
+            dgvComida.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(94, 148, 255);
+            label1.Location = new Point(202, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(157, 46);
+            label1.TabIndex = 0;
+            label1.Text = "Comidas";
             // 
             // GestionMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1806, 1050);
-            Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 5, 4, 5);
+            ClientSize = new Size(1445, 840);
+            Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "GestionMenu";
             Text = "GestionMenu";
             Load += GestionMenu_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvComida).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            guna2ShadowPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvBebida).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            panel3.ResumeLayout(false);
+            guna2ShadowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvComida).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel2;
-        private Label label1;
-        private Panel panel1;
-        private Button btnVolver;
-        private Button btnEliminarComida;
-        private Button btnAgregarComida;
-        private Button btnEditarComida;
-        private DataGridView dgvComida;
-        private Label label2;
-        private Panel panel4;
-        private Label label4;
-        private DataGridView dgvBebida;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel3;
         private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
-        private Button btnEliminarBebida;
-        private Button btnAgregarBebida;
-        private Button btnEditarBebida;
-        private Button btnVolver2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2Button btnVolver;
+        private Guna.UI2.WinForms.Guna2Button btnEliminarComida;
+        private Guna.UI2.WinForms.Guna2Button btnEditarComida;
+        private Guna.UI2.WinForms.Guna2Button btnAgregarComida;
+        private DataGridView dgvComida;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Guna.UI2.WinForms.Guna2Button btnEliminarBebida;
+        private Guna.UI2.WinForms.Guna2Button btnEditarBebida;
+        private Guna.UI2.WinForms.Guna2Button btnAgregarBebida;
+        private DataGridView dgvBebida;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnListarBebida;
+        private Guna.UI2.WinForms.Guna2Button btnListarComida;
     }
 }

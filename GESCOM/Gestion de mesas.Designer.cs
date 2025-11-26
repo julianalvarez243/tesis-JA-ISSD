@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace capaPresentacion
 {
     partial class Gestion_de_mesas
     {
@@ -28,164 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            btnVolver = new Guna.UI2.WinForms.Guna2Button();
+            btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+            btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             dgvMesas = new DataGridView();
-            panel1 = new Panel();
-            btnVolver = new Button();
-            btnEliminar = new Button();
-            btnAgregar = new Button();
-            btnEditar = new Button();
-            panel2 = new Panel();
             label1 = new Label();
-            tableLayoutPanel1.SuspendLayout();
+            btnListar = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel1.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMesas).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // guna2Panel1
             // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(236, 232, 221);
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.4404974F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95.5595F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.Controls.Add(dgvMesas, 1, 1);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 2);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 18.32061F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 81.67939F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 102F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
-            tableLayoutPanel1.Size = new Size(1806, 1050);
-            tableLayoutPanel1.TabIndex = 1;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            guna2Panel1.Controls.Add(guna2ShadowPanel1);
+            guna2Panel1.Controls.Add(label1);
+            guna2Panel1.CustomizableEdges = customizableEdges11;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel1.Size = new Size(1445, 840);
+            guna2Panel1.TabIndex = 1;
             // 
-            // dgvMesas
+            // guna2ShadowPanel1
             // 
-            dgvMesas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMesas.Dock = DockStyle.Fill;
-            dgvMesas.Location = new Point(81, 172);
-            dgvMesas.Margin = new Padding(4, 5, 4, 5);
-            dgvMesas.Name = "dgvMesas";
-            dgvMesas.RowHeadersWidth = 62;
-            dgvMesas.Size = new Size(1650, 737);
-            dgvMesas.TabIndex = 2;
-            dgvMesas.CellDoubleClick += dgvMesas_CellDoubleClick;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(236, 232, 230);
-            panel1.Controls.Add(btnVolver);
-            panel1.Controls.Add(btnEliminar);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(btnEditar);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(81, 919);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1650, 92);
-            panel1.TabIndex = 5;
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(btnListar);
+            guna2ShadowPanel1.Controls.Add(btnVolver);
+            guna2ShadowPanel1.Controls.Add(btnEliminar);
+            guna2ShadowPanel1.Controls.Add(btnEditar);
+            guna2ShadowPanel1.Controls.Add(btnAgregar);
+            guna2ShadowPanel1.Controls.Add(dgvMesas);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(57, 100);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.Radius = 10;
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.Size = new Size(1339, 679);
+            guna2ShadowPanel1.TabIndex = 1;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(527, 27);
-            btnVolver.Margin = new Padding(4, 5, 4, 5);
+            btnVolver.BorderRadius = 10;
+            btnVolver.CustomizableEdges = customizableEdges3;
+            btnVolver.DisabledState.BorderColor = Color.DarkGray;
+            btnVolver.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnVolver.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnVolver.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVolver.Font = new Font("Segoe UI", 9F);
+            btnVolver.ForeColor = Color.White;
+            btnVolver.Image = Properties.Resources.back;
+            btnVolver.ImageAlign = HorizontalAlignment.Left;
+            btnVolver.Location = new Point(1161, 608);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(107, 38);
-            btnVolver.TabIndex = 6;
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnVolver.Size = new Size(148, 40);
+            btnVolver.TabIndex = 4;
             btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(366, 27);
-            btnEliminar.Margin = new Padding(4, 5, 4, 5);
+            btnEliminar.BorderRadius = 10;
+            btnEliminar.CustomizableEdges = customizableEdges5;
+            btnEliminar.DisabledState.BorderColor = Color.DarkGray;
+            btnEliminar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEliminar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEliminar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEliminar.Font = new Font("Segoe UI", 9F);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Image = Properties.Resources.trashbind;
+            btnEliminar.ImageAlign = HorizontalAlignment.Left;
+            btnEliminar.Location = new Point(590, 608);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(107, 38);
-            btnEliminar.TabIndex = 5;
+            btnEliminar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnEliminar.Size = new Size(148, 40);
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
-            // 
-            // btnAgregar
-            // 
-            btnAgregar.Location = new Point(30, 27);
-            btnAgregar.Margin = new Padding(4, 5, 4, 5);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(107, 38);
-            btnAgregar.TabIndex = 3;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(204, 27);
-            btnEditar.Margin = new Padding(4, 5, 4, 5);
+            btnEditar.BorderRadius = 10;
+            btnEditar.CustomizableEdges = customizableEdges7;
+            btnEditar.DisabledState.BorderColor = Color.DarkGray;
+            btnEditar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditar.Font = new Font("Segoe UI", 9F);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Image = Properties.Resources.edit;
+            btnEditar.ImageAlign = HorizontalAlignment.Left;
+            btnEditar.Location = new Point(297, 608);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(97, 38);
-            btnEditar.TabIndex = 4;
+            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEditar.Size = new Size(148, 40);
+            btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 
-            // panel2
+            // btnAgregar
             // 
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(81, 5);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1650, 157);
-            panel2.TabIndex = 6;
+            btnAgregar.BorderRadius = 10;
+            btnAgregar.CustomizableEdges = customizableEdges9;
+            btnAgregar.DisabledState.BorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgregar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgregar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregar.Font = new Font("Segoe UI", 9F);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Image = Properties.Resources.add;
+            btnAgregar.ImageAlign = HorizontalAlignment.Left;
+            btnAgregar.Location = new Point(32, 608);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAgregar.Size = new Size(148, 40);
+            btnAgregar.TabIndex = 1;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // dgvMesas
+            // 
+            dgvMesas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMesas.Location = new Point(3, 3);
+            dgvMesas.Name = "dgvMesas";
+            dgvMesas.RowHeadersWidth = 51;
+            dgvMesas.Size = new Size(1333, 580);
+            dgvMesas.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(30, 33);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(94, 148, 255);
+            label1.Location = new Point(57, 32);
             label1.Name = "label1";
-            label1.Size = new Size(507, 81);
-            label1.TabIndex = 1;
-            label1.Text = "Gestion De Mesas";
+            label1.Size = new Size(296, 46);
+            label1.TabIndex = 0;
+            label1.Text = "Gestion de mesas";
+            // 
+            // btnListar
+            // 
+            btnListar.BorderRadius = 10;
+            btnListar.CustomizableEdges = customizableEdges1;
+            btnListar.DisabledState.BorderColor = Color.DarkGray;
+            btnListar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnListar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnListar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnListar.Font = new Font("Segoe UI", 9F);
+            btnListar.ForeColor = Color.White;
+            btnListar.Image = Properties.Resources.file;
+            btnListar.ImageAlign = HorizontalAlignment.Left;
+            btnListar.Location = new Point(882, 608);
+            btnListar.Name = "btnListar";
+            btnListar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnListar.Size = new Size(148, 40);
+            btnListar.TabIndex = 7;
+            btnListar.Text = "Listar";
+            btnListar.Click += btnListar_Click;
             // 
             // Gestion_de_mesas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 232, 221);
-            ClientSize = new Size(1806, 1050);
-            Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 5, 4, 5);
+            ClientSize = new Size(1445, 840);
+            Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Gestion_de_mesas";
             Text = "Gestion de Mesas";
             Load += Gestion_de_mesas_Load;
-            tableLayoutPanel1.ResumeLayout(false);
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvMesas).EndInit();
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2Button btnVolver;
+        private Guna.UI2.WinForms.Guna2Button btnEliminar;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private DataGridView dgvMesas;
-        private Panel panel1;
-        private Button btnEliminar;
-        private Button btnAgregar;
-        private Button btnEditar;
-        private Panel panel2;
         private Label label1;
-        private Button btnVolver;
+        private Guna.UI2.WinForms.Guna2Button btnListar;
     }
 }

@@ -21,7 +21,6 @@ namespace capaNegocio
             {
                 var hoja = package.Workbook.Worksheets.Add("Movimientos");
 
-                // Encabezados
                 hoja.Cells[1, 1].Value = "ID Movimiento";
                 hoja.Cells[1, 2].Value = "Fecha";
                 hoja.Cells[1, 3].Value = "Tipo";
@@ -29,7 +28,6 @@ namespace capaNegocio
                 hoja.Cells[1, 5].Value = "Usuario";
                 hoja.Cells[1, 6].Value = "Descripción";
 
-                // Llenado
                 int fila = 2;
                 foreach (var m in lista)
                 {
@@ -42,10 +40,8 @@ namespace capaNegocio
                     fila++;
                 }
 
-                // Auto ajuste
                 hoja.Cells.AutoFitColumns();
 
-                // Guardar
                 File.WriteAllBytes(ruta, package.GetAsByteArray());
             }
         }

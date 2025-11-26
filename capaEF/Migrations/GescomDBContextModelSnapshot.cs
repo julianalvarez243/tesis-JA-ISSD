@@ -45,28 +45,6 @@ namespace capaEF.Migrations
                     b.ToTable("Bebida");
                 });
 
-            modelBuilder.Entity("capaEntidad.Caja", b =>
-                {
-                    b.Property<int>("CajaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CajaId"));
-
-                    b.Property<decimal>("CantFinal")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("CantInicial")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("EstadoCajaId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CajaId");
-
-                    b.ToTable("Caja");
-                });
-
             modelBuilder.Entity("capaEntidad.Comanda", b =>
                 {
                     b.Property<int>("ComandaId")
@@ -170,30 +148,6 @@ namespace capaEF.Migrations
                     b.ToTable("EstadoComanda");
                 });
 
-            modelBuilder.Entity("capaEntidad.Factura", b =>
-                {
-                    b.Property<int>("FacturaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FacturaId"));
-
-                    b.Property<int>("ComandaId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MetodoPago")
-                        .HasColumnType("int");
-
-                    b.HasKey("FacturaId");
-
-                    b.HasIndex("ComandaId");
-
-                    b.ToTable("Factura");
-                });
-
             modelBuilder.Entity("capaEntidad.Mesa", b =>
                 {
                     b.Property<int>("MesaId")
@@ -270,39 +224,6 @@ namespace capaEF.Migrations
                     b.ToTable("Mozo");
                 });
 
-            modelBuilder.Entity("capaEntidad.Ticket", b =>
-                {
-                    b.Property<int>("TicketId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
-
-                    b.Property<int>("CajaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ComandaId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("MedioDePago")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("TicketId");
-
-                    b.HasIndex("CajaId");
-
-                    b.HasIndex("ComandaId");
-
-                    b.ToTable("Ticket");
-                });
-
             modelBuilder.Entity("capaEntidad.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -310,6 +231,9 @@ namespace capaEF.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioId"));
+
+                    b.Property<int>("CantComandasAtendidas")
+                        .HasColumnType("int");
 
                     b.Property<string>("Contrasenia")
                         .IsRequired()
@@ -368,36 +292,6 @@ namespace capaEF.Migrations
                     b.Navigation("Comanda");
 
                     b.Navigation("Comida");
-                });
-
-            modelBuilder.Entity("capaEntidad.Factura", b =>
-                {
-                    b.HasOne("capaEntidad.Comanda", "Comanda")
-                        .WithMany()
-                        .HasForeignKey("ComandaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Comanda");
-                });
-
-            modelBuilder.Entity("capaEntidad.Ticket", b =>
-                {
-                    b.HasOne("capaEntidad.Caja", "Caja")
-                        .WithMany()
-                        .HasForeignKey("CajaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("capaEntidad.Comanda", "Comanda")
-                        .WithMany()
-                        .HasForeignKey("ComandaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Caja");
-
-                    b.Navigation("Comanda");
                 });
 
             modelBuilder.Entity("capaEntidad.Comanda", b =>

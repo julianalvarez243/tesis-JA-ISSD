@@ -1,20 +1,20 @@
 ﻿using capaEntidad;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp2
+namespace capaPresentacion
 {
     public partial class Gestion : Form
     {
         private Usuario usuarioActual;
+
+        private Size formOriginalSize;
+        private Dictionary<Control, Rectangle> shadowPanelsOriginalRects = new();
+        private Dictionary<Control, Rectangle> controlsOriginalRects = new();
+        private Dictionary<Control, float> originalFonts = new();
+
         public Gestion(Usuario user)
         {
             InitializeComponent();
@@ -25,8 +25,79 @@ namespace WinFormsApp2
             if (usuarioActual.Rol == "Mozo")
             {
                 btnUsuarios.Enabled = false;
-                btnInformes.Enabled = false;
+                btnGenerarInformeDiario.Enabled = false;
+                btnGenerarInformeMensual.Enabled = false;
             }
+
+            InitializeResponsiveLayout();
+
+            AdjustLayout();
+
+            this.Resize += Gestion_Resize;
+        }
+
+        #region Responsive Layout
+
+        private void InitializeResponsiveLayout()
+        {
+            formOriginalSize = this.ClientSize;
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                shadowPanelsOriginalRects[shadow] = shadow.Bounds;
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    controlsOriginalRects[ctrl] = ctrl.Bounds;
+                    originalFonts[ctrl] = ctrl.Font.Size;
+                }
+            }
+        }
+
+        private void AdjustLayout()
+        {
+            float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
+            float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+            float scale = Math.Min(scaleX, scaleY);
+
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                Rectangle orig = shadowPanelsOriginalRects[shadow];
+                shadow.Bounds = new Rectangle(
+                    (int)(orig.X * scaleX),
+                    (int)(orig.Y * scaleY),
+                    (int)(orig.Width * scaleX),
+                    (int)(orig.Height * scaleY)
+                );
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    Rectangle ctrlOrig = controlsOriginalRects[ctrl];
+                    ctrl.Bounds = new Rectangle(
+                        (int)(ctrlOrig.X * scaleX),
+                        (int)(ctrlOrig.Y * scaleY),
+                        (int)(ctrlOrig.Width * scaleX),
+                        (int)(ctrlOrig.Height * scaleY)
+                    );
+
+                    if (originalFonts.ContainsKey(ctrl))
+                    {
+                        float newSize = originalFonts[ctrl] * scale;
+
+                        // 🔥 PREVENCIÓN DE ERROR
+                        if (newSize < 1f)
+                            newSize = 1f; // tamaño mínimo permitido
+
+                        ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
+                    }
+                }
+            }
+        }
+
+        private void Gestion_Resize(object sender, EventArgs e)
+        {
+            AdjustLayout();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -35,7 +106,6 @@ namespace WinFormsApp2
             {
                 Application.Exit();
             }
-
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -54,7 +124,7 @@ namespace WinFormsApp2
             gestor.Show();
         }
 
-        private void btnComida_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
             GestionMenu gestor = new GestionMenu(usuarioActual);
@@ -62,13 +132,6 @@ namespace WinFormsApp2
             gestor.Show();
         }
 
-        private void btnNuevaComanda_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AgregarComanda comanda = new AgregarComanda(usuarioActual);
-            comanda.WindowState = FormWindowState.Maximized;
-            comanda.Show();
-        }
 
         private void btnComandas_Click(object sender, EventArgs e)
         {
@@ -78,12 +141,27 @@ namespace WinFormsApp2
             gestor.Show();
         }
 
-        private void btnInformes_Click(object sender, EventArgs e)
+        private void generarInformeCajaDia_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GestionInformes gestor = new GestionInformes(usuarioActual);
-            gestor.WindowState = FormWindowState.Maximized;
-            gestor.Show();
+            using (InformeCajaDia caja = new InformeCajaDia(usuarioActual))
+            {
+                if (caja.ShowDialog(this) == DialogResult.OK)
+                {
+                    return;
+                }
+            }
         }
+
+        private void generarInformeCajaMes_Click(object sender, EventArgs e)
+        {
+            using (InformeCajaMes caja = new InformeCajaMes(usuarioActual))
+            {
+                if (caja.ShowDialog(this) == DialogResult.OK)
+                {
+                    return;
+                }
+            }
+        }
+        #endregion
     }
 }
