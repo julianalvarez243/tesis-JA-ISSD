@@ -1,3 +1,101 @@
+# Manual de Usuario – Sistema de Gestión Gastronómica
+
+## 1. Introducción
+
+Este manual explica cómo utilizar el sistema de gestión gastronómica "GESCOM" de manera simple y clara.
+
+## 2. Inicio de Sesión
+
+1. Ingrese su **Nombre de Usuario**.
+2. Ingrese su **Contraseña**.
+3. Presione **Iniciar Sesión**.
+
+## 3. Menú Principal
+
+Desde el menú principal puede acceder a:
+
+* Gestión de Mesas
+* Gestión de Usuarios
+* Gestión de Comandas
+* Informes
+* Movimientos de Caja
+
+## 4. Gestión de Mesas
+
+### Crear o modificar mesas
+
+1. Abrir la sección *Mesas*.
+2. Seleccionar **Nueva Mesa** o elegir una mesa para editar.
+3. Ingresar:
+
+   * Número de mesa
+   * Capacidad
+   * Ubicación
+   * Estado
+4. Guardar los cambios.
+
+### Estados posibles
+
+* **Disponible**
+* **Reservada**
+* **No disponible**
+
+## 5. Gestión de Comandas
+
+### Crear una nueva comanda
+
+1. Seleccionar una mesa disponible.
+2. Indicar cantidad de comensales.
+3. Agregar productos a la lista.
+4. Confirmar la comanda.
+
+Esto automáticamente:
+
+* Cambia el estado de la mesa a *No disponible*.
+* Genera un movimiento de ingreso en caja.
+
+### Editar comanda
+
+* Solo puede editarse si **NO** está en estado *Cancelada* o *Entregada*.
+* Si intenta cambiar a un estado final, el sistema pedirá confirmación.
+
+### Cancelar comanda
+
+* Se registra un movimiento de **Egreso** en la caja.
+
+## 6. Movimientos de Caja
+
+Puede consultar:
+
+* Fecha del movimiento
+* Tipo (Ingreso/Egreso)
+* Monto
+* Usuario responsable
+* Descripción
+
+## 7. Reportes
+
+### Exportar datos a Excel
+
+1. Ingresar a la sección de gestión.
+2. Elegir el reporte deseado:
+
+   * Mozos y cantidad de comandas
+   * Listas visibles en DataGridView
+3. Presionar **Exportar a Excel**.
+4. Seleccionar ubicación del archivo.
+
+## 8. Consejos de Uso
+
+* Revise bien antes de cerrar o cancelar comandas.
+* Mantenga la base de datos respaldada.
+* No cierre el sistema mientras se exporta a Excel.
+
+## 9. Cierre de Sesión
+
+En el menú principal, use **Cerrar Sesión** para volver a la pantalla de inicio.
+
+
 # Manual Técnico del Sistema de Gestión Gastronómica
 
 ## 1. Introducción
