@@ -62,29 +62,7 @@ namespace capaNegocio
 
         public decimal obtenerTotalComanda(int comandaId)
         {
-            using (var db = new GescomDBContext())
-            {
-                var comanda = db.Comanda
-                    .Include("Detalles.Comida")
-                    .Include("Detalles.Bebida")
-                    .FirstOrDefault(c => c.ComandaId == comandaId);
-
-                if (comanda == null)
-                    return 0;
-
-                decimal total = 0;
-
-                foreach (var d in comanda.Detalles)
-                {
-                    if (d.Comida != null)
-                        total += d.Comida.Precio * d.Cantidad;
-
-                    if (d.Bebida != null)
-                        total += d.Bebida.Precio * d.Cantidad;
-                }
-
-                return total;
-            }
+            return datos.obtenerTotalComanda(comandaId);
         }
 
 

@@ -15,9 +15,15 @@ namespace capaPresentacion
     public partial class AgregarBebida : Form
     {
         private bebidaNegocio negocio = new bebidaNegocio();
+        Bebida nuevaBebida;
+        private bool Disponible;
+
         public AgregarBebida()
         {
             InitializeComponent();
+
+            cboDisponible.Items.Add("Sí");
+            cboDisponible.Items.Add("No");
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -30,6 +36,12 @@ namespace capaPresentacion
                 return;
             }
 
+
+            if (cboDisponible.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar si la bebida está disponible o no.");
+                return;
+            }
 
             if (precio <= 0)
             {
@@ -50,27 +62,38 @@ namespace capaPresentacion
                 return;
             }
 
+            if (cboDisponible.SelectedIndex == 0)
+            {
+                Disponible = true;
+            }
+            else if (cboDisponible.SelectedIndex == 1)
+            {
+                Disponible = false;
+            }
+
+
             try
             {
-                Bebida nuevaBebida = new Bebida
+                    nuevaBebida = new Bebida
+                    {
+                        Nombre = txtNombre.Text.Trim(),
+                        Precio = precio,
+                        Descripcion = txtDescripcion.Text.Trim(),
+                        Disponible = Disponible
+                    };
+
+                    negocio.agregarBebida(nuevaBebida);
+
+                    MessageBox.Show("Bebida agregada correctamente.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                catch (Exception ex)
                 {
-                    Nombre = txtNombre.Text.Trim(),
-                    Precio = precio,
-                    Descripcion = txtDescripcion.Text.Trim(),
-                };
-
-                negocio.agregarBebida(nuevaBebida);
-
-                MessageBox.Show("Bebida agregada correctamente.", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error al agregar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    MessageBox.Show(ex.Message, "Error al agregar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

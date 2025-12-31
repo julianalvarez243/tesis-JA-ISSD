@@ -14,8 +14,8 @@ namespace capaPresentacion
         private Usuario usuarioActual;
         private mesaNegocio negocio = new mesaNegocio();
 
-        private Size originalFormSize;
-        private Dictionary<Control, Rectangle> originalRect = new();
+        private Size formOriginalSize;
+        private Dictionary<Control, Rectangle> originalRectangles = new();
         private Dictionary<Control, float> originalFontSizes = new();
 
         public Gestion_de_mesas(Usuario user)
@@ -23,66 +23,87 @@ namespace capaPresentacion
             InitializeComponent();
             usuarioActual = user;
 
-            SetupResponsive();
-            this.Resize += ResizeAll;
+            
+          
+            InitializeResponsiveLayout();
+            this.Resize += Gestion_de_mesas_Resize;
+
         }
 
 
-        private void SetupResponsive()
-        {
-            originalFormSize = this.ClientSize;
 
-            RegisterControls(this);
+        private void Gestion_de_mesas_Resize(object sender, EventArgs e)
+        {
+            AdjustLayout();
         }
-
-        private void RegisterControls(Control parent)
+        private void InitializeResponsiveLayout()
         {
-            foreach (Control c in parent.Controls)
+            formOriginalSize = this.ClientSize;
+
+            RegisterControl(guna2Panel1);
+            RegisterControl(guna2ShadowPanel1);
+
+            foreach (Control ctrl in guna2ShadowPanel1.Controls)
             {
-                originalRect[c] = c.Bounds;
-                originalFontSizes[c] = c.Font.Size;
-
-                RegisterControls(c);
+                RegisterControl(ctrl);
             }
         }
 
-        private void ResizeAll(object sender, EventArgs e)
+        private void RegisterControl(Control ctrl)
         {
-            float scaleX = (float)this.ClientSize.Width / originalFormSize.Width;
-            float scaleY = (float)this.ClientSize.Height / originalFormSize.Height;
-
-            float scaleFont = Math.Min(scaleX, scaleY);
-
-            foreach (var item in originalRect)
+            if (!originalRectangles.ContainsKey(ctrl))
             {
-                Control control = item.Key;
-                Rectangle rect = item.Value;
+                originalRectangles[ctrl] = ctrl.Bounds;
+                originalFontSizes[ctrl] = ctrl.Font.Size;
+            }
+        }
 
-                control.Bounds = new Rectangle(
-                    (int)(rect.X * scaleX),
-                    (int)(rect.Y * scaleY),
-                    (int)(rect.Width * scaleX),
-                    (int)(rect.Height * scaleY)
+        
+
+        private void AdjustLayout()
+        {
+            float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
+            float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+            float scale = Math.Min(scaleX, scaleY);
+
+            foreach (var kv in originalRectangles)
+            {
+                Control ctrl = kv.Key;
+                Rectangle original = kv.Value;
+
+                ctrl.Bounds = new Rectangle(
+                    (int)(original.X * scaleX),
+                    (int)(original.Y * scaleY),
+                    (int)(original.Width * scaleX),
+                    (int)(original.Height * scaleY)
                 );
 
-                if (originalFontSizes.ContainsKey(control))
+                if (originalFontSizes.ContainsKey(ctrl))
                 {
-                    control.Font = new Font(control.Font.FontFamily,
-                                            originalFontSizes[control] * scaleFont,
-                                            control.Font.Style);
+                    float originalSize = originalFontSizes[ctrl];
+                    float newSize = originalSize * scale;
+
+                    if (newSize < 1f) newSize = 1f;
+
+                    ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
                 }
             }
         }
+
+
 
 
         private void cargarMesas()
         {
             mesaNegocio negocio = new mesaNegocio();
 
-            dgvMesas.DataSource = negocio.listarMesas();
+            var lista = negocio.listarMesas()
+                               .OrderBy(m => m.Tamanio)
+                               .ToList();
+
+            dgvMesas.DataSource = lista;
 
             dgvMesas.Columns["MesaId"].Visible = false;
-
             dgvMesas.Columns["NumeroMesa"].HeaderText = "Número";
             dgvMesas.Columns["Estado"].HeaderText = "Estado";
             dgvMesas.Columns["Tamanio"].HeaderText = "Capacidad";
@@ -90,6 +111,7 @@ namespace capaPresentacion
 
             dgvMesas.AutoResizeColumns();
         }
+
 
         private void Gestion_de_mesas_Load(object sender, EventArgs e)
         {
@@ -159,19 +181,6 @@ namespace capaPresentacion
                 }
             }
         }
-
-        private void dgvMesas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            var mesaSeleccionada = (Mesa)dgvMesas.Rows[e.RowIndex].DataBoundItem;
-
-            ConsultarMesa frm = new ConsultarMesa(mesaSeleccionada);
-            frm.ShowDialog();
-
-            cargarMesas();
-        }
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
         }

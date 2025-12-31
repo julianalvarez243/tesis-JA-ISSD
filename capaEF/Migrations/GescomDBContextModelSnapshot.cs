@@ -33,6 +33,9 @@ namespace capaEF.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Disponible")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -67,6 +70,12 @@ namespace capaEF.Migrations
 
                     b.Property<int>("MesaId")
                         .HasColumnType("int");
+
+                    b.Property<string>("TipoDePago")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("totalComanda")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("ComandaId");
 
@@ -118,6 +127,9 @@ namespace capaEF.Migrations
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Disponible")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -199,29 +211,15 @@ namespace capaEF.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TipoDePago")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
                     b.HasKey("MovimientoCajaId");
 
                     b.ToTable("MovimientoCaja");
-                });
-
-            modelBuilder.Entity("capaEntidad.Mozo", b =>
-                {
-                    b.Property<int>("MozoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MozoId"));
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MozoId");
-
-                    b.ToTable("Mozo");
                 });
 
             modelBuilder.Entity("capaEntidad.Usuario", b =>

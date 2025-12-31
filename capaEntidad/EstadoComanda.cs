@@ -8,12 +8,10 @@ using System.Threading.Tasks;
 namespace capaEntidad
 {
     public class EstadoComanda
-    { 
+    {
         public int EstadoComandaId { get; set; }
         [Required]
         public string Descripcion { get; set; }
-
-
         public override string ToString()
         {
             return Descripcion;

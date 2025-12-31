@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,6 +52,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnEliminarItem = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -77,6 +79,8 @@
             label4 = new Label();
             cboNroMesa = new Guna.UI2.WinForms.Guna2ComboBox();
             label3 = new Label();
+            label9 = new Label();
+            cboTipoDePago = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2Panel1.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
@@ -85,17 +89,19 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(236, 232, 221);
+            guna2Panel1.Controls.Add(label9);
             guna2Panel1.Controls.Add(btnEliminarItem);
+            guna2Panel1.Controls.Add(cboTipoDePago);
             guna2Panel1.Controls.Add(guna2ShadowPanel2);
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(guna2ShadowPanel1);
-            guna2Panel1.CustomizableEdges = customizableEdges25;
+            guna2Panel1.CustomizableEdges = customizableEdges27;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Panel1.Size = new Size(839, 614);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2Panel1.Size = new Size(854, 660);
             guna2Panel1.TabIndex = 0;
             // 
             // btnEliminarItem
@@ -110,12 +116,12 @@
             btnEliminarItem.ForeColor = Color.White;
             btnEliminarItem.Image = Properties.Resources.trashbind;
             btnEliminarItem.ImageAlign = HorizontalAlignment.Left;
-            btnEliminarItem.Location = new Point(649, 555);
+            btnEliminarItem.Location = new Point(649, 602);
             btnEliminarItem.Name = "btnEliminarItem";
             btnEliminarItem.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnEliminarItem.Size = new Size(162, 36);
             btnEliminarItem.TabIndex = 19;
-            btnEliminarItem.Text = "Borrar";
+            btnEliminarItem.Text = "Borrar item";
             btnEliminarItem.Click += btnEliminarItem_Click;
             // 
             // guna2ShadowPanel2
@@ -190,7 +196,7 @@
             // btnCancelar
             // 
             btnCancelar.BorderRadius = 10;
-            btnCancelar.CustomizableEdges = customizableEdges3;
+            btnCancelar.CustomizableEdges = customizableEdges5;
             btnCancelar.DisabledState.BorderColor = Color.DarkGray;
             btnCancelar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -201,7 +207,7 @@
             btnCancelar.ImageAlign = HorizontalAlignment.Left;
             btnCancelar.Location = new Point(216, 490);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnCancelar.Size = new Size(162, 36);
             btnCancelar.TabIndex = 18;
             btnCancelar.Text = "Volver";
@@ -210,7 +216,7 @@
             // btnConfirmar
             // 
             btnConfirmar.BorderRadius = 10;
-            btnConfirmar.CustomizableEdges = customizableEdges5;
+            btnConfirmar.CustomizableEdges = customizableEdges7;
             btnConfirmar.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,7 +227,7 @@
             btnConfirmar.ImageAlign = HorizontalAlignment.Left;
             btnConfirmar.Location = new Point(12, 490);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnConfirmar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnConfirmar.Size = new Size(162, 36);
             btnConfirmar.TabIndex = 17;
             btnConfirmar.Text = "Confirmar";
@@ -230,7 +236,7 @@
             // btnAgregarBebida
             // 
             btnAgregarBebida.BorderRadius = 10;
-            btnAgregarBebida.CustomizableEdges = customizableEdges7;
+            btnAgregarBebida.CustomizableEdges = customizableEdges9;
             btnAgregarBebida.DisabledState.BorderColor = Color.DarkGray;
             btnAgregarBebida.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregarBebida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -241,7 +247,7 @@
             btnAgregarBebida.ImageAlign = HorizontalAlignment.Left;
             btnAgregarBebida.Location = new Point(206, 286);
             btnAgregarBebida.Name = "btnAgregarBebida";
-            btnAgregarBebida.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAgregarBebida.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnAgregarBebida.Size = new Size(162, 36);
             btnAgregarBebida.TabIndex = 16;
             btnAgregarBebida.Text = "Agregar";
@@ -250,7 +256,7 @@
             // btnAgregarComida
             // 
             btnAgregarComida.BorderRadius = 10;
-            btnAgregarComida.CustomizableEdges = customizableEdges9;
+            btnAgregarComida.CustomizableEdges = customizableEdges11;
             btnAgregarComida.DisabledState.BorderColor = Color.DarkGray;
             btnAgregarComida.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregarComida.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -261,7 +267,7 @@
             btnAgregarComida.ImageAlign = HorizontalAlignment.Left;
             btnAgregarComida.Location = new Point(206, 185);
             btnAgregarComida.Name = "btnAgregarComida";
-            btnAgregarComida.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAgregarComida.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnAgregarComida.Size = new Size(162, 36);
             btnAgregarComida.TabIndex = 15;
             btnAgregarComida.Text = "Agregar";
@@ -272,7 +278,7 @@
             cboBebida.BackColor = Color.Transparent;
             cboBebida.BorderColor = Color.Black;
             cboBebida.BorderRadius = 10;
-            cboBebida.CustomizableEdges = customizableEdges11;
+            cboBebida.CustomizableEdges = customizableEdges13;
             cboBebida.DrawMode = DrawMode.OwnerDrawFixed;
             cboBebida.DropDownStyle = ComboBoxStyle.DropDownList;
             cboBebida.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -282,7 +288,7 @@
             cboBebida.ItemHeight = 30;
             cboBebida.Location = new Point(12, 286);
             cboBebida.Name = "cboBebida";
-            cboBebida.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cboBebida.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cboBebida.Size = new Size(188, 36);
             cboBebida.TabIndex = 14;
             // 
@@ -290,7 +296,7 @@
             // 
             txtCantBebida.BorderColor = Color.Black;
             txtCantBebida.BorderRadius = 10;
-            txtCantBebida.CustomizableEdges = customizableEdges13;
+            txtCantBebida.CustomizableEdges = customizableEdges15;
             txtCantBebida.DefaultText = "";
             txtCantBebida.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCantBebida.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -304,7 +310,7 @@
             txtCantBebida.Name = "txtCantBebida";
             txtCantBebida.PlaceholderText = "Cantidad";
             txtCantBebida.SelectedText = "";
-            txtCantBebida.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtCantBebida.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtCantBebida.Size = new Size(107, 36);
             txtCantBebida.TabIndex = 13;
             // 
@@ -322,7 +328,7 @@
             // 
             txtComentario.BorderColor = Color.Black;
             txtComentario.BorderRadius = 10;
-            txtComentario.CustomizableEdges = customizableEdges15;
+            txtComentario.CustomizableEdges = customizableEdges17;
             txtComentario.DefaultText = "";
             txtComentario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtComentario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -336,7 +342,7 @@
             txtComentario.Name = "txtComentario";
             txtComentario.PlaceholderText = "";
             txtComentario.SelectedText = "";
-            txtComentario.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtComentario.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtComentario.Size = new Size(366, 106);
             txtComentario.TabIndex = 11;
             // 
@@ -355,7 +361,7 @@
             cboComida.BackColor = Color.Transparent;
             cboComida.BorderColor = Color.Black;
             cboComida.BorderRadius = 10;
-            cboComida.CustomizableEdges = customizableEdges17;
+            cboComida.CustomizableEdges = customizableEdges19;
             cboComida.DrawMode = DrawMode.OwnerDrawFixed;
             cboComida.DropDownStyle = ComboBoxStyle.DropDownList;
             cboComida.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -365,7 +371,7 @@
             cboComida.ItemHeight = 30;
             cboComida.Location = new Point(12, 185);
             cboComida.Name = "cboComida";
-            cboComida.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cboComida.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cboComida.Size = new Size(188, 36);
             cboComida.TabIndex = 6;
             // 
@@ -373,7 +379,7 @@
             // 
             txtCantComida.BorderColor = Color.Black;
             txtCantComida.BorderRadius = 10;
-            txtCantComida.CustomizableEdges = customizableEdges19;
+            txtCantComida.CustomizableEdges = customizableEdges21;
             txtCantComida.DefaultText = "";
             txtCantComida.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCantComida.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -387,7 +393,7 @@
             txtCantComida.Name = "txtCantComida";
             txtCantComida.PlaceholderText = "Cantidad";
             txtCantComida.SelectedText = "";
-            txtCantComida.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtCantComida.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtCantComida.Size = new Size(107, 36);
             txtCantComida.TabIndex = 5;
             // 
@@ -405,7 +411,7 @@
             // 
             txtCantComensales.BorderColor = Color.Black;
             txtCantComensales.BorderRadius = 10;
-            txtCantComensales.CustomizableEdges = customizableEdges21;
+            txtCantComensales.CustomizableEdges = customizableEdges23;
             txtCantComensales.DefaultText = "";
             txtCantComensales.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCantComensales.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -419,7 +425,7 @@
             txtCantComensales.Name = "txtCantComensales";
             txtCantComensales.PlaceholderText = "Comensales";
             txtCantComensales.SelectedText = "";
-            txtCantComensales.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtCantComensales.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtCantComensales.Size = new Size(178, 33);
             txtCantComensales.TabIndex = 3;
             // 
@@ -438,7 +444,7 @@
             cboNroMesa.BackColor = Color.Transparent;
             cboNroMesa.BorderColor = Color.Black;
             cboNroMesa.BorderRadius = 10;
-            cboNroMesa.CustomizableEdges = customizableEdges23;
+            cboNroMesa.CustomizableEdges = customizableEdges25;
             cboNroMesa.DrawMode = DrawMode.OwnerDrawFixed;
             cboNroMesa.DropDownStyle = ComboBoxStyle.DropDownList;
             cboNroMesa.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -448,7 +454,7 @@
             cboNroMesa.ItemHeight = 30;
             cboNroMesa.Location = new Point(190, 22);
             cboNroMesa.Name = "cboNroMesa";
-            cboNroMesa.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            cboNroMesa.ShadowDecoration.CustomizableEdges = customizableEdges26;
             cboNroMesa.Size = new Size(178, 36);
             cboNroMesa.TabIndex = 1;
             // 
@@ -462,11 +468,40 @@
             label3.TabIndex = 0;
             label3.Text = "Numero de mesa:";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label9.Location = new Point(440, 542);
+            label9.Name = "label9";
+            label9.Size = new Size(141, 28);
+            label9.TabIndex = 22;
+            label9.Text = "Tipo de pago:";
+            // 
+            // cboTipoDePago
+            // 
+            cboTipoDePago.BackColor = Color.Transparent;
+            cboTipoDePago.BorderColor = Color.Black;
+            cboTipoDePago.BorderRadius = 10;
+            cboTipoDePago.CustomizableEdges = customizableEdges3;
+            cboTipoDePago.DrawMode = DrawMode.OwnerDrawFixed;
+            cboTipoDePago.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTipoDePago.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboTipoDePago.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboTipoDePago.Font = new Font("Segoe UI", 10F);
+            cboTipoDePago.ForeColor = Color.FromArgb(68, 88, 112);
+            cboTipoDePago.ItemHeight = 30;
+            cboTipoDePago.Location = new Point(633, 542);
+            cboTipoDePago.Name = "cboTipoDePago";
+            cboTipoDePago.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cboTipoDePago.Size = new Size(178, 36);
+            cboTipoDePago.TabIndex = 23;
+            // 
             // AgregarComanda
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(839, 614);
+            ClientSize = new Size(854, 660);
             Controls.Add(guna2Panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarComanda";
@@ -505,5 +540,7 @@
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnConfirmar;
         private Guna.UI2.WinForms.Guna2Button btnEliminarItem;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTipoDePago;
     }
 }

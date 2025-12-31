@@ -11,7 +11,6 @@ namespace capaEF
         public DbSet<ComandaDetalle> ComandaDetalle { get; set; }
         public DbSet<EstadoComanda> EstadoComanda { get; set; }
         public DbSet<Mesa> Mesa { get; set; }
-        public DbSet<Mozo> Mozo { get; set; }
         public DbSet<MovimientoCaja> MovimientoCaja { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
 

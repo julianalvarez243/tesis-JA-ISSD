@@ -27,6 +27,7 @@ namespace capaNegocio
                 hoja.Cells[1, 4].Value = "Monto";
                 hoja.Cells[1, 5].Value = "Usuario";
                 hoja.Cells[1, 6].Value = "Descripción";
+                hoja.Cells[1, 7].Value = "Tipo de Pago";
 
                 int fila = 2;
                 foreach (var m in lista)
@@ -37,6 +38,7 @@ namespace capaNegocio
                     hoja.Cells[fila, 4].Value = m.Monto;
                     hoja.Cells[fila, 5].Value = m.UsuarioId;
                     hoja.Cells[fila, 6].Value = m.Descripcion;
+                    hoja.Cells[fila, 7].Value = m.TipoDePago;
                     fila++;
                 }
 

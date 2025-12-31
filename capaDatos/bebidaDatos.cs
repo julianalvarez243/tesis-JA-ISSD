@@ -18,6 +18,13 @@ namespace capaDatos
             }
         }
 
+        public List<Bebida> listarBebidaDisponible()
+        {
+            using (var db = new GescomDBContext())
+            {
+                return db.Bebida.Where(b => b.Disponible == true).ToList();
+            }
+        }
         public void agregarBebida(Bebida bebida)
         {
             using (var db = new GescomDBContext())

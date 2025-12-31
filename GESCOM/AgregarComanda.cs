@@ -51,16 +51,20 @@ namespace capaPresentacion
             cboNroMesa.DisplayMember = "NumeroMesa";
             cboNroMesa.ValueMember = "MesaId";
 
-            cboComida.DataSource = comidaNeg.listarComida();
+            cboComida.DataSource = comidaNeg.listarComidaDisponible();
             cboComida.DisplayMember = "Nombre";
             cboComida.ValueMember = "ComidaId";
 
-            cboBebida.DataSource = bebidaNeg.listarBebida();
+            cboBebida.DataSource = bebidaNeg.listarBebidaDisponible();
             cboBebida.DisplayMember = "Nombre";
             cboBebida.ValueMember = "BebidaId";
 
             txtCantComida.Text = "1";
             txtCantBebida.Text = "1";
+
+            cboTipoDePago.Items.Add("Efectivo");
+            cboTipoDePago.Items.Add("Tarjeta");
+            cboTipoDePago.Items.Add("Transferencia");
 
         }
 
@@ -131,12 +135,20 @@ namespace capaPresentacion
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            string tipoDePago = cboTipoDePago.SelectedItem?.ToString();
 
             try
             {
                 if (cboNroMesa.SelectedItem == null || listaDetalles.Count == 0)
                 {
                     MessageBox.Show("Debe completar todos los campos");
+                    return;
+                }
+
+
+                if (string.IsNullOrWhiteSpace(tipoDePago))
+                {
+                    MessageBox.Show("Debe seleccionar el tipo de pago de la comanda.");
                     return;
                 }
 
@@ -154,16 +166,23 @@ namespace capaPresentacion
                     Comentario = txtComentario.Text,
                     EstadoComandaId = 1,
                     FechaHora = DateTime.Now,
-                    Detalles = listaDetalles
+                    Detalles = listaDetalles,
+                    TipoDePago = tipoDePago
+
                 };
-                
+
                 mesa.Estado = "No disponible";
                 comandaNeg.agregarComanda(comanda);
-                mesaNeg.editarMesa(mesa);
                 int idComanda = comanda.ComandaId;
-
                 decimal totalComanda = comandaNeg.obtenerTotalComanda(idComanda);
+                comanda.totalComanda = totalComanda;
+                comandaNeg.actualizarComanda(comanda);
+                mesaNeg.editarMesa(mesa);
 
+
+
+
+                movimiento.TipoDePago = tipoDePago;
                 movimiento.ComandaId = idComanda;
                 movimiento.Fecha = DateTime.Now;
                 movimiento.Tipo = "Ingreso";

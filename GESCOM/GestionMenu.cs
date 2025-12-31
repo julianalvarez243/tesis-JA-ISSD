@@ -35,7 +35,11 @@ namespace capaPresentacion
         {
             comidaNegocio negocio = new comidaNegocio();
 
-            dgvComida.DataSource = negocio.listarComida();
+            var lista = negocio.listarComida()
+                               .OrderBy(c => c.Precio)
+                               .ToList();
+
+            dgvComida.DataSource = lista;
             dgvComida.Columns["ComidaId"].Visible = false;
 
             dgvComida.AutoResizeColumns();
@@ -45,11 +49,16 @@ namespace capaPresentacion
         {
             bebidaNegocio negocio = new bebidaNegocio();
 
-            dgvBebida.DataSource = negocio.listarBebida();
+            var lista = negocio.listarBebida()
+                               .OrderBy(b => b.Precio)
+                               .ToList();
+
+            dgvBebida.DataSource = lista;
             dgvBebida.Columns["BebidaId"].Visible = false;
 
             dgvBebida.AutoResizeColumns();
         }
+
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -173,6 +182,8 @@ namespace capaPresentacion
         {
             float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
             float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+            float scale = Math.Min(scaleX, scaleY);
+
 
             foreach (Control shadow in guna2Panel1.Controls)
             {
@@ -194,8 +205,16 @@ namespace capaPresentacion
                         (int)(ctrlOrig.Height * scaleY)
                     );
 
-                    float newFontSize = originalFonts[ctrl] * Math.Min(scaleX, scaleY);
-                    ctrl.Font = new Font(ctrl.Font.FontFamily, newFontSize, ctrl.Font.Style);
+                    if (originalFonts.ContainsKey(ctrl))
+                    {
+                        float newSize = originalFonts[ctrl] * scale;
+
+
+                        if (newSize < 1f)
+                            newSize = 1f; // tamaño mínimo permitido
+
+                        ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
+                    }
                 }
             }
         }

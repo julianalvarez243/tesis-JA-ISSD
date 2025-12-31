@@ -45,7 +45,6 @@ namespace capaPresentacion
                 if (user != null)
                 {
                     this.Hide();
-                    // Abrir formulario principal
                     Gestion main = new Gestion(user);
                     main.WindowState = FormWindowState.Maximized;
                     main.Show();

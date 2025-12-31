@@ -25,8 +25,8 @@ namespace capaPresentacion
             if (usuarioActual.Rol == "Mozo")
             {
                 btnUsuarios.Enabled = false;
-                btnGenerarInformeDiario.Enabled = false;
-                btnGenerarInformeMensual.Enabled = false;
+                generarInformeCajaDia.Enabled = false;
+                generarInformeCajaMes.Enabled = false;
             }
 
             InitializeResponsiveLayout();
@@ -85,7 +85,7 @@ namespace capaPresentacion
                     {
                         float newSize = originalFonts[ctrl] * scale;
 
-                        // 🔥 PREVENCIÓN DE ERROR
+                      
                         if (newSize < 1f)
                             newSize = 1f; // tamaño mínimo permitido
 

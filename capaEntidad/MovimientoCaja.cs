@@ -21,8 +21,9 @@ namespace capaEntidad
         public decimal Monto { get; set; }
 
         [Required]
-        public string Tipo { get; set; } // especifica si sale o entra plata en la jaca
+        public string Tipo { get; set; } // especifica si sale o entra plata 
 
+        public string? TipoDePago { get; set; }
         public string? Descripcion { get; set; }
 
         [Required]

@@ -24,6 +24,7 @@ namespace capaPresentacion
         mesaDatos mesaDatos = new mesaDatos();
         private Usuario usuarioActual;
         private List<Comanda> listaComandas;
+
         private Size formOriginalSize;
         private Dictionary<Control, Rectangle> shadowPanelsOriginalRects = new();
         private Dictionary<Control, Rectangle> controlsOriginalRects = new();
@@ -50,7 +51,8 @@ namespace capaPresentacion
 
         private void cargarComandas()
         {
-            listaComandas = comandNeg.listarComandas();
+            listaComandas = comandNeg.listarComandas().OrderByDescending(c => c.FechaHora)
+                               .ToList();
 
             dgvComandas.DataSource = listaComandas
                 .Select(c => new
@@ -59,7 +61,8 @@ namespace capaPresentacion
                     Mesa = c.Mesa.NumeroMesa,
                     Estado = c.EstadoComanda.Descripcion,
                     Comensales = c.CantComensales,
-                    Fecha = c.FechaHora
+                    Fecha = c.FechaHora,
+                    Total = c.totalComanda
                 })
                 .ToList();
 
@@ -199,6 +202,8 @@ namespace capaPresentacion
         {
             float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
             float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+            float scale = Math.Min(scaleX, scaleY);
+
 
             foreach (Control shadow in guna2Panel1.Controls)
             {
@@ -220,8 +225,16 @@ namespace capaPresentacion
                         (int)(ctrlOrig.Height * scaleY)
                     );
 
-                    float newFontSize = originalFonts[ctrl] * Math.Min(scaleX, scaleY);
-                    ctrl.Font = new Font(ctrl.Font.FontFamily, newFontSize, ctrl.Font.Style);
+                    if (originalFonts.ContainsKey(ctrl))
+                    {
+                        float newSize = originalFonts[ctrl] * scale;
+
+
+                        if (newSize < 1f)
+                            newSize = 1f; // tamaño mínimo permitido
+
+                        ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
+                    }
                 }
             }
         }
@@ -230,27 +243,7 @@ namespace capaPresentacion
         {
             AdjustLayout();
         }
-        private void dgvComandas_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex >= 0)
-            {
-                int comandaId = (int)dgvComandas.Rows[e.RowIndex].Cells["ComandaId"].Value;
-
-                Comanda comandaSeleccionada = comandNeg.obtenerComandaPorId(comandaId);
-
-                if (comandaSeleccionada != null)
-                {
-                    ConsultarComanda frm = new ConsultarComanda(comandaSeleccionada);
-                    frm.ShowDialog();
-                    cargarComandas();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo cargar la comanda seleccionada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+       
 
         private void btnListar_Click(object sender, EventArgs e)
         {

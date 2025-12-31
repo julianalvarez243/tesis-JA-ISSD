@@ -8,7 +8,7 @@ namespace capaPresentacion
 {
     public partial class AgregarMesa : Form
     {
-        private readonly mesaNegocio negocio = new mesaNegocio();
+        private mesaNegocio negocio = new mesaNegocio();
 
         public AgregarMesa()
         {

@@ -17,10 +17,14 @@ namespace capaPresentacion
     {
         private comidaNegocio negocio = new comidaNegocio();
         private Comida comidaSeleccionada;
+        private bool Disponible;
         public ModificarComida(Comida comida)
         {
             InitializeComponent();
             comidaSeleccionada = comida;
+
+            cboDisponible.Items.Add("Sí");
+            cboDisponible.Items.Add("No");
         }
 
         private void ModificarComida_Load(object sender, EventArgs e)
@@ -28,6 +32,15 @@ namespace capaPresentacion
             txtNombre.Text = comidaSeleccionada.Nombre.ToString();
             txtDescripcion.Text = comidaSeleccionada.Descripcion.ToString();
             txtPrecio.Text = comidaSeleccionada.Precio.ToString();
+
+            if (comidaSeleccionada.Disponible)
+            {
+                cboDisponible.SelectedIndex = 0;
+            }
+            else
+            {
+                cboDisponible.SelectedIndex = 1;
+            }
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -40,12 +53,30 @@ namespace capaPresentacion
         {
             try
             {
+
+                if (cboDisponible.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar si la bebida está disponible o no.");
+                    return;
+                }
+
+                if (cboDisponible.SelectedIndex == 0)
+                {
+                    Disponible = true;
+                }
+                else if (cboDisponible.SelectedIndex == 1)
+                {
+                    Disponible = false;
+                }
+
+
                 if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
                     throw new Exception("El precio debe ser numérico.");
 
                 comidaSeleccionada.Nombre = txtNombre.Text.Trim();
                 comidaSeleccionada.Descripcion = txtDescripcion.Text.Trim();
                 comidaSeleccionada.Precio = precio;
+                comidaSeleccionada.Disponible = Disponible;
 
                 negocio.editarComida(comidaSeleccionada);
 

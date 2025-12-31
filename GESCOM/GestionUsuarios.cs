@@ -13,19 +13,21 @@ namespace capaPresentacion
     public partial class GestionUsuarios : Form
     {
         private Usuario usuarioActual;
-        private usuarioNegocio usuarioNegocio;
-
+        private usuarioNegocio usuarioNegocio = new usuarioNegocio();
         private Size formOriginalSize;
-        private Dictionary<Control, Rectangle> originalControls = new();
+        private Dictionary<Control, Rectangle> shadowPanelsOriginalRects = new();
+        private Dictionary<Control, Rectangle> controlsOriginalRects = new();
         private Dictionary<Control, float> originalFonts = new();
-
         public GestionUsuarios(Usuario user)
         {
             InitializeComponent();
             usuarioActual = user;
-            usuarioNegocio = new usuarioNegocio();
+
 
             InitializeResponsiveLayout();
+
+            AdjustLayout();
+
             this.Resize += GestionUsuarios_Resize;
         }
 
@@ -33,65 +35,7 @@ namespace capaPresentacion
         {
             cargarUsuarios();
         }
-
-
-        private void InitializeResponsiveLayout()
-        {
-            formOriginalSize = this.ClientSize;
-
-            RegisterControlRecursive(this);
-        }
-
-        private void RegisterControlRecursive(Control parent)
-        {
-            foreach (Control c in parent.Controls)
-            {
-                originalControls[c] = c.Bounds;
-
-                if (c.Font != null)
-                    originalFonts[c] = c.Font.Size;
-
-                RegisterControlRecursive(c);
-            }
-        }
-
-        private void GestionUsuarios_Resize(object sender, EventArgs e)
-        {
-            AdjustControls();
-        }
-
-        private void AdjustControls()
-        {
-            float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
-            float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
-            float scale = Math.Min(scaleX, scaleY);
-
-            foreach (var kvp in originalControls)
-            {
-                Control ctrl = kvp.Key;
-                Rectangle orig = kvp.Value;
-
-                ctrl.Bounds = new Rectangle(
-                    (int)(orig.X * scaleX),
-                    (int)(orig.Y * scaleY),
-                    (int)(orig.Width * scaleX),
-                    (int)(orig.Height * scaleY)
-                );
-
-                if (originalFonts.ContainsKey(ctrl))
-                {
-                    float newSize = originalFonts[ctrl] * scale;
-
-                    
-                    if (newSize < 1f)
-                        newSize = 1f; 
-
-                    ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
-                }
-
-            }
-        }
-
+       
 
         private void cargarUsuarios()
         {
@@ -229,6 +173,68 @@ namespace capaPresentacion
             {
                 MessageBox.Show("Error al exportar a Excel: " + ex.Message);
             }           
+        }
+
+        private void AdjustLayout()
+        {
+            float scaleX = (float)this.ClientSize.Width / formOriginalSize.Width;
+            float scaleY = (float)this.ClientSize.Height / formOriginalSize.Height;
+            float scale = Math.Min(scaleX, scaleY);
+
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                Rectangle orig = shadowPanelsOriginalRects[shadow];
+                shadow.Bounds = new Rectangle(
+                    (int)(orig.X * scaleX),
+                    (int)(orig.Y * scaleY),
+                    (int)(orig.Width * scaleX),
+                    (int)(orig.Height * scaleY)
+                );
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    Rectangle ctrlOrig = controlsOriginalRects[ctrl];
+                    ctrl.Bounds = new Rectangle(
+                        (int)(ctrlOrig.X * scaleX),
+                        (int)(ctrlOrig.Y * scaleY),
+                        (int)(ctrlOrig.Width * scaleX),
+                        (int)(ctrlOrig.Height * scaleY)
+                    );
+
+                    if (originalFonts.ContainsKey(ctrl))
+                    {
+                        float newSize = originalFonts[ctrl] * scale;
+
+
+                        if (newSize < 1f)
+                            newSize = 1f; // tamaño mínimo permitido
+
+                        ctrl.Font = new Font(ctrl.Font.FontFamily, newSize, ctrl.Font.Style);
+                    }
+                }
+            }
+        }
+
+        private void InitializeResponsiveLayout()
+        {
+            formOriginalSize = this.ClientSize;
+
+            foreach (Control shadow in guna2Panel1.Controls)
+            {
+                shadowPanelsOriginalRects[shadow] = shadow.Bounds;
+
+                foreach (Control ctrl in shadow.Controls)
+                {
+                    controlsOriginalRects[ctrl] = ctrl.Bounds;
+                    originalFonts[ctrl] = ctrl.Font.Size;
+                }
+            }
+        }
+
+        private void GestionUsuarios_Resize(object sender, EventArgs e)
+        {
+            AdjustLayout();
         }
     }
 }

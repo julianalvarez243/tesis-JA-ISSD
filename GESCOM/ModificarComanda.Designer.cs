@@ -54,6 +54,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnCancelar = new Guna.UI2.WinForms.Guna2Button();
@@ -81,6 +83,8 @@
             cboEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             label8 = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            label9 = new Label();
+            cboTipoDePago = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ShadowPanel2.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -143,6 +147,7 @@
             btnAgregarBebida.Size = new Size(162, 36);
             btnAgregarBebida.TabIndex = 16;
             btnAgregarBebida.Text = "Agregar";
+            btnAgregarBebida.Click += btnAgregarBebida_Click;
             // 
             // btnAgregarComida
             // 
@@ -162,6 +167,7 @@
             btnAgregarComida.Size = new Size(162, 36);
             btnAgregarComida.TabIndex = 15;
             btnAgregarComida.Text = "Agregar";
+            btnAgregarComida.Click += btnAgregarComida_Click;
             // 
             // cboBebida
             // 
@@ -376,12 +382,14 @@
             label1.ForeColor = Color.FromArgb(94, 148, 255);
             label1.Location = new Point(52, 9);
             label1.Name = "label1";
-            label1.Size = new Size(305, 46);
+            label1.Size = new Size(331, 46);
             label1.TabIndex = 3;
-            label1.Text = "Agregar comanda";
+            label1.Text = "Modificar comanda";
             // 
             // lstPedido
             // 
+            lstPedido.BackColor = SystemColors.InactiveCaption;
+            lstPedido.Font = new Font("Segoe UI Black", 9F);
             lstPedido.FormattingEnabled = true;
             lstPedido.Location = new Point(15, 22);
             lstPedido.Name = "lstPedido";
@@ -400,12 +408,13 @@
             btnEliminarItem.ForeColor = Color.White;
             btnEliminarItem.Image = Properties.Resources.trashbind;
             btnEliminarItem.ImageAlign = HorizontalAlignment.Left;
-            btnEliminarItem.Location = new Point(649, 555);
+            btnEliminarItem.Location = new Point(649, 624);
             btnEliminarItem.Name = "btnEliminarItem";
             btnEliminarItem.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnEliminarItem.Size = new Size(162, 36);
             btnEliminarItem.TabIndex = 19;
-            btnEliminarItem.Text = "Borrar";
+            btnEliminarItem.Text = "Borrar item";
+            btnEliminarItem.Click += btnEliminarItem_Click;
             // 
             // guna2ShadowPanel2
             // 
@@ -480,18 +489,49 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(236, 232, 221);
+            guna2Panel1.Controls.Add(label9);
+            guna2Panel1.Controls.Add(cboTipoDePago);
             guna2Panel1.Controls.Add(btnEliminarItem);
             guna2Panel1.Controls.Add(guna2ShadowPanel2);
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(guna2ShadowPanel1);
-            guna2Panel1.CustomizableEdges = customizableEdges27;
+            guna2Panel1.CustomizableEdges = customizableEdges29;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges30;
             guna2Panel1.Size = new Size(839, 682);
             guna2Panel1.TabIndex = 1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label9.Location = new Point(440, 555);
+            label9.Name = "label9";
+            label9.Size = new Size(141, 28);
+            label9.TabIndex = 21;
+            label9.Text = "Tipo de pago:";
+            // 
+            // cboTipoDePago
+            // 
+            cboTipoDePago.BackColor = Color.Transparent;
+            cboTipoDePago.BorderColor = Color.Black;
+            cboTipoDePago.BorderRadius = 10;
+            cboTipoDePago.CustomizableEdges = customizableEdges27;
+            cboTipoDePago.DrawMode = DrawMode.OwnerDrawFixed;
+            cboTipoDePago.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTipoDePago.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboTipoDePago.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboTipoDePago.Font = new Font("Segoe UI", 10F);
+            cboTipoDePago.ForeColor = Color.FromArgb(68, 88, 112);
+            cboTipoDePago.ItemHeight = 30;
+            cboTipoDePago.Location = new Point(633, 555);
+            cboTipoDePago.Name = "cboTipoDePago";
+            cboTipoDePago.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            cboTipoDePago.Size = new Size(178, 36);
+            cboTipoDePago.TabIndex = 21;
             // 
             // ModificarComanda
             // 
@@ -538,5 +578,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cboEstado;
         private Label label8;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTipoDePago;
     }
 }

@@ -19,11 +19,13 @@ namespace capaEntidad
         [Required]
         public int CantComensales { get; set; }
 
+        public string? TipoDePago { get; set; }
         public string? Comentario { get; set; }
 
         [Required]
         public DateTime FechaHora { get; set; } = DateTime.Now;
 
         public List<ComandaDetalle> Detalles { get; set; } = new List<ComandaDetalle>();
+        public decimal totalComanda { get; set; }
     }
 }

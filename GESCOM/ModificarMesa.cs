@@ -34,6 +34,13 @@ namespace capaPresentacion
                     noDisponible.Checked = true;
                     break;
             }
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
