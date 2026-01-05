@@ -18,11 +18,13 @@ namespace capaDatos
                 return db.Comanda
                          .Include(c => c.Mesa)
                          .Include(c => c.EstadoComanda)
-                         .Include(c => c.Detalles) // Aquí se incluyen los detalles (Comidas/Bebidas)
+                         .Include(c => c.Detalles) 
                              .ThenInclude(d => d.Comida)
                          .Include(c => c.Detalles)
                              .ThenInclude(d => d.Bebida)
                          .ToList();
+
+
             }
         }
 
@@ -73,11 +75,12 @@ namespace capaDatos
                         mesaNueva.Estado = "No disponible";
                     }
 
+                    existente.totalComanda = comanda.totalComanda;
                     existente.MesaId = comanda.MesaId;
                     existente.CantComensales = comanda.CantComensales;
                     existente.Comentario = comanda.Comentario;
                     existente.EstadoComandaId = comanda.EstadoComandaId;
-
+                    existente.TipoDePago = comanda.TipoDePago;
                     db.ComandaDetalle.RemoveRange(existente.Detalles);
                     existente.Detalles = comanda.Detalles;
 
@@ -89,7 +92,33 @@ namespace capaDatos
                 }
             }
         }
+       
+        public decimal obtenerTotalComanda(int comandaId)
+        {
+            using (var db = new GescomDBContext())
+            {
+                var comanda = db.Comanda
+                    .Include("Detalles.Comida")
+                    .Include("Detalles.Bebida")
+                    .FirstOrDefault(c => c.ComandaId == comandaId);
 
+                if (comanda == null)
+                    return 0;
+
+                decimal total = 0;
+
+                foreach (var d in comanda.Detalles)
+                {
+                    if (d.Comida != null)
+                        total += d.Comida.Precio * d.Cantidad;
+
+                    if (d.Bebida != null)
+                        total += d.Bebida.Precio * d.Cantidad;
+                }
+
+                return total;
+            }
+        }
         public void eliminarComanda(int comandaId)
         {
             using (var db = new GescomDBContext())

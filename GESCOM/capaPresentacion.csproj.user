@@ -16,12 +16,6 @@
     <Compile Update="AgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ConsultarComanda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ConsultarMesa.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="EliminarComanda.cs">
       <SubType>Form</SubType>
     </Compile>

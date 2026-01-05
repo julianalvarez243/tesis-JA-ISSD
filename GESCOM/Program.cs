@@ -16,29 +16,24 @@ namespace GESCOM
         [STAThread]
         static void Main()
         {
-            // Configuración de appsettings.json
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false)
                 .Build();
 
-            // Configuración de servicios e inyección de dependencias
             var services = new ServiceCollection();
 
             services.AddDbContext<GescomDBContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("Default")));
 
-            // Agregá otros servicios si los necesitás (ej: capaNegocio)
 
             ServiceProvider = services.BuildServiceProvider();
 
-            // Crear la base de datos si no existe
             using (var context = ServiceProvider.GetRequiredService<GescomDBContext>())
             {
-                context.Database.EnsureCreated(); // O reemplazá con migraciones
+                context.Database.EnsureCreated(); 
             }
 
-            // Iniciar la app WinForms
             ApplicationConfiguration.Initialize();
             Application.Run(new Login());
         }
@@ -51,6 +46,5 @@ namespace GESCOM
         {
         }
 
-        // DbSets para tus entidades
     }
 }

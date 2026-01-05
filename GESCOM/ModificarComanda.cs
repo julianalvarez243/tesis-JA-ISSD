@@ -18,12 +18,15 @@ namespace capaPresentacion
         private bebidaNegocio bebidaNeg = new bebidaNegocio();
         private comandaNegocio comandaNeg = new comandaNegocio();
         private estadoComandaNegocio estadoNeg = new estadoComandaNegocio();
+        private decimal totalOriginal;
+
 
         public ModificarComanda(Usuario user, Comanda comanda)
         {
             InitializeComponent();
             usuarioActual = user;
             comandaActual = comanda;
+            totalOriginal = comanda.totalComanda;
         }
 
         private void ModificarComanda_Load(object sender, EventArgs e)
@@ -39,11 +42,11 @@ namespace capaPresentacion
             cboNroMesa.ValueMember = "MesaId";
             cboNroMesa.SelectedValue = comandaActual.MesaId;
 
-            cboComida.DataSource = comidaNeg.listarComida();
+            cboComida.DataSource = comidaNeg.listarComidaDisponible();
             cboComida.DisplayMember = "Nombre";
             cboComida.ValueMember = "ComidaId";
 
-            cboBebida.DataSource = bebidaNeg.listarBebida();
+            cboBebida.DataSource = bebidaNeg.listarBebidaDisponible();
             cboBebida.DisplayMember = "Nombre";
             cboBebida.ValueMember = "BebidaId";
 
@@ -52,7 +55,25 @@ namespace capaPresentacion
             cboEstado.ValueMember = "EstadoComandaId";
             cboEstado.SelectedValue = comandaActual.EstadoComandaId;
 
+            
 
+            cboTipoDePago.Items.Add("Efectivo");
+            cboTipoDePago.Items.Add("Tarjeta");
+            cboTipoDePago.Items.Add("Transferencia");
+
+            if (comandaActual.TipoDePago == "Efectivo")
+            {
+                cboTipoDePago.SelectedIndex = 0;
+            }
+            else if (comandaActual.TipoDePago == "Tarjeta")
+            {
+                cboTipoDePago.SelectedIndex = 1;
+            }
+            else if (comandaActual.TipoDePago == "Transferencia")
+            {
+                cboTipoDePago.SelectedIndex = 2;
+            }
+            
             txtCantComida.Text = "1";
             txtCantBebida.Text = "1";
             txtCantComensales.Text = comandaActual.CantComensales.ToString();
@@ -70,6 +91,13 @@ namespace capaPresentacion
                 .ToList();
 
             actualizarLista();
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
         }
 
         private void actualizarLista()
@@ -143,15 +171,25 @@ namespace capaPresentacion
 
                     if (confirm == DialogResult.No)
                     {
-                        return; 
+                        return;
                     }
                 }
+
+                decimal totalNuevo = listaDetalles.Sum(d =>
+                    (d.ComidaId > 0 ? comidaNeg.listarComida().First(c => c.ComidaId == d.ComidaId).Precio * d.Cantidad : 0) +
+                    (d.BebidaId > 0 ? bebidaNeg.listarBebida().First(b => b.BebidaId == d.BebidaId).Precio * d.Cantidad : 0)
+                );
 
                 comandaActual.MesaId = (int)cboNroMesa.SelectedValue;
                 comandaActual.CantComensales = int.Parse(txtCantComensales.Text);
                 comandaActual.Comentario = txtComentario.Text;
                 comandaActual.EstadoComandaId = (int)cboEstado.SelectedValue;
                 comandaActual.Detalles = listaDetalles;
+                comandaActual.totalComanda = totalNuevo;
+
+                comandaNeg.actualizarComanda(comandaActual);
+
+
 
                 if (comandaActual.EstadoComandaId == 3)
                 {
@@ -159,12 +197,11 @@ namespace capaPresentacion
                     MovimientoCaja movimiento = new MovimientoCaja();
                     int comandaId = comandaActual.ComandaId;
 
-                    decimal totalComanda = comandaNeg.obtenerTotalComanda(comandaId);
-
                     movimiento.ComandaId = comandaId;
                     movimiento.Fecha = DateTime.Now;
                     movimiento.Tipo = "Egreso";
-                    movimiento.Monto = totalComanda;
+                    movimiento.TipoDePago = cboTipoDePago.SelectedItem?.ToString();
+                    movimiento.Monto = totalNuevo;
                     movimiento.Descripcion = "Comanda cancelada. ID: " + comandaId;
                     movimiento.UsuarioId = usuarioActual.UsuarioId;
 
@@ -176,10 +213,26 @@ namespace capaPresentacion
                         MessageBox.Show("No se pudo registrar el movimiento de caja: " + mensaje);
                         return;
                     }
-
                 }
 
-                comandaNeg.actualizarComanda(comandaActual);
+                if (comandaActual.EstadoComandaId != 3)
+                {
+                    movimientoCajaNegocio movNeg = new movimientoCajaNegocio();
+                    MovimientoCaja movimiento = new MovimientoCaja();
+
+                    movimiento.ComandaId = comandaActual.ComandaId;
+                    movimiento.Fecha = DateTime.Now;
+                    movimiento.Tipo = "Modificación";
+                    movimiento.TipoDePago = cboTipoDePago.SelectedItem?.ToString();
+                    movimiento.Monto = totalNuevo;
+                    movimiento.Descripcion = $"Modificación de comanda. ID: {comandaActual.ComandaId}";
+                    movimiento.UsuarioId = usuarioActual.UsuarioId;
+
+                    string mensaje;
+                    movNeg.guardarMovimiento(movimiento, out mensaje);
+                }
+
+
 
                 MessageBox.Show("Comanda actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
@@ -188,7 +241,10 @@ namespace capaPresentacion
             {
                 MessageBox.Show($"Error al actualizar la comanda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            actualizarLista();
         }
+
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

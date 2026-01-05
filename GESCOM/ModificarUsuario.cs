@@ -40,7 +40,16 @@ namespace capaPresentacion
                 cboRol.Items.Add("Mozo");
                 cboRol.Items.Add("Administrador");
 
-                cboRol.SelectedItem = _usuario.Rol; // Seleccionar el rol actual
+                if (_usuario.Rol != "Mozo")
+                {
+                    cboRol.SelectedIndex = 1;
+
+                } else
+                {
+                    cboRol.SelectedIndex = 0; 
+
+                }
+
             }
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;    

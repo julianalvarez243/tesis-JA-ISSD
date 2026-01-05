@@ -24,23 +24,31 @@ namespace capaPresentacion
             string nombreUsuario = txtNombreUsuario.Text.Trim();
             string contrasenia = txtContrasenia.Text.Trim();
             string confirmar = txtConfirmarContrasenia.Text.Trim();
-            string rolSeleccionado = cboRol.SelectedItem?.ToString() ?? "";
+            string rolSeleccionado = cboRol.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(nombreUsuario) ||
+                string.IsNullOrEmpty(contrasenia) ||
+                string.IsNullOrEmpty(confirmar) ||
+                rolSeleccionado == null)
+            {
+                MessageBox.Show("Complete todos los campos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             usuarioNegocio negocio = new usuarioNegocio();
 
             if (negocio.CrearUsuario(nombreUsuario, contrasenia, confirmar, rolSeleccionado, out string mensaje))
             {
                 MessageBox.Show("✅ Usuario creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK; // para refrescar dgv al volver
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
                 MessageBox.Show("❌ " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

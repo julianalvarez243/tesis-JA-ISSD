@@ -24,15 +24,9 @@ namespace capaNegocio
                 return 0;
             }
 
-            if (string.IsNullOrWhiteSpace(movimiento.Tipo))
+            if (string.IsNullOrWhiteSpace(movimiento.TipoDePago))
             {
-                mensaje = "Debe indicar el tipo de movimiento (Ingreso o Egreso).";
-                return 0;
-            }
-
-            if (movimiento.UsuarioId <= 0)
-            {
-                mensaje = "Debe especificar el usuario que realizó el movimiento.";
+                mensaje = "Debe especificar el tipo de pago.";
                 return 0;
             }
 

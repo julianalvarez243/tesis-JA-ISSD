@@ -17,6 +17,10 @@ namespace capaNegocio
             return datos.listarComida();
         }
 
+        public List<Comida> listarComidaDisponible()
+        {
+            return datos.listarComida().Where(c => c.Disponible).ToList();
+        }
         private void validarComida(Comida comida)
         {
             if (comida == null)

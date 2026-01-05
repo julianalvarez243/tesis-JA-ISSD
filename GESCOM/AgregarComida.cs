@@ -15,9 +15,13 @@ namespace capaPresentacion
     public partial class AgregarComida : Form
     {
         private comidaNegocio negocio = new comidaNegocio();
+        private bool Disponible;
         public AgregarComida()
         {
             InitializeComponent();
+
+            cboDisponible.Items.Add("Sí");
+            cboDisponible.Items.Add("No");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -37,6 +41,14 @@ namespace capaPresentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string precioTexto = txtPrecio.Text.Trim();
+
+
+            if (cboDisponible.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar si la bebida está disponible o no.");
+                return;
+            }
+
 
             if (!decimal.TryParse(precioTexto, out decimal precio))
             {
@@ -64,6 +76,16 @@ namespace capaPresentacion
                 return;
             }
 
+            if (cboDisponible.SelectedIndex == 1)
+            {
+                Disponible = false;
+            }
+            else
+            {
+                Disponible = true;
+            }
+
+
             try
             {
                 Comida nuevaComida = new Comida
@@ -71,6 +93,7 @@ namespace capaPresentacion
                     Nombre = txtNombre.Text.Trim(),
                     Precio = precio,
                     Descripcion = txtDescripcion.Text.Trim(),
+                    Disponible = Disponible
                 };
 
                 negocio.agregarComida(nuevaComida);
