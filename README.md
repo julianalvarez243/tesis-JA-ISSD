@@ -1,8 +1,7 @@
-# Manual de Usuario – Sistema de Gestión Gastronómica
-
+# Manual de Usuario – GESCOM
 ## 1. Introducción
 
-Este manual explica cómo utilizar el sistema de gestión gastronómica "GESCOM" de manera simple y clara.
+Este manual explica cómo utilizar el sistema de gestión gastronómica "GESCOM".
 
 ## 2. Inicio de Sesión
 
